@@ -13,3 +13,25 @@ Mata kuliah ini akan mengimplementasikan teknik-teknik dalam data mining maupun 
 - Aplikasi Algoritma pembelajaran tak-terawasi (unsupervised learning) pada kasus sederhana.
 - Aplikasi NLP (Natural Language Processing) pada kasus sederhana.
 - Aplikasi Computer vision pada kasus sederhana.
+
+---
+
+## 3. Workflow Praktikum (Google Colab & GitHub)
+
+Untuk menjalankan notebook praktikum secara efektif menggunakan Google Colab yang terhubung langsung dengan repositori ini:
+
+### A. Cara Membuka & Menjalankan Notebook di Colab
+1. Buka [Google Colaboratory](https://colab.research.google.com/).
+2. Pilih tab **GitHub**.
+3. Masukkan repositori: `januarsyah901/PPD` (atau URL repositori ini).
+4. Pilih **Branch** pertemuan yang dituju (misal: `master` atau branch pertemuan seperti `P1`, `P2`, dst.).
+5. Pilih file notebook `.ipynb` yang ingin dijalankan (misal: `P1/project/P1_Penambangan_Data.ipynb`).
+
+### B. Menyimpan Hasil Praktikum Kembali ke GitHub
+1. Setelah selesai running dan mengerjakan tugas di Google Colab, klik menu **File** $\rightarrow$ **Save a copy in GitHub** (Simpan salinan di GitHub).
+2. Pilih repositori `januarsyah901/PPD`, tentukan branch tujuan, dan isi pesan commit.
+
+### C. Standar Notebook Praktikum (Colab-Ready)
+Semua notebook praktikum di repositori ini didesain agar kompatibel dan ramah Google Colab:
+- **Penanganan Dataset**: Apabila praktikum memerlukan dataset lokal di repositori, cell awal akan otomatis menangani clone repo atau download dataset via URL Raw GitHub.
+- **Dependencies**: Perintah instalasi paket (`!pip install ...`) disiapkan jika memerlukan library tambahan di luar bawaan Colab.
