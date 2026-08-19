@@ -35,3 +35,33 @@ Untuk menjalankan notebook praktikum secara efektif menggunakan Google Colab yan
 Semua notebook praktikum di repositori ini didesain agar kompatibel dan ramah Google Colab:
 - **Penanganan Dataset**: Apabila praktikum memerlukan dataset lokal di repositori, cell awal akan otomatis menangani clone repo atau download dataset via URL Raw GitHub.
 - **Dependencies**: Perintah instalasi paket (`!pip install ...`) disiapkan jika memerlukan library tambahan di luar bawaan Colab.
+
+### D. Tips Penting & Penanganan Dataset di Colab
+> **Catatan:** Saat membuka file `.ipynb` langsung dari GitHub via Google Colab, Colab **hanya memuat file notebook ke browser** dan tidak otomatis meng-clone seluruh repositori/dataset ke VM runtime Colab.
+
+Untuk mengakses dataset atau modul pendukung di Colab, gunakan salah satu solusi berikut di cell inisialisasi:
+
+#### 1. Auto-Clone Repositori (Rekomendasi)
+```python
+import os
+
+# Clone repo jika runtime berjalan di Google Colab dan folder belum ada
+if 'google.colab' in str(get_ipython()):
+    if not os.path.exists('PPD'):
+        !git clone https://github.com/januarsyah901/PPD.git
+        %cd PPD/P1/project
+```
+
+#### 2. Membaca Dataset Langsung via Raw GitHub URL
+```python
+import pandas as pd
+
+url = "https://raw.githubusercontent.com/januarsyah901/PPD/master/P1/project/dataset.csv"
+df = pd.read_csv(url)
+```
+
+#### 3. Mount Google Drive (Jika dataset sangat besar)
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
