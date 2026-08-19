@@ -1,2 +1,26 @@
-*.pdf
+# macOS files
 .DS_Store
+
+# LaTeX Auxiliary & Build Files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.dvi
+*.xdv
+*.ps
+
+# LaTeX compiled output (hanya simpan source .tex dan gambar di repo)
+*.pdf

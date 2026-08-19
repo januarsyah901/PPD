@@ -75,3 +75,38 @@ df = pd.read_csv(url)
 from google.colab import drive
 drive.mount('/content/drive')
 ```
+
+---
+
+## 4. Standar Penulisan Laporan (LaTeX)
+
+Setiap pertemuan praktikum disertai pembuatan laporan resmi menggunakan **LaTeX** dengan struktur sebagai berikut:
+
+### A. Struktur Folder Laporan
+Setiap folder pertemuan `Pn/` memiliki folder `laporan/`:
+```text
+Pn/
+├── project/
+│   └── p{n}_{topik}.ipynb                  # Notebook Colab
+└── laporan/
+    ├── PPD_P{n}_Januarsyah Akbar_535846.tex # Source code LaTeX
+    ├── lambang ugm.png                      # Logo resmi UGM untuk cover
+    └── gambar/                              # Tangkapan layar / grafik hasil praktikum
+```
+
+### B. Format Penamaan File Laporan
+* **Format**: `PPD_P{n}_Januarsyah Akbar_535846.tex`
+* **Contoh**: `P1/laporan/PPD_P1_Januarsyah Akbar_535846.tex`
+
+### C. Sistematika Isi Laporan
+1. **Halaman Judul (Cover)**: Format resmi UGM (Nama, NIM: 24/535846/SV/24314, Kelas: B2, Dosen Pengampu, Lambang UGM).
+2. **Daftar Isi**: Dihasilkan secara otomatis (`\tableofcontents`).
+3. **Bab I: Tujuan Praktikum**: Poin-poin capaian pembelajaran.
+4. **Bab II: Dasar Teori**: Landasan konsep materi praktikum.
+5. **Bab III: Langkah Praktikum**: Hands-on dan dokumentasi kode/output.
+6. **Bab IV: Tugas & Analisis**: Penyelesaian soal praktikum, kode, hasil eksekusi, serta analisis mendalam.
+7. **Bab V: Kesimpulan**: Rangkuman pembelajaran praktikum.
+8. **Daftar Pustaka**: Referensi resmi.
+
+### D. Pengelolaan File Build LaTeX di Git
+Sesuai konfigurasi `.gitignore`, **hanya file sumber `.tex` dan aset gambar (`gambar/`, `*.png`)** yang di-push ke repositori. File build sementara seperti `.aux`, `.log`, `.toc`, `.out`, `.synctex.gz`, dan `.pdf` otomatis diabaikan agar repositori tetap bersih dan ringan.

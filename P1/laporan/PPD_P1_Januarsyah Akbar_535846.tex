@@ -1,0 +1,458 @@
+\documentclass[a4paper,oneside,12pt]{report}
+% Package yang diperlukan
+\usepackage{graphicx}      % Untuk memasukkan gambar
+\usepackage{titling}       % Untuk kustomisasi halaman judul
+\usepackage{geometry}      % Untuk mengatur margin halaman
+\usepackage{listings}      % Untuk menampilkan blok kode
+\usepackage{xcolor}        % Untuk menggunakan warna
+\usepackage{float}         % Untuk kontrol penempatan float (seperti gambar)
+\usepackage{hyperref}      % Untuk membuat hyperlink (URL, referensi)
+\usepackage{indentfirst}   % Untuk memberi indentasi pada paragraf pertama setiap seksi
+\usepackage{url}           % Untuk format URL
+\usepackage{fancyhdr}      % Untuk kustomisasi header dan footer
+\usepackage{tocloft}       % Untuk kustomisasi Daftar Isi
+\usepackage{bookmark}      % Untuk manajemen bookmark PDF yang lebih baik
+\usepackage{amsmath}       % Untuk notasi matematika
+
+%======================================================================
+% PENGATURAN GEOMETRI HALAMAN
+%======================================================================
+\geometry{left=3cm, right=2.5cm, top=2cm, bottom=2.5cm}
+\sloppy
+
+%======================================================================
+% PENGATURAN WARNA UNTUK BLOK KODE
+%======================================================================
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{darkblue}{rgb}{0,0,0.6}
+
+%======================================================================
+% PENGATURAN BLOK KODE (LISTINGS)
+%======================================================================
+\lstdefinestyle{commonstyle}{
+    backgroundcolor=\color{backcolour}, 
+    breakatwhitespace=false, 
+    breaklines=true, 
+    captionpos=b, 
+    keepspaces=true,
+    numbers=left, 
+    numbersep=5pt, 
+    showspaces=false, 
+    showstringspaces=false, 
+    showtabs=false, 
+    tabsize=2, 
+    frame=single,
+    basicstyle=\ttfamily\footnotesize,
+    numberstyle=\tiny\color{codegray},
+    columns=flexible,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    breakindent=0pt,
+    breakautoindent=false
+}
+
+\lstdefinestyle{pythonstyle}{
+    style=commonstyle,
+    language=Python,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{darkblue},
+    stringstyle=\color{codepurple},
+    emph={import,from,class,def,for,while,if,else,elif,try,except,finally,as,lambda,return},
+    emphstyle=\color{darkblue}
+}
+
+%======================================================================
+% PENGATURAN LAIN-LAIN
+%======================================================================
+\newcommand{\customfbox}[1]{%
+  \setlength{\fboxsep}{0pt}%
+  \setlength{\fboxrule}{0.5pt}%
+  \fcolorbox{black}{white}{#1}%
+}
+
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\hypersetup{
+    colorlinks=true, 
+    linkcolor=black, 
+    filecolor=black, 
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Laporan Praktikum Penambangan Data - Pertemuan I}, 
+    pdfpagemode=FullScreen, 
+    breaklinks=true
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+%======================================================================
+% PENGATURAN STRUKTUR BAB DAN DAFTAR ISI
+%======================================================================
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\bibname}{Daftar Pustaka}
+
+\renewcommand{\thechapter}{}
+\renewcommand{\chaptername}{}
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\setlength{\cftchapindent}{0em}
+\setlength{\cftsecindent}{2em}
+\setlength{\cftsubsecindent}{4em}
+\setlength{\cftchapnumwidth}{0em}
+\setlength{\cftsecnumwidth}{2.5em}
+\setlength{\cftsubsecnumwidth}{3.2em}
+\renewcommand{\cftchappresnum}{}
+\renewcommand{\cftchapaftersnum}{}
+
+\newcommand{\tocboldsection}[1]{%
+  \protect\renewcommand{\protect\cftchapfont}{\protect\bfseries}%
+  #1%
+  \protect\renewcommand{\protect\cftchapfont}{}%
+}
+
+%======================================================================
+% AWAL DOKUMEN
+%======================================================================
+\begin{document}
+
+% Halaman Judul (Cover)
+\newgeometry{left=3cm, right=2.5cm, top=2cm, bottom=2cm}
+\begin{titlingpage}
+\begin{center}
+\vspace*{0.3cm}
+{\large \textbf{\MakeUppercase{Laporan Praktikum}}} \\[0.3cm]
+{\large \textbf{\MakeUppercase{Praktikum Penambangan Data}}} \\[0.3cm]
+{\large \textbf{\MakeUppercase{Pertemuan I}}} \\[0.3cm]
+{\large \textbf{\MakeUppercase{Pengenalan NumPy dan Pandas}}} \\[0.8cm]
+
+\includegraphics[height=7cm]{lambang ugm.png} \\[0.8cm]
+
+{\normalsize \textbf{Disusun oleh:}} \\[0.3cm]
+\begin{tabular}{@{}l l @{}}
+  \textbf{Nama}             & : Januarsyah Akbar \\
+  \textbf{NIM}              & : 24/535846/SV/24314 \\
+  \textbf{Kelas}            & : B2 \\
+  \textbf{Dosen Pengampu}   & : Dr. Ganjar Alfian, S.T., M.Eng. \\
+                            & \phantom{:} Dr. Imam Fahrurrozi, S.T., M.Cs.
+\end{tabular} \\[1.5cm]
+
+{\normalsize \textbf{PROGRAM STUDI D-IV}} \\[0.15cm]
+{\normalsize \textbf{TEKNOLOGI REKAYASA PERANGKAT LUNAK}} \\[0.15cm]
+{\normalsize \textbf{DEPARTEMEN TEKNIK ELEKTRO DAN INFORMATIKA}} \\[0.15cm]
+{\normalsize \textbf{SEKOLAH VOKASI}} \\[0.15cm]
+{\normalsize \textbf{UNIVERSITAS GADJAH MADA}} \\[0.15cm]
+{\normalsize \textbf{YOGYAKARTA}} \\[0.15cm]
+{\normalsize \textbf{2026}}
+\end{center}
+\end{titlingpage}
+\restoregeometry
+
+% Halaman kosong (i, tidak bernomor)
+\clearpage
+\pagenumbering{roman}
+\setcounter{page}{1}
+\thispagestyle{empty}
+
+% Daftar Isi (ii)
+\clearpage
+\setcounter{page}{2}
+\addcontentsline{toc}{chapter}{Daftar Isi}
+\tableofcontents
+\clearpage
+
+% Penomoran arab untuk isi laporan
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%======================================================================
+% BAB I: TUJUAN PRAKTIKUM
+%======================================================================
+\chapter[Tujuan Praktikum]{Tujuan Praktikum}
+Tujuan pelaksanaan praktikum pada Pertemuan I adalah sebagai berikut:
+\begin{enumerate}
+    \item Mahasiswa mampu memahami konsep dasar pustaka \textit{NumPy} serta penggunaan struktur array $n$-dimensi (\textit{ndarray}) dan berbagai operasi manipulasi array.
+    \item Mahasiswa mengetahui berbagai teknik manipulasi, eksplorasi, dan transformasi data tabular menggunakan pustaka \textit{Pandas}, termasuk pembuatan dan restrukturisasi \textit{DataFrame}.
+    \item Mahasiswa dapat menerapkan integrasi \textit{NumPy} dan \textit{Pandas} untuk mengolah, menyaring, mengagregasi, serta menganalisis dataset sebagai pondasi komputasi pada penambangan data (\textit{data mining}).
+\end{enumerate}
+
+%======================================================================
+% BAB II: DASAR TEORI
+%======================================================================
+\chapter[Dasar Teori]{Dasar Teori}
+
+\section{NumPy (Numerical Python)}
+\textit{NumPy} adalah pustaka inti dalam ekosistem komputasi ilmiah berbasis Python yang menyediakan objek array multidimensi berkinerja tinggi, dikenal sebagai \texttt{ndarray} (\textit{N-dimensional array}). Dibandingkan dengan tipe data bawaan \textit{list} pada Python murni, \textit{ndarray} menyimpan data dalam blok memori yang kontinu secara homogen (\textit{contiguous homogeneous memory layout}), memungkinkan operasi matematika vektorisasi (\textit{vectorization}) dieksekusi secara cepat tanpa beban komputasi perulangan eksplisit.
+
+Fitur-fitur fundamental \textit{NumPy} meliputi:
+\begin{itemize}
+    \item \textbf{Array Creation \& Attributes}: Pembuatan array satu dimensi hingga multidimensi serta inspeksi bentuk dimensi melalui atribut \texttt{shape}, tipe data elemen \texttt{dtype}, dan ukuran data \texttt{size}.
+    \item \textbf{Indexing dan Slicing}: Pengambilan elemen spesifik berdasarkan indeks berbasis nol (\textit{zero-based indexing}) serta pemotongan subset array menggunakan sintaks rentang \texttt{[start:stop:step]} tanpa perlu menyalin data fisik (\textit{memory view}).
+    \item \textbf{Reshaping \& Flattening}: Pengubahan geometri array tanpa mengubah nilai elemen melalui metode \texttt{reshape()}, serta perataan ke 1D melalui \texttt{ravel()} atau \texttt{reshape(-1)}.
+    \item \textbf{Array Operations}: Operasi aritmatika elemen-ke-elemen (\textit{element-wise operations}), penggabungan (\texttt{concatenate}), pencarian berbasis kondisi (\texttt{np.where}), dan fungsi statistik (\texttt{sum}, \texttt{mean}, \texttt{std}, \texttt{prod}).
+\end{itemize}
+
+\section{Pandas}
+\textit{Pandas} adalah pustaka analisis dan manipulasi data terstruktur yang dibangun di atas \textit{NumPy}. \textit{Pandas} menyediakan dua struktur data utama:
+\begin{enumerate}
+    \item \textbf{Series}: Struktur data satu dimensi berlabel yang mampu menampung berbagai tipe data (integer, string, float, dsb.).
+    \item \textbf{DataFrame}: Struktur data dua dimensi berbentuk tabel dua sumbu (\textit{rows} dan \textit{columns}) dengan indeks fleksibel.
+\end{enumerate}
+
+Operasi krusial pada \textit{Pandas} meliputi:
+\begin{itemize}
+    \item \textbf{Data Cleaning \& Transformation}: Penambahan atau penghapusan kolom (\texttt{drop}), pengubahan tipe data, penanganan nilai hilang (\textit{missing values}), dan pemfilteran berbasis kondisi boolean.
+    \item \textbf{Grouping \& Aggregation}: Operasi \textit{split-apply-combine} menggunakan metode \texttt{groupby()} yang dikombinasikan dengan \texttt{agg()} untuk menghitung berbagai metrik ringkasan (misalnya \textit{mean}, \textit{max}, \textit{min}, \textit{std}, \textit{count}) pada kelompok data tertentu.
+    \item \textbf{Relational Operations (Merge, Join, Concat)}: Penggabungan beberapa tabel berdasarkan kolom kunci tertentu (\texttt{merge}) atau penggabungan berorientasi sumbu horizontal/vertikal (\texttt{concat}).
+    \item \textbf{Reshaping}: Transformasi bentuk tabel melalui pembuatan tabel silang (\texttt{pivot\_table}) dan restrukturisasi dari format lebar (\textit{wide}) ke panjang (\textit{long}) menggunakan metode \texttt{melt}.
+    \item \textbf{Functional Application}: Penerapan ekspresi logika kustom pada seluruh baris atau kolom melalui fungsi \texttt{apply()} dengan ekspresi \texttt{lambda}.
+\end{itemize}
+
+%======================================================================
+% BAB III: LANGKAH PRAKTIKUM
+%======================================================================
+\chapter[Langkah Praktikum]{Langkah Praktikum}
+
+\section{Eksplorasi Dasar NumPy}
+Pada tahap pertama praktikum, dilakukan inisialisasi pustaka \textit{NumPy} serta eksplorasi pembuatan array multidimensi.
+
+\begin{lstlisting}[style=pythonstyle, caption=Pembuatan dan Inspeksi Dimensi Array NumPy]
+import numpy as np
+
+# Pembuatan array 1D, 2D, dan 3D
+arr1d = np.array([1, 2, 3, 4, 5])
+arr2d = np.array([[1, 2, 3], [4, 5, 6]])
+arr3d = np.array([
+    [[1, 2, 3, 4], [5, 6, 7, 8]],
+    [[9, 10, 11, 12], [13, 14, 15, 16]],
+    [[17, 18, 19, 20], [21, 22, 23, 24]]
+])
+
+print("Shape 1D:", arr1d.shape) # (5,)
+print("Shape 2D:", arr2d.shape) # (2, 3)
+print("Shape 3D:", arr3d.shape) # (3, 2, 4)
+\end{lstlisting}
+
+Selanjutnya, dilakukan operasi pemotongan (\textit{slicing}), perataan (\textit{reshape}), serta operasi statistik deskriptif pada array acak.
+
+\begin{lstlisting}[style=pythonstyle, caption=Operasi Reshape dan Statistik NumPy]
+# Reshape dari 1D (12 elemen) menjadi 2D (3x4)
+data = np.arange(1, 13)
+matrix_3x4 = data.reshape(3, 4)
+
+# Operasi Statistik
+print("Total Sum:", np.sum(matrix_3x4))
+print("Sum per Kolom (axis=0):", np.sum(matrix_3x4, axis=0))
+print("Mean Keseluruhan:", np.mean(matrix_3x4))
+\end{lstlisting}
+
+\section{Eksplorasi Dasar Pandas}
+Pada tahap kedua, dibuat objek \textit{DataFrame} untuk mengelola data tabular, melakukan penambahan/penghapusan kolom, serta manipulasi relasional.
+
+\begin{lstlisting}[style=pythonstyle, caption=Pembuatan DataFrame dan Agregasi dengan Pandas]
+import pandas as pd
+
+# Membuat DataFrame Data Mahasiswa
+df_mhs = pd.DataFrame({
+    'NIM': ['22/001', '22/002', '22/003', '22/004'],
+    'Nama': ['Budi', 'Siti', 'Joko', 'Dewi'],
+    'Jurusan': ['TRPL', 'TRPL', 'TRK', 'TRPL'],
+    'Nilai_UAS': [85, 92, 78, 88]
+})
+
+# Filter Mahasiswa TRPL dengan Nilai UAS >= 85
+filtered = df_mhs[(df_mhs['Jurusan'] == 'TRPL') & (df_mhs['Nilai_UAS'] >= 85)]
+
+# Pengurutan Data (Sorting)
+sorted_df = df_mhs.sort_values(by='Nilai_UAS', ascending=False)
+\end{lstlisting}
+
+Transformasi tabel lanjutan dipraktikkan dengan menggunakan metode \texttt{pivot\_table}, \texttt{melt}, serta transformasi nilai kolom menggunakan \texttt{apply} dan ekspresi \texttt{lambda}.
+
+\begin{lstlisting}[style=pythonstyle, caption=Penerapan Lambda Function dan Reshaping Data]
+# Transformasi nilai dengan Lambda Function
+df_mhs['Kategori'] = df_mhs['Nilai_UAS'].apply(
+    lambda x: 'Sangat Baik' if x >= 90 else ('Baik' if x >= 80 else 'Cukup')
+)
+
+# Reshaping format lebar ke panjang (Melt)
+melted = pd.melt(df_mhs, id_vars=['NIM', 'Nama'], value_vars=['Nilai_UAS'])
+\end{lstlisting}
+
+%======================================================================
+% BAB IV: TUGAS DAN ANALISIS
+%======================================================================
+\chapter[Tugas dan Analisis]{Tugas dan Analisis}
+
+\section{Soal 1: NumPy Reshape dan Boolean Filtering}
+\subsection{Deskripsi Tugas}
+Buatlah array NumPy 2D berukuran $4 \times 4$ berisi angka acak (rentang nilai 0 hingga 50), kemudian ubah bentuk dimensinya (\textit{reshape}) menjadi array $2 \times 8$, lalu tampilkan hanya elemen-elemen yang bernilai lebih dari 25.
+
+\subsection{Implementasi Kode}
+\begin{lstlisting}[style=pythonstyle, caption=Solusi Soal 1 - NumPy Reshape dan Filtering]
+import numpy as np
+
+# 1. Inisialisasi seed dan buat array 2D 4x4 bilangan bulat acak [0, 50]
+np.random.seed(42)
+arr_awal = np.random.randint(0, 51, size=(4, 4))
+print("Array Asal (4x4):")
+print(arr_awal)
+print("Shape Asal:", arr_awal.shape)
+print("-" * 40)
+
+# 2. Reshape menjadi array berukuran 2x8
+arr_reshaped = arr_awal.reshape(2, 8)
+print("Hasil Reshape (2x8):")
+print(arr_reshaped)
+print("Shape Reshape:", arr_reshaped.shape)
+print("-" * 40)
+
+# 3. Filtering elemen bernilai > 25
+hasil_filter = arr_reshaped[arr_reshaped > 25]
+print("Elemen dengan nilai > 25:")
+print(hasil_filter)
+print("Banyaknya elemen yang lolos filter:", len(hasil_filter))
+\end{lstlisting}
+
+\subsection{Analisis dan Pembahasan}
+\begin{enumerate}
+    \item \textbf{Pembangkitan Angka Acak}: Fungsi \texttt{np.random.randint(0, 51, size=(4, 4))} menghasilkan matriks berukuran $4 \times 4$ dengan 16 bilangan bulat acak pada interval inklusif $[0, 50]$. Penggunaan \texttt{np.random.seed(42)} memastikan hasil komputasi bersifat deterministik dan dapat direplikasi secara konsisten.
+    \item \textbf{Mekanisme Reshape}: Operasi \texttt{reshape(2, 8)} mengubah struktur matriks dari 4 baris $\times$ 4 kolom menjadi 2 baris $\times$ 8 kolom. Operasi ini berjalan dengan kompleksitas $O(1)$ karena tidak melakukan penyalinan data fisik di memori, melainkan hanya memodifikasi metadata \textit{stride} dan dimensi dari \textit{ndarray} yang tetap berjumlah $4 \times 4 = 2 \times 8 = 16$ elemen.
+    \item \textbf{Boolean Masking}: Ekspresi \texttt{arr\_reshaped > 25} menghasilkan array boolean dengan dimensi yang sama dengan array asal. Ketika dimasukkan sebagai indeks (\texttt{arr\_reshaped[...]}), \textit{NumPy} melakukan ekstraksi elemen bernilai \texttt{True} dan mengembalikannya sebagai array satu dimensi (vektor).
+
+\end{enumerate}
+
+\section{Soal 2: Pandas Groupby dan Multiple Aggregations}
+\subsection{Deskripsi Tugas}
+Buatlah \textit{DataFrame} untuk data karyawan yang berisi kolom \texttt{Nama}, \texttt{Pekerjaan}, dan \texttt{Gaji}. Lalu lakukan operasi \texttt{groupby()} pada kolom \texttt{Pekerjaan} dan hitung nilai \textbf{maksimum}, \textbf{minimum}, serta \textbf{standar deviasi} untuk kolom \texttt{Gaji} menggunakan metode \texttt{agg()}.
+
+\subsection{Implementasi Kode}
+\begin{lstlisting}[style=pythonstyle, caption=Solusi Soal 2 - Pandas Groupby dan Aggregation]
+import pandas as pd
+
+# 1. Pembuatan DataFrame Karyawan
+data_karyawan = {
+    'Nama': ['Andi', 'Budi', 'Citra', 'Dewi', 'Eko', 'Fani', 'Gita', 'Hadi'],
+    'Pekerjaan': ['Programmer', 'Programmer', 'Data Analyst', 'Data Analyst', 
+                  'Manager', 'Manager', 'Programmer', 'Data Analyst'],
+    'Gaji': [6000000, 6500000, 5500000, 5800000, 9500000, 10000000, 7000000, 6200000]
+}
+df_karyawan = pd.DataFrame(data_karyawan)
+
+# 2. Operasi Groupby dan Perhitungan Agregasi Berganda
+ringkasan_gaji = df_karyawan.groupby('Pekerjaan')['Gaji'].agg(
+    Gaji_Maksimum='max',
+    Gaji_Minimum='min',
+    Standar_Deviasi='std'
+).reset_index()
+
+print("Hasil Ringkasan Agregasi Gaji per Pekerjaan:")
+print(ringkasan_gaji)
+\end{lstlisting}
+
+\subsection{Analisis dan Pembahasan}
+\begin{enumerate}
+    \item \textbf{Pengelompokan Kategori (\texttt{groupby})}: Metode \texttt{groupby('Pekerjaan')} mempartisi data menjadi kelompok-kelompok diskrit berdasarkan nama jabatan (\textit{Data Analyst}, \textit{Manager}, dan \textit{Programmer}).
+    \item \textbf{Agregasi Terarah (\texttt{agg})}: Pemanggilan \texttt{.agg(Gaji\_Maksimum='max', Gaji\_Minimum='min', Standar\_Deviasi='std')} memungkinkan penghitungan beberapa metrik statistik deskriptif sekaligus dalam satu lintasan komputasi.
+    \item \textbf{Interpretasi Metrik}:
+    \begin{itemize}
+        \item Nilai \texttt{max} dan \texttt{min} memperlihatkan batas rentang kompensasi tertinggi dan terendah pada masing-masing posisi pekerjaan.
+        \item Nilai \texttt{std} (\textit{standard deviation}) menggambarkan dispersi atau variasi sebaran gaji di antara karyawan dalam jabatan yang sama.
+    \end{itemize}
+    \item \textbf{Normalisasi Indeks (\texttt{reset\_index})}: Mengembalikan kolom pengelompokan (\texttt{Pekerjaan}) menjadi kolom reguler tabel dua dimensi, bukan sebagai indeks baris berjenjang.
+\end{enumerate}
+
+\section{Soal 3: Pandas Relational Merge (Left Join dengan Kolom Kunci Berbeda dan Suffixes)}
+\subsection{Deskripsi Tugas}
+Buat dua \textit{DataFrame}: DataFrame karyawan dengan kolom \texttt{Emp\_id}, \texttt{Nama}, dan \texttt{Divisi}, serta DataFrame gaji dengan kolom \texttt{ID}, \texttt{Gaji}, dan \texttt{Status} (masing-masing minimal tiga baris). Setelah itu, gabungkan kedua \textit{DataFrame} tersebut menggunakan \texttt{merge()} dengan parameter \texttt{left\_on='Emp\_id'} dan \texttt{right\_on='ID'}, terapkan metode \textbf{left join}, dan gunakan parameter \texttt{suffixes} untuk membedakan nama kolom yang bertabrakan.
+
+\subsection{Implementasi Kode}
+\begin{lstlisting}[style=pythonstyle, caption=Solusi Soal 3 - Pandas Merge dengan Key Berbeda dan Suffixes]
+import pandas as pd
+
+# 1. DataFrame Karyawan (Tabel Kiri)
+df_info = pd.DataFrame({
+    'Emp_id': ['EMP01', 'EMP02', 'EMP03', 'EMP04'],
+    'Nama': ['Rian', 'Sari', 'Doni', 'Lestari'],
+    'Divisi': ['Engineering', 'Data Science', 'Product', 'Marketing'],
+    'Status': ['Aktif', 'Aktif', 'Cuti', 'Aktif'] # Kolom yang bertabrakan
+})
+
+# 2. DataFrame Gaji (Tabel Kanan)
+df_payroll = pd.DataFrame({
+    'ID': ['EMP01', 'EMP02', 'EMP03', 'EMP05'], # EMP04 tidak ada di kanan, EMP05 tidak ada di kiri
+    'Gaji': [7500000, 8200000, 6800000, 9000000],
+    'Status': ['Tetap', 'Kontrak', 'Tetap', 'Kontrak'] # Kolom yang bertabrakan
+})
+
+# 3. Penggabungan Tabel Relasional
+df_hasil_merge = pd.merge(
+    df_info,
+    df_payroll,
+    left_on='Emp_id',
+    right_on='ID',
+    how='left',
+    suffixes=('_karyawan', '_kepegawaian')
+)
+
+print("Hasil Penggabungan Data (Left Join):")
+print(df_hasil_merge)
+\end{lstlisting}
+
+\subsection{Analisis dan Pembahasan}
+\begin{enumerate}
+    \item \textbf{Mekanisme Left Join (\texttt{how='left'})}: Menjamin bahwa seluruh 4 baris data dari DataFrame kiri (\texttt{df\_info}) dipertahankan secara utuh pada tabel luaran. Karyawan dengan ID \texttt{EMP04} (Lestari) yang tidak tercatat dalam tabel gaji kanan tetap muncul dalam luaran dengan nilai kolom \texttt{ID}, \texttt{Gaji}, dan \texttt{Status\_kepegawaian} otomatis terisi nilai \texttt{NaN} (\textit{Not a Number}).
+    \item \textbf{Penanganan Kunci Berbeda (\texttt{left\_on} dan \texttt{right\_on})}: Ketika dua sumber data menggunakan nama atribut pengenal yang tidak identik (\texttt{Emp\_id} pada tabel kiri dan \texttt{ID} pada tabel kanan), spesifikasi eksplisit \texttt{left\_on} dan \texttt{right\_on} menjembatani proses pencocokan nilai entitas secara akurat.
+    \item \textbf{Resolusi Kolisi Nama (\texttt{suffixes})}: Kedua tabel memiliki kolom bernama sama yaitu \texttt{Status} dengan arti kontekstual berbeda (status kehadiran aktif/cuti vs status kepegawaian tetap/kontrak). Parameter \texttt{suffixes=('\_karyawan', '\_kepegawaian')} secara otomatis mengubah nama kolom menjadi \texttt{Status\_karyawan} dan \texttt{Status\_kepegawaian}, mencegah penimpaan data dan menjaga integritas informasi.
+\end{enumerate}
+
+%======================================================================
+% BAB V: KESIMPULAN
+%======================================================================
+\chapter[Kesimpulan]{Kesimpulan}
+Berdasarkan serangkaian langkah praktikum dan penyelesaian tugas pada Pertemuan I, dapat ditarik beberapa kesimpulan penting:
+\begin{enumerate}
+    \item \textbf{Efisiensi NumPy}: Pustaka \textit{NumPy} dengan objek \textit{ndarray} menyediakan kapabilitas komputasi matriks berkinerja tinggi, manipulasi bentuk array melalui \textit{reshaping} yang hemat memori, serta kemampuan \textit{vectorized boolean filtering} yang sangat efisien untuk seleksi data numerik bervolume besar.
+    \item \textbf{Fleksibilitas Pandas}: Pustaka \textit{Pandas} mempermudah manipulasi data tabular melalui antarmuka \textit{DataFrame}, memudahkan pengelolaan indeks, pengurutan, pengelompokan data multidimensi melalui \texttt{groupby()} dan \texttt{agg()}, serta restrukturisasi tabel melalui operasi \textit{pivot} dan \textit{melt}.
+    \item \textbf{Integritas Penggabungan Data}: Operasi \texttt{merge()} pada \textit{Pandas} menyediakan fleksibilitas relasional yang setara dengan operasi SQL \textit{JOIN}, di mana penggunaan parameter \texttt{left\_on}, \texttt{right\_on}, dan \texttt{suffixes} terbukti andal dalam menyatukan dataset heterogen tanpa kehilangan konteks maupun duplikasi kolom.
+\end{enumerate}
+
+%======================================================================
+% DAFTAR PUSTAKA
+%======================================================================
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Daftar Pustaka}
+
+\bibitem{numpy_doc}
+NumPy Developers, \textit{NumPy User Guide and Reference Documentation}, 2024. [Online]. Tersedia: \url{https://numpy.org/doc/}.
+
+\bibitem{pandas_doc}
+Wes McKinney \& Pandas Development Team, \textit{pandas: powerful Python data analysis toolkit}, 2024. [Online]. Tersedia: \url{https://pandas.pydata.org/docs/}.
+
+\bibitem{python_doc}
+Python Software Foundation, \textit{The Python Standard Library Reference}, 2024. [Online]. Tersedia: \url{https://docs.python.org/3/}.
+
+\bibitem{modul_ppd}
+Tim Dosen Praktikum Penambangan Data, \textit{Modul Praktikum Penambangan Data 2025}, Departemen Teknik Elektro dan Informatika, Sekolah Vokasi, Universitas Gadjah Mada, 2025.
+
+\end{thebibliography}
+
+\end{document}
