@@ -24,19 +24,29 @@ Untuk menjalankan notebook praktikum secara efektif menggunakan Google Colab yan
 1. Buka [Google Colaboratory](https://colab.research.google.com/).
 2. Pilih tab **GitHub**.
 3. Masukkan repositori: `januarsyah901/PPD` (atau URL repositori ini).
-4. Pilih **Branch** pertemuan yang dituju (misal: `master` atau branch pertemuan seperti `P1`, `P2`, dst.).
-5. Pilih file notebook `.ipynb` yang ingin dijalankan (misal: `P1/project/P1_Penambangan_Data.ipynb`).
+  4. Pilih branch `main`.
+  5. Pilih file notebook `.ipynb` yang ingin dijalankan (misal: `P1/project/p1_numpy_pandas.ipynb`).
 
 ### B. Menyimpan Hasil Praktikum Kembali ke GitHub
 1. Setelah selesai running dan mengerjakan tugas di Google Colab, klik menu **File** $\rightarrow$ **Save a copy in GitHub** (Simpan salinan di GitHub).
 2. Pilih repositori `januarsyah901/PPD`, tentukan branch tujuan, dan isi pesan commit.
 
-### C. Standar Notebook Praktikum (Colab-Ready)
+### C. Penamaan File Notebook
+
+Format: `p{n}_{topik}.ipynb` — nomor pertemuan + isi yang dibahas, snake_case, tanpa spasi.
+
+Contoh:
+- `P1/project/p1_numpy_pandas.ipynb`
+- `P4/project/p4_klasifikasi.ipynb`
+
+Letakkan di `Pn/project/`.
+
+### D. Standar Notebook Praktikum (Colab-Ready)
 Semua notebook praktikum di repositori ini didesain agar kompatibel dan ramah Google Colab:
 - **Penanganan Dataset**: Apabila praktikum memerlukan dataset lokal di repositori, cell awal akan otomatis menangani clone repo atau download dataset via URL Raw GitHub.
 - **Dependencies**: Perintah instalasi paket (`!pip install ...`) disiapkan jika memerlukan library tambahan di luar bawaan Colab.
 
-### D. Tips Penting & Penanganan Dataset di Colab
+### E. Tips Penting & Penanganan Dataset di Colab
 > **Catatan:** Saat membuka file `.ipynb` langsung dari GitHub via Google Colab, Colab **hanya memuat file notebook ke browser** dan tidak otomatis meng-clone seluruh repositori/dataset ke VM runtime Colab.
 
 Untuk mengakses dataset atau modul pendukung di Colab, gunakan salah satu solusi berikut di cell inisialisasi:
@@ -56,7 +66,7 @@ if 'google.colab' in str(get_ipython()):
 ```python
 import pandas as pd
 
-url = "https://raw.githubusercontent.com/januarsyah901/PPD/master/P1/project/dataset.csv"
+url = "https://raw.githubusercontent.com/januarsyah901/PPD/main/P1/project/dataset.csv"
 df = pd.read_csv(url)
 ```
 
