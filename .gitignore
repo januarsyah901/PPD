@@ -21,6 +21,12 @@
 *.dvi
 *.xdv
 *.ps
+*.listing
 
 # LaTeX compiled output (hanya simpan source .tex dan gambar di repo)
 *.pdf
+
+# Template
+template/
+template.zip
+
