@@ -29,4 +29,5 @@
 # Template
 template/
 template.zip
+*.zip
 
