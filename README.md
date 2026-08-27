@@ -24,8 +24,8 @@ Untuk menjalankan notebook praktikum secara efektif menggunakan Google Colab yan
 1. Buka [Google Colaboratory](https://colab.research.google.com/).
 2. Pilih tab **GitHub**.
 3. Masukkan repositori: `januarsyah901/PPD` (atau URL repositori ini).
-  4. Pilih branch `main`.
-  5. Pilih file notebook `.ipynb` yang ingin dijalankan (misal: `P1/project/p1_numpy_pandas.ipynb`).
+4. Pilih branch `main`.
+5. Pilih file notebook `.ipynb` yang ingin dijalankan (misal: `P1/project/p1_numpy_pandas.ipynb`).
 
 ### B. Menyimpan Hasil Praktikum Kembali ke GitHub
 1. Setelah selesai running dan mengerjakan tugas di Google Colab, klik menu **File** $\rightarrow$ **Save a copy in GitHub** (Simpan salinan di GitHub).
@@ -80,14 +80,14 @@ drive.mount('/content/drive')
 
 ## 4. Standar Penulisan Laporan (LaTeX)
 
-Setiap pertemuan praktikum disertai pembuatan laporan resmi menggunakan **LaTeX** dengan struktur sebagai berikut:
+Setiap pertemuan praktikum disertai pembuatan laporan resmi menggunakan **LaTeX**. Acuan struktur: `P1/laporan/` dan `P2/laporan/`.
 
 ### A. Struktur Folder Laporan
 Setiap folder pertemuan `Pn/` memiliki folder `laporan/`:
 ```text
 Pn/
 ├── project/
-│   └── p{n}_{topik}.ipynb                  # Notebook Colab
+│   └── p{n}_{topik}.ipynb                   # Notebook Colab
 └── laporan/
     ├── PPD_P{n}_Januarsyah Akbar_535846.tex # Source code LaTeX
     ├── lambang ugm.png                      # Logo resmi UGM untuk cover
@@ -95,18 +95,47 @@ Pn/
 ```
 
 ### B. Format Penamaan File Laporan
-* **Format**: `PPD_P{n}_Januarsyah Akbar_535846.tex`
-* **Contoh**: `P1/laporan/PPD_P1_Januarsyah Akbar_535846.tex`
+- **Format**: `PPD_P{n}_Januarsyah Akbar_535846.tex`
+- **Contoh**: `P1/laporan/PPD_P1_Januarsyah Akbar_535846.tex`
 
 ### C. Sistematika Isi Laporan
-1. **Halaman Judul (Cover)**: Format resmi UGM (Nama, NIM: 24/535846/SV/24314, Kelas: B2, Dosen Pengampu, Lambang UGM).
-2. **Daftar Isi**: Dihasilkan secara otomatis (`\tableofcontents`).
-3. **Bab I: Tujuan Praktikum**: Poin-poin capaian pembelajaran.
-4. **Bab II: Dasar Teori**: Landasan konsep materi praktikum.
-5. **Bab III: Langkah Praktikum**: Hands-on dan dokumentasi kode/output.
-6. **Bab IV: Tugas & Analisis**: Penyelesaian soal praktikum, kode, hasil eksekusi, serta analisis mendalam.
-7. **Bab V: Kesimpulan**: Rangkuman pembelajaran praktikum.
-8. **Daftar Pustaka**: Referensi resmi.
+
+Empat bab (`report` class). Heading LaTeX berhenti di `\subsection`. Isi tugas pakai `\enumerate` biasa (1, 2, 3), **bukan** `\subsubsection`.
+
+```text
+Cover
+Daftar Isi
+
+BAB I   Tujuan Praktikum
+        enumerate capaian (tanpa section)
+
+BAB II  Dasar Teori
+        \section per konsep (contoh P1: NumPy, Pandas;
+        P2: AI, ML, EDA, Data Preprocessing)
+
+BAB III Hasil dan Pembahasan
+        \section{Langkah Praktikum}          % P2: Langkah Percobaan
+            \subsection{Langkah Percobaan ...}  per topik/dataset
+        \section{Tugas}                      % P2: Tugas dan Analisis
+            \subsection{Tugas N / Bagian X: ...}
+                1. Deskripsi Tugas
+                2. Implementasi Kode
+                3. Hasil Eksekusi
+                4. Analisis dan Pembahasan
+
+BAB IV  Kesimpulan
+        enumerate (tanpa section)
+
+Daftar Pustaka
+```
+
+Contoh heading P1:
+- `3.1` Langkah Praktikum → `3.1.1` NumPy, `3.1.2` Pandas
+- `3.2` Tugas → `3.2.1` Tugas 1, `3.2.2` Tugas 2, `3.2.3` Tugas 3
+
+Contoh heading P2:
+- `3.1` Langkah Percobaan → `3.1.1` EDA, `3.1.2` Data Preprocessing (Titanic)
+- `3.2` Tugas dan Analisis → `3.2.1` Bagian A (Bank Churners), `3.2.2` Bagian B (Bengaluru)
 
 ### D. Pengelolaan File Build LaTeX di Git
 Sesuai konfigurasi `.gitignore`, **hanya file sumber `.tex` dan aset gambar (`gambar/`, `*.png`)** yang di-push ke repositori. File build sementara seperti `.aux`, `.log`, `.toc`, `.out`, `.synctex.gz`, dan `.pdf` otomatis diabaikan agar repositori tetap bersih dan ringan.
@@ -124,6 +153,5 @@ Untuk mempercepat pengerjaan laporan praktikum di setiap pertemuan, gunakan form
 - **Standard Pipeline Otomatis yang Dijalankan:**
   1. **Analisis Modul & Notebook**: Membaca modul `Pn/MODUL_PDD_Pn.md` dan struktur kode di `Pn/project/`.
   2. **Ekstraksi Gambar/Grafik**: Menjalankan skrip Python untuk merender seluruh plot percobaan & tugas ke `Pn/laporan/gambar/`.
-  3. **Penulisan LaTeX (`.tex`)**: Menyusun laporan lengkap (struktur Bab, metadata nama/NIM/kelas UGM, code listings, tabel atribut, dan analisis mendalam).
-  4. **Kompilasi Otomatis PDF**: Menjalankan `pdflatex` / `latexmk` secara otomatis hingga file `PPD_P{n}_Januarsyah Akbar_535846.pdf` siap kumpul.
-
+  3. **Penulisan LaTeX (`.tex`)**: Menyusun laporan lengkap mengikuti sistematika Bab III di atas (bukan 5 bab). Metadata nama/NIM/kelas UGM, code listings, tabel, analisis.
+  4. **Kompilasi Otomatis PDF**: Menjalankan `latexmk -pdf -interaction=nonstopmode` hingga file `PPD_P{n}_Januarsyah Akbar_535846.pdf` siap kumpul.
