@@ -110,3 +110,20 @@ Pn/
 
 ### D. Pengelolaan File Build LaTeX di Git
 Sesuai konfigurasi `.gitignore`, **hanya file sumber `.tex` dan aset gambar (`gambar/`, `*.png`)** yang di-push ke repositori. File build sementara seperti `.aux`, `.log`, `.toc`, `.out`, `.synctex.gz`, dan `.pdf` otomatis diabaikan agar repositori tetap bersih dan ringan.
+
+---
+
+## 5. Otomasi Pembuatan Laporan (AI Assistant End-to-End)
+
+Untuk mempercepat pengerjaan laporan praktikum di setiap pertemuan, gunakan format instruksi berikut kepada AI Assistant:
+
+- **Trigger / Perintah:**
+  - `"Gas buatin laprak pertemuan [N] full end-to-end sampai PDF jadi"`
+  - *(atau: `"Buat laprak P[N] lengkap sama gambar dan compile LaTeX-nya"`)*
+
+- **Standard Pipeline Otomatis yang Dijalankan:**
+  1. **Analisis Modul & Notebook**: Membaca modul `Pn/MODUL_PDD_Pn.md` dan struktur kode di `Pn/project/`.
+  2. **Ekstraksi Gambar/Grafik**: Menjalankan skrip Python untuk merender seluruh plot percobaan & tugas ke `Pn/laporan/gambar/`.
+  3. **Penulisan LaTeX (`.tex`)**: Menyusun laporan lengkap (struktur Bab, metadata nama/NIM/kelas UGM, code listings, tabel atribut, dan analisis mendalam).
+  4. **Kompilasi Otomatis PDF**: Menjalankan `pdflatex` / `latexmk` secara otomatis hingga file `PPD_P{n}_Januarsyah Akbar_535846.pdf` siap kumpul.
+

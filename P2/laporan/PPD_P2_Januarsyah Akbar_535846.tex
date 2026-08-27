@@ -1,0 +1,713 @@
+\documentclass[a4paper,oneside,12pt]{report}
+% Package yang diperlukan
+\usepackage{graphicx}      % Untuk memasukkan gambar
+\usepackage{titling}       % Untuk kustomisasi halaman judul
+\usepackage{geometry}      % Untuk mengatur margin halaman
+\usepackage{listings}      % Untuk menampilkan blok kode
+\usepackage{xcolor}        % Untuk menggunakan warna
+\usepackage{float}         % Untuk kontrol penempatan float (seperti gambar)
+\usepackage{hyperref}      % Untuk membuat hyperlink (URL, referensi)
+\usepackage{indentfirst}   % Untuk memberi indentasi pada paragraf pertama setiap seksi
+\usepackage{url}           % Untuk format URL
+\usepackage{fancyhdr}      % Untuk kustomisasi header dan footer
+\usepackage{tocloft}       % Untuk kustomisasi Daftar Isi
+\usepackage{bookmark}      % Untuk manajemen bookmark PDF yang lebih baik
+\usepackage{amsmath}       % Untuk notasi matematika
+\usepackage[most]{tcolorbox} % Untuk box output terminal
+
+% Paket untuk tabel agar sesuai format referensi
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{colortbl}
+
+% Macro untuk header tabel
+\newcommand{\thead}[1]{\textcolor{white}{\textbf{#1}}}
+
+%======================================================================
+% PENGATURAN GEOMETRI HALAMAN
+%======================================================================
+\geometry{left=3cm, right=2.5cm, top=2cm, bottom=2.5cm}
+\sloppy
+
+%======================================================================
+% PENGATURAN WARNA UNTUK BLOK KODE
+%======================================================================
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{darkblue}{rgb}{0,0,0.6}
+\definecolor{outputbg}{RGB}{241,245,249}
+\definecolor{outputborder}{RGB}{203,213,225}
+
+%======================================================================
+% PENGATURAN BLOK KODE (LISTINGS)
+%======================================================================
+\lstdefinestyle{commonstyle}{
+    backgroundcolor=\color{backcolour},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    basicstyle=\ttfamily\footnotesize,
+    numberstyle=\tiny\color{codegray},
+    columns=flexible,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    breakindent=0pt,
+    breakautoindent=false
+}
+
+\lstdefinestyle{pythonstyle}{
+    style=commonstyle,
+    language=Python,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{darkblue},
+    stringstyle=\color{codepurple},
+    emph={import,from,class,def,for,while,if,else,elif,try,except,finally,as,lambda,return},
+    emphstyle=\color{darkblue}
+}
+
+% ── Box Format Output / Terminal Box (Verbatim via tcblisting) ───────────
+\newtcblisting{outputbox}{
+    enhanced,
+    colback=outputbg,
+    colframe=outputborder,
+    boxrule=0.6pt,
+    arc=1.2mm,
+    left=3mm,
+    right=3mm,
+    top=1.2mm,
+    bottom=1.2mm,
+    listing only,
+    listing options={
+        basicstyle=\ttfamily\footnotesize,
+        breaklines=true,
+        numbers=none,
+        showstringspaces=false
+    }
+}
+
+\newcommand{\screenshotimage}[3]{%
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.85\textwidth]{#1}
+        \caption{#2}
+        \label{fig:#3}
+    \end{figure}
+}
+
+%======================================================================
+% PENGATURAN LAIN-LAIN
+%======================================================================
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Laporan Praktikum Penambangan Data - Pertemuan II},
+    pdfpagemode=FullScreen,
+    breaklinks=true
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+%======================================================================
+% PENGATURAN STRUKTUR BAB DAN DAFTAR ISI
+%======================================================================
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\bibname}{Daftar Pustaka}
+
+\renewcommand{\thechapter}{}
+\renewcommand{\chaptername}{}
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\setlength{\cftchapindent}{0em}
+\setlength{\cftsecindent}{2em}
+\setlength{\cftsubsecindent}{4em}
+\setlength{\cftchapnumwidth}{0em}
+\setlength{\cftsecnumwidth}{2.5em}
+\setlength{\cftsubsecnumwidth}{3.2em}
+\renewcommand{\cftchappresnum}{}
+\renewcommand{\cftchapaftersnum}{}
+
+%======================================================================
+% AWAL DOKUMEN
+%======================================================================
+\begin{document}
+
+\newgeometry{left=3cm, right=2.5cm, top=2.5cm, bottom=3cm}
+\begin{titlingpage}
+\begin{center}
+\vspace*{0.5cm}
+{\large \textbf{\MakeUppercase{Laporan Praktikum}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Praktikum Penambangan Data}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Pertemuan II}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Exploratory Data Analysis dan Data Preprocessing}}} \\[1.5cm]
+
+\includegraphics[height=7cm]{lambang ugm.png} \\[1cm]
+
+{\normalsize \textbf{Disusun oleh:}} \\[0.4cm]
+\begin{tabular}{@{}l l @{}}
+  \textbf{Nama}           & : Januarsyah Akbar \\
+  \textbf{NIM}            & : 24/535846/SV/24314 \\
+  \textbf{Kelas}          & : B2 \\
+  \textbf{Dosen Pengampu} & : Dr. Ganjar Alfian, S.T., M.Eng. \\
+                          & \phantom{:} Dr. Imam Fahrurrozi, S.T., M.Cs.
+\end{tabular} \\[1.2cm]
+
+{\normalsize \textbf{PROGRAM STUDI D-IV}} \\[0.2cm]
+{\normalsize \textbf{TEKNOLOGI REKAYASA PERANGKAT LUNAK}} \\[0.2cm]
+{\normalsize \textbf{DEPARTEMEN TEKNIK ELEKTRO DAN INFORMATIKA}} \\[0.2cm]
+{\normalsize \textbf{SEKOLAH VOKASI}} \\[0.2cm]
+{\normalsize \textbf{UNIVERSITAS GADJAH MADA}} \\[0.2cm]
+{\normalsize \textbf{YOGYAKARTA}} \\[0.2cm]
+{\normalsize \textbf{2026}} \\[1.2cm]
+\end{center}
+\end{titlingpage}
+\restoregeometry
+
+\thispagestyle{empty}
+\clearpage
+\stepcounter{page}
+\thispagestyle{empty}
+
+% --- Daftar Isi ---
+\addcontentsline{toc}{chapter}{Daftar Isi}
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{3}
+
+%======================================================================
+% BAB I: TUJUAN PRAKTIKUM
+%======================================================================
+\chapter[Tujuan Praktikum]{Tujuan Praktikum}
+Tujuan pelaksanaan praktikum pada Pertemuan II adalah sebagai berikut:
+\begin{enumerate}
+    \item Mahasiswa mampu memahami konsep dasar Artificial Intelligence (AI) dan peran data dalam membangun sistem cerdas.
+    \item Mahasiswa mengetahui dasar-dasar Machine Learning (ML) meliputi \textit{supervised learning}, \textit{unsupervised learning}, dan \textit{reinforcement learning}.
+    \item Mahasiswa dapat menerapkan langkah awal analisis data melalui \textit{Exploratory Data Analysis} (EDA) menggunakan visualisasi grafik dan eksplorasi statistik.
+    \item Mahasiswa mampu mengetahui dan menerapkan teknik-teknik dasar dalam \textit{data preprocessing} meliputi penanganan \textit{missing values}, \textit{duplicate removal}, \textit{categorical encoding}, \textit{dataset splitting}, dan \textit{feature scaling}.
+\end{enumerate}
+\clearpage
+
+%======================================================================
+% BAB II: DASAR TEORI
+%======================================================================
+\chapter{Dasar Teori}
+
+\section{Artificial Intelligence (AI)}
+\textit{Artificial Intelligence} (AI) merupakan cabang ilmu komputer yang berfokus pada pembuatan mesin dan sistem cerdas yang mampu melakukan tugas-tugas yang secara tradisional membutuhkan tingkat kecerdasan manusia. Tugas-tugas ini meliputi penalaran logis, pembelajaran dari pengalaman, pengenalan pola visual maupun bahasa, hingga pengambilan keputusan secara otonom \cite{ref1}. Perkembangan AI modern sangat bertumpu pada ketersediaan data dalam skala besar (\textit{big data}) serta peningkatan kapasitas komputasi perangkat keras seperti GPU dan TPU. Kualitas dari kecerdasan buatan sangat bergantung pada kualitas data yang dipelajari; data yang buruk atau bias akan menghasilkan keputusan sistem yang keliru.
+
+\section{Machine Learning (ML)}
+\textit{Machine Learning} adalah subdisiplin utama dari AI yang memungkinkan sistem komputer untuk belajar dan meningkatkan performanya secara otomatis dari pengalaman (data) tanpa diprogram secara eksplisit berbasis aturan kaku (\textit{hardcoded rules}). Secara umum, algoritma \textit{Machine Learning} dikategorikan menjadi tiga paradigma utama \cite{ref2}:
+\begin{enumerate}
+    \item \textbf{Supervised Learning}: Model dilatih menggunakan dataset terlabel (\textit{labeled data}) di mana terdapat pasangan fitur masukan ($X$) dan target luaran ($y$). Contohnya adalah estimasi harga rumah (regresi) dan deteksi \textit{churn} pelanggan (klasifikasi).
+    \item \textbf{Unsupervised Learning}: Model menerima data tanpa label dan bertugas menemukan pola, struktur tersembunyi, atau pengelompokan alami dalam data. Contohnya adalah klusterisasi segmen pelanggan (\textit{K-Means}).
+    \item \textbf{Reinforcement Learning}: Agen cerdas belajar mengambil tindakan optimal melalui mekanisme penghargaan (\textit{reward}) dan hukuman (\textit{penalty}) dalam suatu lingkungan dinamis.
+\end{enumerate}
+
+\section{Exploratory Data Analysis (EDA)}
+\textit{Exploratory Data Analysis} (EDA) adalah pendekatan kritis awal dalam analisis data yang pertama kali dipelopori oleh John W. Tukey. EDA menekankan pentingnya mendengarkan cerita yang disampaikan oleh data sebelum terburu-buru menerapkan model matematika atau algoritma pemodelan yang rumit \cite{ref3,ref5}. Tujuan utama EDA adalah:
+\begin{itemize}
+    \item Memahami karakteristik dasar dan distribusi dari setiap variabel numerik maupun kategorikal.
+    \item Memeriksa tingkat pemusatan data (\textit{mean}, \textit{median}) dan penyebarannya (\textit{standard deviation}, \textit{interquartile range}).
+    \item Mengidentifikasi kejanggalan pada data seperti \textit{outliers}, \textit{missing values}, dan rekaman duplikat.
+    \item Memetakan korelasi dan hubungan antar variabel menggunakan visualisasi grafik seperti \textit{scatter plot}, \textit{heatmap}, \textit{histogram}, dan \textit{boxplot}.
+\end{itemize}
+
+\section{Data Preprocessing}
+\textit{Data Preprocessing} adalah serangkaian tahapan sistematis untuk membersihkan, mentransformasikan, dan menyiapkan data mentah agar siap diproses oleh algoritma \textit{Machine Learning}. Data mentah di dunia nyata umumnya bersifat kotor, tidak lengkap, tidak konsisten, serta mengandung \textit{noise}. Tahapan vital dalam \textit{data preprocessing} meliputi \cite{ref4,ref6}:
+\begin{enumerate}
+    \item \textbf{Data Cleaning}: Penanganan nilai hilang (\textit{imputation}) menggunakan nilai statistik seperti \textit{mean}, \textit{median}, atau modus, serta penghapusan data duplikat (\textit{drop duplicates}).
+    \item \textbf{Categorical Encoding}: Mengubah variabel kategorikal teks menjadi representasi angka numerik. Teknik utama meliputi \textit{One-Hot Encoding} (membuat kolom biner baru) dan \textit{Label Encoding} (memetakan kategori ke nilai integer).
+    \item \textbf{Dataset Splitting}: Membagi dataset menjadi \textit{training set} (untuk melatih model) dan \textit{testing set} (untuk evaluasi mandiri) guna mencegah fenomena \textit{overfitting}.
+    \item \textbf{Feature Scaling}: Menyeleraskan skala variabel numerik agar berada pada rentang yang sebanding. Dua teknik populer adalah \textit{Standardization} (z-score scaling dengan $\mu=0, \sigma=1$) dan \textit{Normalization} (Min-Max scaling pada rentang $[0, 1]$).
+\end{enumerate}
+\clearpage
+
+%======================================================================
+% BAB III: HASIL DAN PEMBAHASAN
+%======================================================================
+\chapter{Hasil dan Pembahasan}
+
+\section{Langkah Percobaan}
+
+\subsection{Langkah Percobaan Exploratory Data Analysis (EDA)}
+Berikut adalah langkah-langkah eksplorasi data yang dipraktikkan pada dataset \textit{BankChurners} dan data sensor IoT:
+
+\begin{enumerate}
+    \item \textbf{Impor Pustaka Utama} \\
+    Mengimpor pustaka \texttt{pandas}, \texttt{matplotlib.pyplot}, dan \texttt{numpy}.
+\begin{lstlisting}[style=pythonstyle, caption=Impor Pustaka EDA]
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+\end{lstlisting}
+
+    \item \textbf{Load Dataset Bank Churners} \\
+    Dataset dibaca langsung dari repositori menggunakan fungsi \texttt{pd.read\_csv()}.
+\begin{lstlisting}[style=pythonstyle, caption=Load Dataset Bank Churners]
+df_churning = pd.read_csv('https://raw.githubusercontent.com/ganjar87/data_science_practice/main/BankChurners.csv')
+print('Shape:', df_churning.shape)
+\end{lstlisting}
+\begin{outputbox}
+Shape: (10127, 23)
+\end{outputbox}
+
+    \item \textbf{Melihat 5 Baris Pertama dan Terakhir Data} \\
+    Pemeriksaan struktur sampel data menggunakan \texttt{head()} dan \texttt{tail()}.
+\begin{lstlisting}[style=pythonstyle, caption=Inspeksi Baris Pertama dan Terakhir]
+df_churning.head()
+df_churning.tail()
+\end{lstlisting}
+
+    \item \textbf{Pemisahan Sub-Dataset Berdasarkan Kelas Target} \\
+    Dataset dipisah berdasarkan status \texttt{Attrition\_Flag} menjadi dua subset.
+\begin{lstlisting}[style=pythonstyle, caption=Pemisahan Data Existing vs Attrited]
+existing_data = df_churning[(df_churning.Attrition_Flag == 'Existing Customer')]
+attrited_data = df_churning[(df_churning.Attrition_Flag == 'Attrited Customer')]
+\end{lstlisting}
+
+    \item \textbf{Line Chart (Data Dummy \& IoT Humidity Time Series)} \\
+    Membuat grafik garis untuk mengamati tren data sintetis dan tren waktu kelembaban sensor IoT.
+\begin{lstlisting}[style=pythonstyle, caption=Visualisasi Line Chart IoT]
+df_iot = pd.read_csv('https://raw.githubusercontent.com/ganjar87/data_science_practice/main/datatraining.txt')
+df_iot['date'] = pd.to_datetime(df_iot['date'])
+plt.figure(figsize=(15, 3))
+plt.plot(df_iot['date'], df_iot['Humidity'])
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/fig_iot_humidity.png}{Grafik Line Chart Tren Kelembaban Sensor IoT}{iot_humidity}
+
+    \item \textbf{Pie Chart (Proporsi Marital Status)} \\
+    Diagram lingkaran untuk mengamati komposisi persentase kategori status pernikahan nasabah.
+\begin{lstlisting}[style=pythonstyle, caption=Visualisasi Pie Chart Marital Status]
+data = df_churning['Marital_Status'].value_counts()
+plt.pie(data, labels=data.index, autopct='%.2f%%')
+plt.title('Marital Status')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/fig_pie_marital.png}{Pie Chart Distribusi Marital Status Nasabah}{pie_marital}
+
+    \item \textbf{Grouped Bar Plot \& Stacked Bar Plot} \\
+    Diagram batang vertikal berdampingan dan bertumpuk untuk membandingkan status pernikahan pada kelompok nasabah aktif dan churn.
+\begin{lstlisting}[style=pythonstyle, caption=Grouped dan Stacked Bar Plot]
+# Stacked Bar Plot
+data1 = existing_data['Marital_Status'].value_counts()
+data2 = attrited_data['Marital_Status'].value_counts()
+df_new = pd.concat([data1, data2], keys=['existing', 'attrited'], axis=1)
+df_new.plot(kind='bar', stacked=True)
+plt.title('Marital Status')
+plt.ylabel('Count')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/fig_bar_marital_grouped.png}{Grouped Bar Plot Status Pernikahan per Kelompok Nasabah}{bar_grouped}
+    \screenshotimage{gambar/fig_bar_marital_stacked.png}{Stacked Bar Plot Status Pernikahan Nasabah}{bar_stacked}
+
+    \item \textbf{Histogram Distribusi Usia (Customer Age)} \\
+    Mengamati persebaran distribusi frekuensi usia pelanggan antara \textit{existing} dan \textit{attrited}.
+\begin{lstlisting}[style=pythonstyle, caption=Histogram Usia Pelanggan]
+plt.hist(existing_data['Customer_Age'], label='existing')
+plt.hist(attrited_data['Customer_Age'], label='attrited')
+plt.title('Customer Age')
+plt.legend()
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/fig_hist_age.png}{Histogram Distribusi Usia Nasabah Aktif vs Churn}{hist_age}
+
+    \item \textbf{Scatter Plot (Customer Age vs Months on Book)} \\
+    Memetakan hubungan dua variabel numerik untuk melihat tren korelasi usia terhadap lama berlangganan.
+\begin{lstlisting}[style=pythonstyle, caption=Scatter Plot Usia vs Masa Langganan]
+plt.scatter(existing_data['Customer_Age'], existing_data['Months_on_book'], label='existing')
+plt.scatter(attrited_data['Customer_Age'], attrited_data['Months_on_book'], label='attrited')
+plt.title('Customer age vs months on book')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/fig_scatter_age_months.png}{Scatter Plot Usia Nasabah vs Months on Book}{scatter_age}
+
+    \item \textbf{Boxplot \& Violin Plot} \\
+    Visualisasi ringkasan 5 angka kuartil, pencilan (\textit{outliers}), serta bentuk kepadatan distribusi frekuensi (\textit{KDE}).
+\begin{lstlisting}[style=pythonstyle, caption=Boxplot dan Violin Plot]
+# Violin plot
+dict_violin = {'existing': existing_data['Customer_Age'].values, 'attrited': attrited_data['Customer_Age'].values}
+plt.violinplot(list(dict_violin.values()))
+plt.xticks([1, 2], labels=list(dict_violin.keys()))
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/fig_boxplot_grouped.png}{Boxplot Perbandingan Usia Nasabah}{boxplot_grouped}
+    \screenshotimage{gambar/fig_violin_age.png}{Violin Plot Kepadatan Usia Nasabah}{violin_age}
+
+    \item \textbf{Subplot 2x2 \& Anotasi Statistik} \\
+    Menyusun tata letak kanvas multi-plot serta menyisipkan anotasi teks ukuran pemusatan data (\textit{mean} dan \textit{median}).
+\begin{lstlisting}[style=pythonstyle, caption=Anotasi Ukuran Pemusatan Data]
+data = df_churning['Customer_Age']
+plt.hist(data)
+plt.text(60, 1600, "Median Age: " + str(round(data.median(), 2)), style='italic')
+plt.text(60, 1800, "Mean Age: " + str(round(data.mean(), 2)), style='italic')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/fig_subplot_2x2.png}{Subplot Kisi 2x2 Boxplot dan Histogram Usia}{subplot_2x2}
+    \screenshotimage{gambar/fig_annotation.png}{Histogram Usia Dilengkapi Anotasi Statistics}{annotation_plot}
+\end{enumerate}
+
+\subsection{Langkah Percobaan Data Preprocessing (Titanic Dataset)}
+Berikut adalah implementasi tahapan pembersihan dan penyiapan data menggunakan dataset \textit{Titanic}:
+
+\begin{enumerate}
+    \item \textbf{Load Dataset \& Cek Dimensi} \\
+    Membaca dataset \textit{Titanic} dan memeriksa dimensi bentuk menggunakan \texttt{df.shape}.
+\begin{lstlisting}[style=pythonstyle, caption=Load Dataset Titanic]
+df = pd.read_csv('https://raw.githubusercontent.com/ganjar87/data_science_practice/main/train.csv')
+print('Shape:', df.shape)
+\end{lstlisting}
+\begin{outputbox}
+Shape: (891, 12)
+\end{outputbox}
+
+    \item \textbf{Inspeksi Missing Values \& Duplikasi} \\
+    Memeriksa jumlah data kosong per kolom serta menghapus baris duplikat.
+\begin{lstlisting}[style=pythonstyle, caption=Pemeriksaan Nilai Kosong dan Duplikat]
+print(df.isnull().sum())
+print('Duplikat:', df.duplicated().sum())
+df.drop_duplicates(inplace=True)
+\end{lstlisting}
+\begin{outputbox}
+PassengerId      0
+Survived         0
+Pclass           0
+Name             0
+Sex              0
+Age            177
+SibSp            0
+Parch            0
+Ticket           0
+Fare             0
+Cabin          687
+Embarked         2
+dtype: int64
+Duplikat: 0
+\end{outputbox}
+
+    \item \textbf{Imputasi Nilai Kosong (Imputation)} \\
+    Mengisi kolom numerik \texttt{Age} dengan nilai \textit{median}, serta kolom kategorikal \texttt{Cabin} dan \texttt{Embarked} dengan nilai modus (kategori terbanyak).
+\begin{lstlisting}[style=pythonstyle, caption=Imputasi Fitur Titanic]
+df['Age'].fillna(df['Age'].median(), inplace=True)
+df['Cabin'].fillna(df['Cabin'].value_counts().index[0], inplace=True)
+df['Embarked'].fillna(df['Embarked'].value_counts().index[0], inplace=True)
+\end{lstlisting}
+
+    \item \textbf{Encoding Variabel Kategorikal} \\
+    Mengonversi kolom \texttt{Sex} dan \texttt{Embarked} menjadi kolom numerik menggunakan \textit{One-Hot Encoding} (\texttt{pd.get\_dummies}) serta \textit{Label Encoding} (\texttt{LabelEncoder}).
+\begin{lstlisting}[style=pythonstyle, caption=One-Hot Encoding dan Label Encoding]
+df_X = df.drop(['PassengerId', 'Name', 'Survived', 'Cabin', 'Ticket'], axis=1)
+df_y = df['Survived']
+
+# One-Hot Encoding
+df_onehot = pd.get_dummies(df_X, columns=['Sex', 'Embarked'], drop_first=True)
+
+# Label Encoding
+cat_en = LabelEncoder()
+for col in ['Sex', 'Embarked']:
+    df_X[col] = cat_en.fit_transform(df_X[col])
+\end{lstlisting}
+
+    \item \textbf{Dataset Splitting (Train-Test Split)} \\
+    Membagi dataset menjadi 70\% \textit{training set} dan 30\% \textit{testing set}.
+\begin{lstlisting}[style=pythonstyle, caption=Pembagian Dataset 70:30]
+X_train, X_test, y_train, y_test = train_test_split(df_X, df_y, test_size=0.3, random_state=42)
+print('X_train shape:', X_train.shape, '| X_test shape:', X_test.shape)
+\end{lstlisting}
+\begin{outputbox}
+X_train shape: (623, 7) | X_test shape: (268, 7)
+\end{outputbox}
+
+    \item \textbf{Feature Scaling (StandardScaler \& MinMaxScaler)} \\
+    Menerapkan penyeimbangan skala fitur. \textit{Scaler} di-fit **hanya pada data latih** (\texttt{X\_train}) lalu mentransformasikan \texttt{X\_train} dan \texttt{X\_test}.
+\begin{lstlisting}[style=pythonstyle, caption=Standardization dan Normalization]
+# StandardScaler (Z-Score)
+scaler_std = StandardScaler()
+X_train_std = scaler_std.fit_transform(X_train)
+X_test_std = scaler_std.transform(X_test)
+
+# MinMaxScaler ([0, 1])
+scaler_mm = MinMaxScaler()
+X_train_mm = scaler_mm.fit_transform(X_train)
+X_test_mm = scaler_mm.transform(X_test)
+\end{lstlisting}
+\end{enumerate}
+
+\clearpage
+
+%======================================================================
+% TUGAS DAN ANALISIS
+%======================================================================
+\section{Tugas dan Analisis}
+
+\subsection{Bagian A: Exploratory Data Analysis (Bank Churners Dataset)}
+Dataset yang dianalisis: \textit{Credit Card Customers} (\texttt{BankChurners.csv}).
+
+\begin{enumerate}
+    \item \textbf{Membaca Dataset Menggunakan Dataframe} \\
+    Dataset dibaca menggunakan pustaka Pandas.
+\begin{lstlisting}[style=pythonstyle, caption=Load Dataset Tugas EDA]
+df_tugas_eda = pd.read_csv('https://raw.githubusercontent.com/ganjar87/data_science_practice/main/BankChurners.csv')
+print('Dimensi Dataset:', df_tugas_eda.shape)
+\end{lstlisting}
+\begin{outputbox}
+Dimensi Dataset: (10127, 23)
+\end{outputbox}
+
+    \item \textbf{Tujuan Penggunaan Dataset} \\
+    \textit{Penjelasan:} Dataset \textit{BankChurners} dirancang untuk memprediksi tingkat penutupan layanan atau perpindahan nasabah kartu kredit (\textit{credit card customer churn}). Tujuan utamanya adalah:
+    \begin{itemize}
+        \item Menganalisis profil dan karakteristik perilaku nasabah yang berisiko mengalami \textit{churn} (\texttt{Attrited Customer}) dibandingkan nasabah yang tetap setia (\texttt{Existing Customer}).
+        \item Membangun model pemelajaran mesin terawasi (\textit{supervised classification}) untuk secara otomatis mendeteksi dini nasabah berisiko tinggi.
+        \item Memberikan masukkan strategis bagi manajemen bank untuk melakukan program retensi (seperti penyesuaian limit kredit, promo, atau kontak edukatif) sebelum nasabah menutup akun mereka.
+    \end{itemize}
+
+    \item \textbf{Definisi Atribut Input, Output/Label, dan Kolom yang Dibuang} \\
+    Berdasarkan struktur dataset, pembagian kolom adalah sebagai berikut:
+    \begin{itemize}
+        \item \textbf{Output / Class / Label}: \texttt{Attrition\_Flag} (berisi kategori \texttt{Existing Customer} dan \texttt{Attrited Customer}).
+        \item \textbf{Kolom yang Dibuang (Dropped Columns)}: 
+        \begin{enumerate}
+            \item \texttt{CLIENTNUM}: Berisi nomor identifikasi unik pelanggan yang tidak memiliki nilai informasi prediktif.
+            \item Dua kolom prediktor Naive Bayes bawaan (\texttt{Naive\_Bayes\_Classifier\_...}): Kolom ini merupakan hasil klasifikasi bawaan dataset. Jika digunakan dalam pelatihan model, akan terjadi kecacatan kebocoran data (\textit{data leakage}).
+        \end{enumerate}
+        \item \textbf{Input / Fitur (Features)}: Seluruh 19 kolom sisanya yang mencakup demografi, histori kredit, transaksi, dan tingkat keaktifan nasabah.
+    \end{itemize}
+
+    \item \textbf{Penjelasan Singkat Setiap Atribut Dataset} \\
+    Rincian penjelasan 21 atribut dasar dari dataset \textit{BankChurners} disajikan pada Tabel~\ref{tab:bank_churners_attributes}.
+
+\begin{table}[H]
+\centering
+\caption{Deskripsi dan Karakteristik Atribut Dataset BankChurners}
+\label{tab:bank_churners_attributes}
+\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+\rowcolor{darkblue}
+\thead{Nama Atribut} & \thead{Tipe Data} & \thead{Penjelasan / Fungsi Atribut} \\
+\midrule
+\texttt{CLIENTNUM} & Integer & Nomor ID unik pemegang kartu kredit (di-drop). \\
+\texttt{Attrition\_Flag} & Object & Target label: \textit{Existing Customer} vs \textit{Attrited Customer}. \\
+\texttt{Customer\_Age} & Integer & Usia nasabah dalam satuan tahun. \\
+\texttt{Gender} & Object & Jenis kelamin nasabah (\textit{M} = Pria, \textit{F} = Wanita). \\
+\texttt{Dependent\_count} & Integer & Jumlah anggota keluarga yang menjadi tanggungan. \\
+\texttt{Education\_Level} & Object & Tingkat pendidikan terakhir nasabah. \\
+\texttt{Marital\_Status} & Object & Status pernikahan (\textit{Married}, \textit{Single}, \textit{Divorced}, \textit{Unknown}). \\
+\texttt{Income\_Category} & Object & Kelompok rentang penghasilan tahunan nasabah. \\
+\texttt{Card\_Category} & Object & Tipe tingkatan kartu kredit (\textit{Blue}, \textit{Silver}, \textit{Gold}, \textit{Platinum}). \\
+\texttt{Months\_on\_book} & Integer & Lama waktu nasabah menjadi nasabah bank (bulan). \\
+\texttt{Total\_Relationship\_Count} & Integer & Total jumlah produk perbankan yang dimiliki nasabah. \\
+\texttt{Months\_Inactive\_12\_mon} & Integer & Jumlah bulan tidak aktif transaksi dalam 12 bulan terakhir. \\
+\texttt{Contacts\_Count\_12\_mon} & Integer & Frekuensi interaksi/kontak nasabah ke bank dalam 12 bulan. \\
+\texttt{Credit\_Limit} & Float & Batas maksimum limit kredit yang disetujui bank. \\
+\texttt{Total\_Revolving\_Bal} & Integer & Total saldo berputar (\textit{revolving balance}) pada kartu kredit. \\
+\texttt{Avg\_Open\_To\_Buy} & Float & Rata-rata sisa limit kredit yang masih dapat digunakan. \\
+\texttt{Total\_Amt\_Chng\_Q4\_Q1} & Float & Rasio perubahan nominal transaksi Q4 dibanding Q1. \\
+\texttt{Total\_Trans\_Amt} & Integer & Total nominal rupiah/dolar transaksi dalam 12 bulan. \\
+\texttt{Total\_Trans\_Ct} & Integer & Total frekuensi jumlah kali transaksi dalam 12 bulan. \\
+\texttt{Total\_Ct\_Chng\_Q4\_Q1} & Float & Rasio perubahan frekuensi transaksi Q4 dibanding Q1. \\
+\texttt{Avg\_Utilization\_Ratio} & Float & Rasio pemakaian limit kredit (\textit{saldo} / \textit{limit}). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{enumerate}
+
+\subsection{Bagian B: Data Preprocessing (Bengaluru House Price Dataset)}
+Dataset yang dianalisis: \textit{Bengaluru House Price Data}.
+
+\begin{enumerate}
+    \item \textbf{Membaca Dataset Menggunakan Dataframe} \\
+    Dataset perumahan Bengaluru dibaca dan diperiksa struktur awalnya.
+\begin{lstlisting}[style=pythonstyle, caption=Load Dataset Bengaluru House Price]
+URL_BENGALURU = 'https://raw.githubusercontent.com/dphi-official/Datasets/master/Bengaluru_House_Data.csv'
+df_house = pd.read_csv(URL_BENGALURU)
+print('Dimensi:', df_house.shape)
+df_house.head()
+\end{lstlisting}
+\begin{outputbox}
+Dimensi: (13320, 9)
+\end{outputbox}
+
+    \item \textbf{Visualisasi Histogram Numerik \& Analisis Pola Distribusi} \\
+    Sebelum memplot histogram, atribut \texttt{total\_sqft} yang memiliki format string rentang (misal \texttt{2100 - 2850}) di-parse menjadi numerik rata-rata. Atribut \texttt{size} diubah menjadi atribut integer \texttt{bhk}.
+\begin{lstlisting}[style=pythonstyle, caption=Parsing Kolom Numerik dan Histogram]
+# Visualisasi histogram 5 variabel numerik
+num_cols = ['total_sqft_num', 'bath', 'balcony', 'bhk', 'price']
+fig, axes = plt.subplots(2, 3, figsize=(10, 6))
+# ... [Plotting Histogram] ...
+\end{lstlisting}
+    \screenshotimage{gambar/fig_bengaluru_hist.png}{Histogram Distribusi Variabel Numerik Dataset Bengaluru}{bengaluru_hist}
+
+    \textit{Penjelasan Pola Distribusi:}
+    \begin{itemize}
+        \item \textbf{\texttt{price} (Harga Rumah)}: Menunjukkan pola kemiringan kanan yang sangat tajam (\textit{highly right-skewed}). Sebagian besar harga properti terkonsentrasi pada kelas menengah ke bawah ($< 200$ Lakh), dengan beberapa nilai pencilan ekstrim properti mewah bernilai tinggi.
+        \item \textbf{\texttt{total\_sqft\_num} (Luas Bangunan)}: Berpola \textit{right-skewed}. Mayoritas rumah memiliki luas di bawah 2.000 sqft, namun terdapat beberapa data outlier dengan luas sangat besar.
+        \item \textbf{\texttt{bath} \& \texttt{bhk} (Kamar Mandi \& Kamar Tidur)}: Memiliki distribusi diskrit berskala kecil yang berpusat pada nilai 2 hingga 3 unit.
+        \item \textbf{\texttt{balcony} (Balkon)}: Berjumlah diskrit dari 0 hingga 3 balkon, dengan jumlah terbanyak pada 1 dan 2 balkon.
+    \end{itemize}
+
+    \item \textbf{Matriks Korelasi Antar Variabel \& Analisis Hubungan} \\
+    Menghitung koefisien korelasi Pearson antar fitur numerik dan memvisualisasikannya ke dalam *heatmap*.
+\begin{lstlisting}[style=pythonstyle, caption=Korelasi Heatmap Dataset Bengaluru]
+corr_house = df_house[num_cols].corr(numeric_only=True)
+# ... [Plotting Heatmap] ...
+\end{lstlisting}
+    \screenshotimage{gambar/fig_bengaluru_corr.png}{Heatmap Korelasi Pearson Properti Bengaluru}{bengaluru_corr}
+
+    \textit{Analisis Hubungan Antar Variabel:}
+    \begin{itemize}
+        \item \textbf{\texttt{bath} vs \texttt{bhk} (Korelasi Sangat Kuat $\approx 0.90$)}: Terdapat hubungan linear positif yang amat kuat. Semakin banyak kamar tidur (BHK) dalam suatu rumah, semakin banyak pula fasilitas kamar mandi yang dibangun.
+        \item \textbf{\texttt{total\_sqft\_num} vs \texttt{price} (Korelasi Positif $\approx 0.57$)}: Luas total bangunan menjadi faktor pendorong utama kenaikan harga properti di Bengaluru.
+        \item \textbf{\texttt{bhk}/\texttt{bath} vs \texttt{price} (Korelasi Sedang $\approx 0.40 - 0.45$)}: Jumlah kamar tidur dan kamar mandi berbanding lurus dengan kenaikan harga rumah.
+        \item \textbf{\texttt{balcony} vs \texttt{price} (Korelasi Lemah $\approx 0.12$)}: Jumlah balkon memiliki pengaruh yang sangat kecil terhadap penentuan harga jual properti.
+    \end{itemize}
+
+    \item \textbf{Exploratory Data Analysis: Statistik Deskriptif, Missing Values, dan Duplikasi} \\
+    Analisis statistik ringkasan dan deteksi kualitas data dilakukan melalui metode \texttt{describe()}, \texttt{isnull().sum()}, dan \texttt{duplicated().sum()}.
+\begin{lstlisting}[style=pythonstyle, caption=Pemeriksaan Ringkasan Statistik dan Kualitas Data]
+# Missing values check
+print(df_house.isnull().sum())
+print('Jumlah Duplikat:', df_house.duplicated().sum())
+\end{lstlisting}
+\begin{outputbox}
+area_type          0
+availability       0
+location           1
+size              16
+society         5502
+total_sqft         0
+bath              73
+balcony  605
+price              0
+dtype: int64
+Jumlah Duplikat: 568
+\end{outputbox}
+
+    \textit{Penjelasan Tindakan Penanganan Data:}
+    \begin{enumerate}
+        \item \textbf{Data Duplikat (568 baris)}: Harus dihapus menggunakan \texttt{drop\_duplicates()} karena rekaman ganda tidak memberikan informasi baru dan dapat membias alokasi bobot pada model.
+        \item \textbf{Fitur \texttt{society} (5.502 missing $\approx 41.3\%$)}: Kolom ini di-drop sepenuhnya karena persentase nilai kosong terlalu besar. Pengisian nilai buatan akan merusak keaslian distribusi data.
+        \item \textbf{Fitur \texttt{balcony} (605 missing)}: Dilakukan imputasi nilai kosong menggunakan nilai \textit{median} karena tipe data numerik diskrit dan memiliki distribusi miring.
+        \item \textbf{Fitur \texttt{location}, \texttt{size}, \texttt{bath} (missing $< 1\%$)}: Baris yang mengandung nilai kosong pada kolom-kolom ini dihapus (\texttt{dropna()}) karena proporsinya sangat kecil terhadap total dataset ($13.320$ baris).
+    \end{enumerate}
+
+    \item \textbf{Preprocessing Lanjutan: Encoding, Split 80:20, dan Feature Scaling} \\
+    Menerapkan pipeline \textit{preprocessing} lengkap sesuai rekomendasi teknik:
+\begin{lstlisting}[style=pythonstyle, caption=Pipeline Preprocessing Lengkap Dataset Bengaluru]
+# 1. Cleaning & Imputation
+df_pp = df_house.drop_duplicates().drop(columns=['society'])
+df_pp = df_pp.dropna(subset=['location', 'size', 'bath', 'bhk', 'total_sqft_num'])
+df_pp['balcony'] = df_pp['balcony'].fillna(df_pp['balcony'].median())
+
+# 2. Categorical Encoding
+# One-Hot Encoding pada area_type (kardinalitas rendah)
+X_ohe = pd.get_dummies(df_pp.drop(columns=['availability', 'size', 'total_sqft', 'price']), 
+                       columns=['area_type'], drop_first=True)
+# Label Encoding pada location (kardinalitas tinggi > 1000 lokasi)
+le_loc = LabelEncoder()
+X_ohe['location'] = le_loc.fit_transform(X_ohe['location'])
+
+# 3. Train-Test Split 80:20
+y_house = df_pp['price']
+X_train_h, X_test_h, y_train_h, y_test_h = train_test_split(
+    X_ohe, y_house, test_size=0.2, random_state=42
+)
+
+# 4. Feature Scaling (StandardScaler)
+num_scale_cols = ['total_sqft_num', 'bath', 'balcony', 'bhk']
+scaler_house = StandardScaler()
+X_train_scaled = X_train_h.copy()
+X_test_scaled = X_test_h.copy()
+X_train_scaled[num_scale_cols] = scaler_house.fit_transform(X_train_h[num_scale_cols])
+X_test_scaled[num_scale_cols] = scaler_house.transform(X_test_h[num_scale_cols])
+\end{lstlisting}
+
+    \textit{Alasan Penggunaan Masing-Masing Teknik:}
+    \begin{itemize}
+        \item \textbf{One-Hot Encoding (\texttt{area\_type})}: Digunakan untuk variabel kategorikal nominal dengan jumlah opsi sedikit (4 kategori). One-Hot mencegah model menganggap adanya tingkatan orde hierarki implisit. Penggunaan \texttt{drop\_first=True} mencegah kecacatan \textit{multicollinearity} (\textit{dummy variable trap}).
+        \item \textbf{Label Encoding (\texttt{location})}: Digunakan untuk kolom lokasi karena memiliki lebih dari $1.000$ nama area unik. Jika menerapkan One-Hot, dimensi dataset akan meledak menjadi ribuan kolom \textit{sparse} yang memicu fenomena \textit{curse of dimensionality}.
+        \item \textbf{Train-Test Split (80:20)}: Membagi 80\% data untuk pelatihan dan 20\% data untuk pengujian mandiri. Proporsi ini memberikan data latih yang cukup besar sembari menyisakan sampel uji yang representatif.
+        \item \textbf{StandardScaler (Pilihan Utama)}: Mengubah skala fitur numerik agar memiliki \textit{mean} $0$ dan \textit{standard deviation} $1$. Teknik ini diprioritaskan karena lebih tahan terhadap variabel miring yang mengandung pencilan (\textit{outliers}) dibanding Min-Max scaling.
+    \end{itemize}
+\end{enumerate}
+
+\clearpage
+
+%======================================================================
+% BAB IV: KESIMPULAN
+%======================================================================
+\chapter{Kesimpulan}
+Berdasarkan praktikum yang telah dilaksanakan pada Pertemuan II, dapat ditarik beberapa kesimpulan utama sebagai berikut:
+\begin{enumerate}
+    \item \textit{Exploratory Data Analysis} (EDA) merupakan tahapan krusial untuk memahami karakteristik alami data, pola distribusi, korelasi antar variabel, serta mendeteksi potensi masalah data (\textit{missing values}, duplikat, dan \textit{outliers}) melalui kombinasi eksplorasi visualisasi grafik dan kalkulasi statistik deskriptif.
+    \item Pemilihan teknik visualisasi grafik harus disesuaikan dengan tipe data: \textit{Line Chart} untuk data berurutan/waktu (\textit{time series}), \textit{Pie Chart} dan \textit{Bar Plot} untuk frekuensi data kategorikal, \textit{Histogram} untuk distribusi kontinu, \textit{Scatter Plot} untuk hubungan dua numerik, serta \textit{Boxplot} dan \textit{Violin Plot} untuk inspeksi sebaran kuartil dan pencilan.
+    \item \textit{Data Preprocessing} menentukan kualitas performa dan generalisasi model \textit{Machine Learning}. Penanganan nilai kosong harus disesuaikan dengan karakteristik variabel (median untuk numerik miring/diskrit, modus untuk kategorikal, dan drop kolom jika nilai kosong terlalu dominan).
+    \item Variabel kategorikal ber-kardinalitas rendah paling baik diolah menggunakan \textit{One-Hot Encoding}, sedangkan kardinalitas tinggi memerlukan pendekatan yang lebih efisien seperti \textit{Label Encoding}.
+    \item Proses pembagian data (\textit{Train-Test Split}) harus dilakukan sebelum langkah pengisian statistik skala (\textit{Feature Scaling}) untuk menjamin tidak terjadinya kebocoran informasi (\textit{data leakage}) dari data uji ke dalam proses pelatihan model.
+\end{enumerate}
+
+\clearpage
+
+%======================================================================
+% DAFTAR PUSTAKA
+%======================================================================
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Daftar Pustaka}
+
+\bibitem{ref1}
+Russell, S., \& Norvig, P. (2020). \textit{Artificial Intelligence: A Modern Approach} (4th ed.). Pearson.
+
+\bibitem{ref2}
+Mitchell, T. M. (1997). \textit{Machine Learning}. McGraw-Hill Education.
+
+\bibitem{ref3}
+Tukey, J. W. (1977). \textit{Exploratory Data Analysis}. Addison-Wesley.
+
+\bibitem{ref4}
+Han, J., Pei, J., \& Tong, H. (2022). \textit{Data Mining: Concepts and Techniques} (4th ed.). Morgan Kaufmann/Elsevier.
+
+\bibitem{ref5}
+McKinney, W. (2017). \textit{Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython} (2nd ed.). O'Reilly Media.
+
+\bibitem{ref6}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., \& Duchesnay, É. (2011). Scikit-learn: Machine Learning in Python. \textit{Journal of Machine Learning Research}, 12, 2825--2830.
+
+\end{thebibliography}
+
+\end{document}
