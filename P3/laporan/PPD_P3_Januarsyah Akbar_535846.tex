@@ -512,30 +512,11 @@ plt.show()
 \end{enumerate}
 
 \subsection{Rekapitulasi Evaluasi Dataset Stroke}
-Tabel \ref{tab:stroke_performance} merangkum perbandingan metrik evaluasi dari kelima algoritma pada dataset uji Stroke.
+Hasil evaluasi performa kelima algoritma klasifikasi pada dataset uji Stroke dirangkum pada Gambar \ref{fig:colab-stroke-summary-table}.
 
-\begin{table}[H]
-\centering
-\caption{Perbandingan Performa Model Klasifikasi pada Dataset Stroke}
-\label{tab:stroke_performance}
-\vspace{0.2cm}
-\footnotesize
-\rowcolors{2}{gray!10}{white}
-\begin{tabularx}{0.85\textwidth}{X c c c}
-\toprule
-\rowcolor{darkblue}
-\thead{Model} & \thead{Accuracy} & \thead{Precision} & \thead{Recall} \\
-\midrule
-Logistic Regression & 0.9419 & 0.0000 & 0.0000 \\
-K-Nearest Neighbors ($k=10$) & 0.9419 & 0.0000 & 0.0000 \\
-Decision Tree (Entropy) & 0.9022 & 0.1139 & 0.1011 \\
-Random Forest & 0.9419 & 0.0000 & 0.0000 \\
-AdaBoost & 0.9419 & 0.0000 & 0.0000 \\
-\bottomrule
-\end{tabularx}
-\end{table}
+\screenshotimage{gambar/colab-stroke-summary-table.png}{Tabel Perbandingan Performa Model Klasifikasi pada Dataset Stroke}{colab-stroke-summary-table}
 
-Eksperimen ini membuktikan bahwa akurasi tinggi dapat menipu. Angka 94.19\% lahir karena model hanya menebak kelas mayoritas. Decision Tree memiliki akurasi terendah (90.22\%), namun justru satu-satunya yang mampu mengenali pasien positif stroke.
+Eksperimen ini membuktikan bahwa akurasi tinggi dapat menipu. Nilai akurasi sekitar 94.1\% pada Logistic Regression, KNN, Random Forest, dan AdaBoost lahir karena model hanya memprediksi kelas mayoritas (tidak stroke), sehingga presisi, recall, dan f1-score untuk kelas positif bernilai 0. Sebaliknya, Decision Tree mencatat akurasi 90.99\%, namun menjadi satu-satunya model yang mampu mendeteksi sampel pasien positif stroke dengan presisi 14.49\%, recall 11.24\%, dan f1-score 12.66\%.
 \clearpage
 
 %======================================================================

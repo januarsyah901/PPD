@@ -28,6 +28,7 @@ Semua file gambar disimpan ke dalam direktori:
 | 15 | `cm_loan_knn.png` | **Sudah Terpasang** | Heatmap matriks konfusi KNN pada dataset loan |
 | 16 | `cm_loan_dt.png` | **Sudah Terpasang** | Heatmap matriks konfusi Decision Tree pada dataset loan |
 | 17 | `cm_loan_rf.png` | **Sudah Terpasang** | Heatmap matriks konfusi Random Forest pada dataset loan |
+| 18 | `colab-stroke-summary-table.png` | **Sudah Terpasang** | Output tabel ringkasan performa 5 model pada dataset stroke |
 
 ---
 
@@ -46,4 +47,3 @@ Jika bang jan ingin menambahkan screenshot sel Colab yang masih tersisa, gunakan
 | 7 | `colab-loan-load-clean.png` | `df_loan` missing values | Sel penanganan missing values dataset loan |
 | 8 | `colab-loan-prep.png` | Encoding & standardisasi loan | Sel persiapan fitur dan split dataset loan |
 | 9 | `colab-loan-modelling.png` | Loop model loan status | Sel proses perulangan evaluasi model loan |
-| 10 | `colab-stroke-summary-table.png` | `df_stroke_results` | Output tabel ringkasan performa 5 model pada dataset stroke |
