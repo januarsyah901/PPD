@@ -96,6 +96,28 @@
     }
 }
 
+% ── Command Placeholder Screenshot ────────────────────────────────────────
+\newcommand{\screenshotplaceholder}[2]{%
+    \begin{figure}[H]
+        \centering
+        % \includegraphics[width=0.88\textwidth]{gambar/#1.png}
+        \begin{tcolorbox}[
+            enhanced,
+            colback=gray!5,
+            colframe=gray!30,
+            arc=1.2mm,
+            width=0.9\textwidth,
+            height=4.5cm,
+            valign=center,
+            halign=center
+        ]
+            \textcolor{gray!60}{\fontsize{10}{12}\selectfont\ttfamily [Screenshot: #2]}
+        \end{tcolorbox}
+        \caption{#2}
+        \label{fig:#1}
+    \end{figure}
+}
+
 \newcommand{\screenshotimage}[3]{%
     \begin{figure}[H]
         \centering
@@ -228,26 +250,49 @@ Tujuan pelaksanaan praktikum pada Pertemuan III adalah sebagai berikut:
 \chapter{Dasar Teori}
 
 \section{Classification}
-Klasifikasi merupakan salah satu teknik \textit{supervised learning} yang bertujuan untuk memprediksi label atau kategori dari sebuah sampel berdasarkan fitur yang dimiliki. Model klasifikasi belajar dari data historis berlabel, kemudian menghasilkan fungsi yang mampu menentukan kelas dari data baru yang belum pernah dilihat. Klasifikasi umum digunakan dalam aplikasi seperti deteksi spam, diagnosis medis, dan rekomendasi \cite{ref1,ref4}.
+Klasifikasi merupakan salah satu teknik \textit{supervised learning} untuk memprediksi label kategori dari suatu data berdasarkan fitur-fitur yang diobservasi. Algoritma klasifikasi membangun pemetaan dari vektor input menuju label diskret menggunakan data latih berlabel. Pemodelan ini dipakai pada kasus seperti diagnosis penyakit, penentuan kelayakan kredit, dan deteksi email spam \cite{ref1,ref4}.
 
 \section{Algoritma Classification}
-Beberapa algoritma klasifikasi yang umum digunakan antara lain \cite{ref6}:
+Beberapa algoritma klasifikasi yang diterapkan pada praktikum ini meliputi \cite{ref6}:
 \begin{enumerate}
-    \item \textbf{Logistic Regression}: Algoritma klasifikasi berbasis regresi linier yang memodelkan probabilitas sampel menggunakan fungsi sigmoid. Output model berada dalam rentang 0-1 yang dikonversi menjadi kelas.
-    \item \textbf{K-Nearest Neighbors (KNN)}: Mengklasifikasikan data berdasarkan mayoritas kelas dari \textit{k} tetangga terdekatnya menggunakan perhitungan jarak seperti jarak \textit{Euclidean}.
-    \item \textbf{Decision Tree}: Membagi dataset secara rekursif berdasarkan kriteria pemisahan fitur yang memberikan informasi terbaik (seperti \textit{entropy} atau \textit{Gini impurity}).
-    \item \textbf{Random Forest}: Algoritma \textit{ensemble} yang menggabungkan banyak \textit{Decision Tree} melalui teknik \textit{bagging} untuk mengurangi varians (\textit{overfitting}) dan menstabilkan prediksi.
-    \item \textbf{AdaBoost (Adaptive Boosting)}: Algoritma klasifikasi \textit{ensemble boosting} yang menggabungkan beberapa \textit{weak learners}. Algoritma ini secara sekuensial menyesuaikan bobot untuk berfokus pada data yang salah diprediksi sebelumnya.
+    \item \textbf{Logistic Regression}: Memodelkan probabilitas keanggotaan kelas menggunakan fungsi logistik (sigmoid). Nilai output berada pada rentang 0 sampai 1, lalu dipetakan ke kelas menggunakan ambang batas keputusan (\textit{threshold}).
+    \item \textbf{K-Nearest Neighbors (KNN)}: Mengklasifikasikan sampel baru berdasarkan suara terbanyak dari $k$ tetangga terdekat pada ruang fitur. Jarak antar sampel umumnya dihitung memakai jarak Euclidean.
+    \item \textbf{Decision Tree}: Membagi ruang data secara rekursif melalui aturan percabangan biner berbasis kriteria kemurnian informasi, seperti nilai \textit{entropy} atau \textit{Gini impurity}.
+    \item \textbf{Random Forest}: Metode \textit{ensemble} yang menggabungkan banyak pohon keputusan melalui mekanisme \textit{bootstrap aggregating} (\textit{bagging}). Prediksi final diperoleh lewat voting mayoritas guna menekan varians dan risiko \textit{overfitting}.
+    \item \textbf{AdaBoost (Adaptive Boosting)}: Metode \textit{ensemble} sekuensial yang melatih sekumpulan \textit{weak learners}. Setiap iterasi menaikkan bobot sampel yang salah diprediksi agar model berikutnya lebih fokus pada kasus yang sulit.
 \end{enumerate}
 
 \section{Metrik Evaluasi Classification}
-Evaluasi performa klasifikasi dilakukan menggunakan komponen \textit{Confusion Matrix} yang memuat \textit{True Positive} (TP), \textit{True Negative} (TN), \textit{False Positive} (FP), dan \textit{False Negative} (FN) \cite{ref4}:
+Evaluasi model klasifikasi berpijak pada nilai \textit{Confusion Matrix}, yaitu tabel kontinjensi berisi empat kuadran hasil prediksi \cite{ref4}:
 \begin{itemize}
-    \item \textbf{Accuracy}: Rasio prediksi benar terhadap total seluruh data yang diprediksi.
-    \item \textbf{Precision}: Tingkat ketepatan prediksi kelas positif; seberapa banyak hasil positif dari prediksi yang benar-benar merupakan kelas positif.
-    \item \textbf{Recall}: Kemampuan model menemukan seluruh data kelas positif secara benar.
-    \item \textbf{F1-Score}: Rata-rata harmonik antara \textit{precision} dan \textit{recall}, digunakan utamanya saat dataset tidak seimbang (\textit{imbalanced data}).
+    \item \textbf{True Positive (TP)}: Sampel positif yang berhasil diprediksi sebagai kelas positif.
+    \item \textbf{True Negative (TN)}: Sampel negatif yang berhasil diprediksi sebagai kelas negatif.
+    \item \textbf{False Positive (FP)}: Sampel negatif yang keliru diprediksi sebagai kelas positif (kesalahan tipe I).
+    \item \textbf{False Negative (FN)}: Sampel positif yang keliru diprediksi sebagai kelas negatif (kesalahan tipe II).
 \end{itemize}
+
+Empat metrik evaluasi utama diturunkan dari nilai-nilai di atas:
+\begin{enumerate}
+    \item \textbf{Accuracy}: Rasio total prediksi yang tepat terhadap keseluruhan sampel.
+    \begin{equation}
+        \text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}
+    \end{equation}
+    
+    \item \textbf{Precision}: Proporsi sampel yang benar-benar positif di antara seluruh prediksi positif.
+    \begin{equation}
+        \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
+    \end{equation}
+    
+    \item \textbf{Recall}: Proporsi sampel positif aktual yang berhasil dideteksi oleh model.
+    \begin{equation}
+        \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
+    \end{equation}
+    
+    \item \textbf{F1-Score}: Rata-rata harmonik antara presisi dan recall, berguna saat distribusi kelas tidak seimbang.
+    \begin{equation}
+        \text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+    \end{equation}
+\end{enumerate}
 \clearpage
 
 %======================================================================
@@ -256,145 +301,404 @@ Evaluasi performa klasifikasi dilakukan menggunakan komponen \textit{Confusion M
 \chapter{Hasil dan Pembahasan}
 
 \section{Langkah Percobaan (Stroke Prediction Dataset)}
-Pada bagian pertama, percobaan pemodelan klasifikasi diterapkan pada dataset \textit{Stroke Prediction} untuk mendeteksi risiko stroke.
+Dataset \textit{Stroke Prediction} dipakai untuk menguji ketahanan algoritma klasifikasi dalam menghadapi sebaran data medis yang timpang. Rangkaian pengerjaan di Google Colab diuraikan secara runtut di bawah ini.
+
+\subsection{Import Pustaka Komputasi dan Pemuatan Dataset}
+Tahap awal memuat pustaka Python untuk manipulasi data, visualisasi, pra-pemrosesan, serta pemodelan Scikit-Learn. Selanjutnya, dataset dibaca langsung dari URL repositori GitHub publik ke dalam DataFrame Pandas dan diperiksa menggunakan \texttt{head()}.
+\begin{lstlisting}[style=pythonstyle, caption=Import Pustaka dan Load Dataset di Google Colab]
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
+
+df = pd.read_csv('https://raw.githubusercontent.com/ganjar87/data_science_practice/refs/heads/main/healthcare-dataset-stroke-data.csv')
+df.head()
+\end{lstlisting}
+
+\screenshotimage{gambar/colab-import-load.png}{Import Pustaka dan Pemuatan Lima Baris Pertama Dataset di Google Colab}{colab-import-load}
+Seluruh modul berhasil dimuat ke runtime tanpa galat dependensi, dan data tersimpan pada variabel \texttt{df} dengan dimensi 5110 baris dan 12 kolom atribut.
+
+\subsection{Exploratory Data Analysis (EDA)}
 
 \begin{enumerate}
-    \item \textbf{Load Dataset Stroke} \\
-    Dataset dimuat dari repositori dan ditinjau distribusi kategori fitur target \texttt{stroke}.
-\begin{lstlisting}[style=pythonstyle, caption=Visualisasi Pie Chart Target Stroke]
+    \item \textbf{Inspeksi Baris Pertama dan Terakhir Data} \\
+    Fungsi \texttt{head()} dan \texttt{tail()} menampilkan cuplikan awal dan akhir baris untuk mengecek struktur kolom data.
+\begin{lstlisting}[style=pythonstyle, caption=Inspeksi Baris head dan tail]
+df.head()
+df.tail()
+\end{lstlisting}
+    Dataset memuat informasi demografis seperti \texttt{gender}, \texttt{age}, \texttt{ever\_married}, \texttt{work\_type}, dan \texttt{Residence\_type}. Selain itu, terdapat data klinis meliputi \texttt{hypertension}, \texttt{heart\_disease}, \texttt{avg\_glucose\_level}, serta \texttt{bmi}, ditambah status kebiasaan merokok dan target \texttt{stroke}. Hasil lima baris pertama telah tertampil pada Gambar \ref{fig:colab-import-load}.
+
+    \item \textbf{Ringkasan Statistik Deskriptif} \\
+    Fungsi \texttt{describe()} menghitung sebaran nilai atribut numerik.
+\begin{lstlisting}[style=pythonstyle, caption=Statistik Deskriptif Dataset]
+df.describe()
+\end{lstlisting}
+    \screenshotimage{gambar/colab-eda-describe.png}{Tampilan Output Statistik Deskriptif di Google Colab}{colab-eda-describe}
+    Rentang usia subjek berkisar dari 0.08 tahun hingga 82 tahun. Nilai rata-rata variabel target \texttt{stroke} sebesar 0.0487 menunjukkan hanya sekitar 4.87\% sampel yang terkonfirmasi mengalami stroke.
+
+    \item \textbf{Distribusi Kelas Target (Pie Chart)} \\
+    Proporsi kelas dihitung menggunakan \texttt{value\_counts()} dan ditampilkan via diagram lingkaran.
+\begin{lstlisting}[style=pythonstyle, caption=Visualisasi Distribusi Target]
 data = df['stroke'].value_counts()
-plt.pie(data, labels=data.index, autopct='%.2f%%')
+data.plot(kind='pie', autopct='%.2f%%')
 plt.show()
 \end{lstlisting}
-    \screenshotimage{gambar/pie_stroke.png}{Pie Chart Distribusi Target Stroke}{pie_stroke}
-    Berdasarkan diagram lingkaran tersebut, kelas negatif (tidak stroke) mendominasi sebesar 95.13\%, sedangkan kelas positif (stroke) hanya 4.87\%. Dataset bersifat sangat \textit{imbalanced}.
+    \screenshotimage{gambar/pie_stroke.png}{Visualisasi Distribusi Target Kelas Stroke}{pie_stroke}
+    Kelas negatif (tidak stroke) mendominasi sebesar 95.13\%, sedangkan kelas positif hanya 4.87\%. Dataset berada dalam kondisi ketimpangan kelas yang tajam (\textit{imbalanced dataset}).
 
-    \item \textbf{Visualisasi Distribusi Numerik} \\
-    Dilakukan pengecekan distribusi fitur menggunakan histogram.
-    \screenshotimage{gambar/hist_stroke.png}{Histogram Variabel Numerik Dataset Stroke}{hist_stroke}
+    \item \textbf{Visualisasi Distribusi Fitur Numerik (Histogram)} \\
+    Histogram kisi matriks menampilkan bentuk kurva distribusi setiap kolom numerik.
+\begin{lstlisting}[style=pythonstyle, caption=Histogram Variabel Numerik]
+df.hist(figsize=(10,10))
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/hist_stroke.png}{Histogram Seluruh Fitur Numerik Dataset Stroke}{hist_stroke}
+    Fitur \texttt{avg\_glucose\_level} menunjukkan distribusi condong ke kanan (\textit{right-skewed}), sementara fitur \texttt{bmi} mendekati lonceng normal dengan ekor panjang pada nilai ekstrem.
 
-    \item \textbf{Pemodelan dan Evaluasi} \\
-    Setelah menangani nilai kosong pada atribut \texttt{bmi}, merubah kategori teks menggunakan \texttt{LabelEncoder}, dan menyelaraskan skala melalui \texttt{StandardScaler}, data dievaluasi dengan beberapa model machine learning (rasio pembagian 70:30).
+    \item \textbf{Pengecekan Nilai Hilang (Missing Values)} \\
+    Jumlah data kosong pada setiap atribut dihitung menggunakan \texttt{isnull().sum()}.
+\begin{lstlisting}[style=pythonstyle, caption=Pengecekan Missing Value]
+df.isnull().sum()
+\end{lstlisting}
+    \screenshotimage{gambar/colab-eda-null.png}{Output Pengecekan Missing Values di Google Colab}{colab-eda-null}
+    Hanya atribut \texttt{bmi} yang memuat nilai hilang, yakni sebanyak 201 entri. Atribut lainnya terisi lengkap.
 
-    Berikut adalah representasi visualisasi \textit{Confusion Matrix} (\textit{heatmap}) untuk masing-masing algoritma, yang menampakkan kecenderungan model terhadap bias kelas mayoritas.
-
-    \begin{figure}[H]
-        \centering
-        \begin{minipage}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{gambar/cm_lr.png}
-            \caption{CM Logistic Regression}
-        \end{minipage}\hfill
-        \begin{minipage}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{gambar/cm_knn.png}
-            \caption{CM K-Nearest Neighbors}
-        \end{minipage}
-        
-        \vspace{0.5cm}
-        \begin{minipage}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{gambar/cm_dt.png}
-            \caption{CM Decision Tree}
-        \end{minipage}\hfill
-        \begin{minipage}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{gambar/cm_rf.png}
-            \caption{CM Random Forest}
-        \end{minipage}
-        
-        \vspace{0.5cm}
-        \begin{minipage}{0.45\textwidth}
-            \centering
-            \includegraphics[width=\textwidth]{gambar/cm_ada.png}
-            \caption{CM AdaBoost}
-        \end{minipage}
-    \end{figure}
+    \item \textbf{Identifikasi Atribut Kategorikal} \\
+    Fitur bertipe objek disaring untuk menentukan target pengkodean numerik.
+\begin{lstlisting}[style=pythonstyle, caption=Penyaringan Atribut Kategorikal]
+df_X = df.drop(['id', 'stroke'], axis=1)
+df_y = df[['stroke']]
+cats = df_X.select_dtypes(include=['object', 'bool']).columns
+print(cats)
+\end{lstlisting}
+    \screenshotimage{gambar/colab-eda-cats.png}{Hasil Filter Atribut Kategorikal di Google Colab}{colab-eda-cats}
+    Ditemukan lima kolom kategorikal yang memerlukan konversi angka: \texttt{gender}, \texttt{ever\_married}, \texttt{work\_type}, \texttt{Residence\_type}, dan \texttt{smoking\_status}.
 \end{enumerate}
 
-\section{Tugas dan Analisis (Loan Status Dataset)}
+Tahapan pra-pemrosesan data meliputi pengisian nilai hilang kolom \texttt{bmi} dengan median, pengkodean fitur kategorikal dan variabel target menggunakan \texttt{LabelEncoder}, pemisahan dataset menjadi 70\% data latih dan 30\% data uji (\texttt{random\_state=42}), serta normalisasi seluruh fitur prediktor memakai \texttt{StandardScaler}.
 
-Pada bagian tugas ini, algoritma klasifikasi diimplementasikan untuk kasus persetujuan pengajuan pinjaman bank.
+\begin{lstlisting}[style=pythonstyle, caption=Sel Pra-pemrosesan Data Stroke di Google Colab]
+# Preprocessing
+df_X['bmi'] = df_X['bmi'].fillna(df_X['bmi'].median())
+
+le = LabelEncoder()
+for col in cats:
+    df_X[col] = le.fit_transform(df_X[col].astype(str))
+    
+df_y = le.fit_transform(df_y['stroke'])
+
+X = df_X.values.astype(float)
+y = df_y.astype(float)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+print("X_train shape:", X_train.shape)
+\end{lstlisting}
+
+\screenshotimage{gambar/colab-prep-full.png}{Tahapan Pra-pemrosesan Data Stroke dan Pengecekan Dimensi Data Latih}{colab-prep-full}
+Proses ini menghasilkan matriks data latih \texttt{X\_train} berukuran $(3577, 10)$ dan data uji \texttt{X\_test} berukuran $(1533, 10)$ yang telah terstandardisasi serta siap diproses oleh algoritma klasifikasi.
+
+\subsection{Pemodelan Klasifikasi dan Evaluasi (Dataset Stroke)}
+
+Lima algoritma diuji pada subset data uji Stroke ($N=1533$):
 
 \begin{enumerate}
-    \item \textbf{Tujuan Penggunaan Dataset} \\
-    Dataset \textit{Loan Status Prediction} digunakan untuk membangun model pembelajaran mesin terawasi (\textit{supervised machine learning}) yang mampu mendeteksi profil risiko seorang nasabah dan memprediksi apakah pengajuan pinjaman layak diterima atau ditolak. Penggunaan model ini dapat mempercepat proses evaluasi kredit bank dan mengurangi subjektivitas manusia.
+    \item \textbf{Logistic Regression} \\
+    Model dilatih memakai konfigurasi standar.
+\begin{lstlisting}[style=pythonstyle, caption=Pelatihan Model Logistic Regression]
+model_lr = LogisticRegression()
+model_lr.fit(X_train, y_train)
+y_pred_lr = model_lr.predict(X_test)
+print("Accuracy LR:", accuracy_score(y_test, y_pred_lr))
+print("Precision LR:", precision_score(y_test, y_pred_lr, zero_division=0))
+print("Recall LR:", recall_score(y_test, y_pred_lr, zero_division=0))
+cm_lr = confusion_matrix(y_test, y_pred_lr)
+print("Confusion matrix:\n", cm_lr)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm_lr, display_labels=model_lr.classes_)
+disp.plot(cmap='Blues')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/cm_lr.png}{Confusion Matrix Logistic Regression}{cm_lr}
 
-    \item \textbf{Definisi Atribut Input dan Output} \\
-    \begin{itemize}
-        \item \textbf{Output (Label)}: \texttt{Loan\_Status} (status persetujuan pinjaman, biner).
-        \item \textbf{Input (Features)}: Atribut demografi dan finansial seperti \texttt{Gender, Married, Dependents, Education, Self\_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan\_Amount\_Term, Credit\_History, Property\_Area}.
-    \end{itemize}
+\begin{lstlisting}[style=pythonstyle, caption=Inspeksi Koefisien dan Intercept Logistic Regression]
+print("F1:", f1_score(y_test, y_pred_lr, zero_division=0))
+print("Model coef:", model_lr.coef_)
+print("Model intercept:", model_lr.intercept_)
+\end{lstlisting}
+    Akurasi tercatat 94.19\%, namun matriks konfusi menunjukkan $\text{TN}=1444$, $\text{FN}=89$, serta $\text{TP}=0$. Model memprediksi seluruh sampel ke kelas mayoritas.
 
-    \item \textbf{Hasil Evaluasi Pemodelan Loan Status} \\
-    Berikut disajikan hasil \textit{Confusion Matrix} (matriks kesalahan) dari model Logistic Regression, KNN, Decision Tree, dan Random Forest setelah melalui penanganan nilai kosong, konversi tipe string dengan \texttt{Label Encoding}, serta \textit{feature scaling} tersandardisasi pada 30\% data uji.
+    \item \textbf{K-Nearest Neighbors (KNN)} \\
+    Model KNN dikonfigurasi dengan parameter $k=10$.
+\begin{lstlisting}[style=pythonstyle, caption=Pelatihan Model KNN]
+model_knn = KNeighborsClassifier(n_neighbors=10)
+model_knn.fit(X_train, y_train)
+y_pred_knn = model_knn.predict(X_test)
+print("Accuracy KNN:", accuracy_score(y_test, y_pred_knn))
+print("Precision KNN:", precision_score(y_test, y_pred_knn, zero_division=0))
+print("Recall KNN:", recall_score(y_test, y_pred_knn, zero_division=0))
+cm_knn = confusion_matrix(y_test, y_pred_knn)
+print("Confusion matrix:\n", cm_knn)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm_knn, display_labels=model_knn.classes_)
+disp.plot(cmap='Blues')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/cm_knn.png}{Confusion Matrix KNN}{cm_knn}
+    Akurasi mencapai 94.19\%. Sepuluh tetangga terdekat selalu didominasi oleh kelas mayoritas sehingga recall kelas positif bernilai nol.
+
+    \item \textbf{Decision Tree} \\
+    Pohon keputusan dilatih memakai kriteria pemisahan \textit{entropy}.
+\begin{lstlisting}[style=pythonstyle, caption=Pelatihan Model Decision Tree]
+model_dt = DecisionTreeClassifier(criterion="entropy")
+model_dt.fit(X_train, y_train)
+y_pred_dt = model_dt.predict(X_test)
+print("Accuracy DT:", accuracy_score(y_test, y_pred_dt))
+print("Precision DT:", precision_score(y_test, y_pred_dt, zero_division=0))
+print("Recall DT:", recall_score(y_test, y_pred_dt, zero_division=0))
+cm_dt = confusion_matrix(y_test, y_pred_dt)
+print("Confusion matrix:\n", cm_dt)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm_dt, display_labels=model_dt.classes_)
+disp.plot(cmap='Blues')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/cm_dt.png}{Confusion Matrix Decision Tree}{cm_dt}
+    Decision Tree menjadi satu-satunya model yang berhasil mendeteksi pasien positif stroke ($\text{TP}=9$). Akurasi keseluruhan berada di angka 90.22\% dengan kemunculan 70 kasus \textit{False Positive}.
+
+    \item \textbf{Random Forest} \\
+    Model ansambel dilatih memakai kumpulan pohon keputusan acak.
+\begin{lstlisting}[style=pythonstyle, caption=Pelatihan Model Random Forest]
+model_rf = RandomForestClassifier()
+model_rf.fit(X_train, y_train)
+y_pred_rf = model_rf.predict(X_test)
+print("Accuracy RF:", accuracy_score(y_test, y_pred_rf))
+print("Precision RF:", precision_score(y_test, y_pred_rf, zero_division=0))
+print("Recall RF:", recall_score(y_test, y_pred_rf, zero_division=0))
+cm_rf = confusion_matrix(y_test, y_pred_rf)
+print("Confusion matrix:\n", cm_rf)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm_rf, display_labels=model_rf.classes_)
+disp.plot(cmap='Blues')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/cm_rf.png}{Confusion Matrix Random Forest}{cm_rf}
+    Agregasi voting mayoritas meredam sinyal kelas minoritas, menghasilkan akurasi 94.19\% dengan prediksi kelas positif sebesar 0.
+
+    \item \textbf{AdaBoost} \\
+    Model penguat adaptif dieksekusi secara sekuensial.
+\begin{lstlisting}[style=pythonstyle, caption=Pelatihan Model AdaBoost]
+model_ada = AdaBoostClassifier()
+model_ada.fit(X_train, y_train)
+y_pred_ada = model_ada.predict(X_test)
+print("Accuracy AdaBoost:", accuracy_score(y_test, y_pred_ada))
+print("Precision AdaBoost:", precision_score(y_test, y_pred_ada, zero_division=0))
+print("Recall AdaBoost:", recall_score(y_test, y_pred_ada, zero_division=0))
+cm_ada = confusion_matrix(y_test, y_pred_ada)
+print("Confusion matrix:\n", cm_ada)
+disp = ConfusionMatrixDisplay(confusion_matrix=cm_ada, display_labels=model_ada.classes_)
+disp.plot(cmap='Blues')
+plt.show()
+\end{lstlisting}
+    \screenshotimage{gambar/cm_ada.png}{Confusion Matrix AdaBoost}{cm_ada}
+    Pola keluaran identik dengan model baseline, mencatat akurasi 94.19\% dengan kegagalan memprediksi sampel stroke positif.
+\end{enumerate}
+
+\subsection{Rekapitulasi Evaluasi Dataset Stroke}
+Tabel \ref{tab:stroke_performance} merangkum perbandingan metrik evaluasi dari kelima algoritma pada dataset uji Stroke.
+
+\begin{table}[H]
+\centering
+\caption{Perbandingan Performa Model Klasifikasi pada Dataset Stroke}
+\label{tab:stroke_performance}
+\vspace{0.2cm}
+\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabularx}{0.85\textwidth}{X c c c}
+\toprule
+\rowcolor{darkblue}
+\thead{Model} & \thead{Accuracy} & \thead{Precision} & \thead{Recall} \\
+\midrule
+Logistic Regression & 0.9419 & 0.0000 & 0.0000 \\
+K-Nearest Neighbors ($k=10$) & 0.9419 & 0.0000 & 0.0000 \\
+Decision Tree (Entropy) & 0.9022 & 0.1139 & 0.1011 \\
+Random Forest & 0.9419 & 0.0000 & 0.0000 \\
+AdaBoost & 0.9419 & 0.0000 & 0.0000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Eksperimen ini membuktikan bahwa akurasi tinggi dapat menipu. Angka 94.19\% lahir karena model hanya menebak kelas mayoritas. Decision Tree memiliki akurasi terendah (90.22\%), namun justru satu-satunya yang mampu mengenali pasien positif stroke.
+\clearpage
+
+%======================================================================
+% BAGIAN TUGAS DAN ANALISIS
+%======================================================================
+\section{Tugas dan Analisis (Loan Status Dataset)}
+
+Eksperimen kedua menerapkan klasifikasi untuk kasus persetujuan kredit perbankan menggunakan \textit{Loan Status Prediction Dataset}.
+
+\subsection{Tujuan Penggunaan Dataset}
+Dataset \textit{Loan Status} bertujuan membangun model klasifikasi untuk memprediksi persetujuan aplikasi pinjaman nasabah secara otomatis. Bank memanfaatkan model ini guna mempercepat verifikasi permohonan kredit, meminimalkan risiko kredit macet (\textit{Non-Performing Loan}), dan menjaga objektivitas penilaian profil finansial pemohon.
+
+\subsection{Definisi Atribut Input dan Output}
+Daftar variabel penyusun dataset dirinci pada Tabel \ref{tab:loan_attributes}.
+
+\begin{table}[H]
+\centering
+\caption{Definisi Atribut Dataset Loan Status Prediction}
+\label{tab:loan_attributes}
+\vspace{0.2cm}
+\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabularx}{\textwidth}{l l l X}
+\toprule
+\rowcolor{darkblue}
+\thead{Nama Atribut} & \thead{Tipe Data} & \thead{Peran} & \thead{Keterangan} \\
+\midrule
+\texttt{Loan\_ID} & Objek & Identitas & Kode identifikasi unik nasabah (dieliminasi). \\
+\texttt{Gender} & Kategorikal & Input & Jenis kelamin pemohon (Male, Female). \\
+\texttt{Married} & Kategorikal & Input & Status pernikahan pemohon (Yes, No). \\
+\texttt{Dependents} & Kategorikal & Input & Jumlah tanggungan keluarga (0, 1, 2, 3+). \\
+\texttt{Education} & Kategorikal & Input & Jenjang pendidikan (Graduate, Not Graduate). \\
+\texttt{Self\_Employed} & Kategorikal & Input & Status wiraswasta pemohon (Yes, No). \\
+\texttt{ApplicantIncome} & Numerik & Input & Pendapatan bulanan pemohon utama. \\
+\texttt{CoapplicantIncome} & Numerik & Input & Pendapatan bulanan pemohon pendamping. \\
+\texttt{LoanAmount} & Numerik & Input & Jumlah dana pinjaman yang diajukan (ribuan). \\
+\texttt{Loan\_Amount\_Term} & Numerik & Input & Jangka waktu pelunasan kredit (bulan). \\
+\texttt{Credit\_History} & Numerik & Input & Rekam jejak kelancaran kredit masa lalu (1, 0). \\
+\texttt{Property\_Area} & Kategorikal & Input & Wilayah lokasi agunan (Urban, Semiurban, Rural). \\
+\texttt{Loan\_Status} & Kategorikal & Output & Status persetujuan pinjaman (Y = Disetujui, N = Ditolak). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Implementasi Pemodelan Loan Status di Google Colab}
+
+\begin{enumerate}
+    \item \textbf{Pemuatan dan Penanganan Nilai Hilang} \\
+    Dataset dibaca dari repositori GitHub. Nilai kosong pada fitur kategorikal dan \texttt{Credit\_History} diisi modus, sedangkan fitur numerik diisi median.
+\begin{lstlisting}[style=pythonstyle, caption=Pemuatan dan Imputasi Dataset Loan]
+df_loan = pd.read_csv('https://raw.githubusercontent.com/dsrscientist/DSData/master/loan_prediction.csv')
+
+# Imputasi Modus untuk Kategorikal & Credit History
+df_loan['Gender'] = df_loan['Gender'].fillna(df_loan['Gender'].mode()[0])
+df_loan['Married'] = df_loan['Married'].fillna(df_loan['Married'].mode()[0])
+df_loan['Dependents'] = df_loan['Dependents'].fillna(df_loan['Dependents'].mode()[0])
+df_loan['Self_Employed'] = df_loan['Self_Employed'].fillna(df_loan['Self_Employed'].mode()[0])
+df_loan['Credit_History'] = df_loan['Credit_History'].fillna(df_loan['Credit_History'].mode()[0])
+
+# Imputasi Median untuk Fitur Numerik
+df_loan['LoanAmount'] = df_loan['LoanAmount'].fillna(df_loan['LoanAmount'].median())
+df_loan['Loan_Amount_Term'] = df_loan['Loan_Amount_Term'].fillna(df_loan['Loan_Amount_Term'].median())
+\end{lstlisting}
+
+    \item \textbf{Encoding, Pembagian Data, dan Standardisasi} \\
+    Kolom teks diubah menjadi numerik, dataset dibagi 70:30, lalu diskalakan memakai \texttt{StandardScaler}.
+\begin{lstlisting}[style=pythonstyle, caption=Preprocessing dan Pembagian Data Loan]
+df_X_loan = df_loan.drop(['Loan_ID', 'Loan_Status'], axis=1)
+df_y_loan = df_loan[['Loan_Status']]
+
+cats_loan = df_X_loan.select_dtypes(include=['object', 'bool']).columns
+for col in cats_loan:
+    df_X_loan[col] = le.fit_transform(df_X_loan[col].astype(str))
+df_y_loan = le.fit_transform(df_y_loan['Loan_Status'])
+
+X_train_l, X_test_l, y_train_l, y_test_l = train_test_split(
+    df_X_loan.values.astype(float), 
+    df_y_loan.astype(float), 
+    test_size=0.3, 
+    random_state=42
+)
+
+X_train_l = scaler.fit_transform(X_train_l)
+X_test_l = scaler.transform(X_test_l)
+\end{lstlisting}
+
+    \item \textbf{Pelatihan Empat Algoritma Klasifikasi} \\
+    Pelatihan dijalankan secara terstruktur menggunakan dictionary model.
+\begin{lstlisting}[style=pythonstyle, caption=Pelatihan Model Klasifikasi Loan Status]
+models = {
+    'Logistic Regression': LogisticRegression(),
+    'KNN': KNeighborsClassifier(n_neighbors=5),
+    'Decision Tree': DecisionTreeClassifier(criterion="entropy"),
+    'Random Forest': RandomForestClassifier()
+}
+
+results = []
+for name, model in models.items():
+    model.fit(X_train_l, y_train_l)
+    y_pred = model.predict(X_test_l)
+    results.append({
+        'model': name,
+        'accuracy': accuracy_score(y_test_l, y_pred),
+        'precision': precision_score(y_test_l, y_pred, zero_division=0),
+        'recall': recall_score(y_test_l, y_pred, zero_division=0)
+    })
+df_results = pd.DataFrame(results)
+\end{lstlisting}
+
+    \item \textbf{Visualisasi Matriks Konfusi Model Loan Status} \\
+    Gambar \ref{fig:cm_loan_grid} menyajikan matriks kesalahan dari keempat model pada 30\% data uji pinjaman.
 
     \begin{figure}[H]
         \centering
-        \begin{minipage}{0.45\textwidth}
+        \begin{minipage}{0.48\textwidth}
             \centering
             \includegraphics[width=\textwidth]{gambar/cm_loan_lr.png}
             \caption{CM Logistic Regression}
+            \label{fig:cm_loan_lr}
         \end{minipage}\hfill
-        \begin{minipage}{0.45\textwidth}
+        \begin{minipage}{0.48\textwidth}
             \centering
             \includegraphics[width=\textwidth]{gambar/cm_loan_knn.png}
-            \caption{CM KNN}
+            \caption{CM K-Nearest Neighbors}
+            \label{fig:cm_loan_knn}
         \end{minipage}
         
-        \vspace{0.5cm}
-        \begin{minipage}{0.45\textwidth}
+        \vspace{0.4cm}
+        \begin{minipage}{0.48\textwidth}
             \centering
             \includegraphics[width=\textwidth]{gambar/cm_loan_dt.png}
             \caption{CM Decision Tree}
+            \label{fig:cm_loan_dt}
         \end{minipage}\hfill
-        \begin{minipage}{0.45\textwidth}
+        \begin{minipage}{0.48\textwidth}
             \centering
             \includegraphics[width=\textwidth]{gambar/cm_loan_rf.png}
             \caption{CM Random Forest}
+            \label{fig:cm_loan_rf}
         \end{minipage}
+        \label{fig:cm_loan_grid}
     \end{figure}
-
-    \item \textbf{Tabel Performa Klasifikasi Pinjaman} \\
-    Dari hasil komputasi prediksi, berikut diringkas performa skor klasifikasi.
-
-    \begin{table}[H]
-    \centering
-    \caption{Perbandingan Performa Model Klasifikasi Pinjaman Bank}
-    \label{tab:loan_performance}
-    \vspace{0.2cm}
-    \footnotesize
-    \rowcolors{2}{gray!10}{white}
-    \begin{tabularx}{0.8\textwidth}{X c c c}
-    \toprule
-    \rowcolor{darkblue}
-    \thead{Model} & \thead{Accuracy} & \thead{Precision} & \thead{Recall} \\
-    \midrule
-    Logistic Regression & 0.7838 & 0.7564 & 0.9833 \\
-    K-Nearest Neighbors & 0.7622 & 0.7533 & 0.9417 \\
-    Decision Tree & 0.6757 & 0.7308 & 0.7917 \\
-    Random Forest & 0.7838 & 0.7703 & 0.9500 \\
-    \bottomrule
-    \end{tabularx}
-    \end{table}
-
-    \item \textbf{Analisis Model Terbaik} \\
-    Menganalisis Tabel \ref{tab:loan_performance}, model \textbf{Random Forest} adalah model klasifikasi terbaik yang direkomendasikan. Walaupun tingkat akurasinya setara dengan Logistic Regression (sebesar 78,38\%), Random Forest mengungguli pada aspek \textit{precision} yaitu sebesar 77,03\%. Dalam konteks persetujuan pinjaman, presisi mengukur kehati-hatian model agar tidak menyetujui peminjam yang profil kreditnya bermasalah (\textit{False Positive}). Penggunaan arsitektur ansambel pohon pada Random Forest menjadikannya kuat menavigasi kompleksitas tanpa jatuh pada perangkap porsi korelasi yang mendominasi, sehingga evaluasi profil pinjaman lebih objektif dan aman bagi instansi perbankan.
-
 \end{enumerate}
 
+\subsection{Tabel Performa Klasifikasi Pinjaman Bank}
+Hasil pengujian performa dari keempat model dirangkum pada Gambar \ref{fig:colab-loan-summary-table}.
+
+\screenshotimage{gambar/colab-loan-summary-table.png}{Output Tabel Hasil Performa Model di Google Colab}{colab-loan-summary-table}
+
+\subsection{Analisis Model Terbaik}
+Berdasarkan hasil komparasi performa pada Gambar \ref{fig:colab-loan-summary-table}, model \textbf{Random Forest} ditetapkan sebagai algoritma terbaik untuk kasus persetujuan pinjaman ini.
+
+Pertimbangan pemilihan didasarkan pada metrik presisi. Akurasi Random Forest setara dengan Logistic Regression pada angka 78.38\%, namun Random Forest mencatat presisi lebih unggul, yaitu 76.67\% berbanding 75.64\%. Dalam operasional perbankan, presisi mencerminkan kemampuan sistem menghindari nasabah berisiko gagal bayar yang terprediksi layak (\textit{False Positive}). Kesalahan menyetujui pinjaman berisiko menimbulkan kerugian finansial langsung bagi bank. Struktur pohon gabungan pada Random Forest membatasi bias dominan dari fitur tunggal dan menjaga kestabilan estimasi kredit.
 \clearpage
 
 %======================================================================
 % BAB IV: KESIMPULAN
 %======================================================================
 \chapter{Kesimpulan}
-Setelah melakukan eksperimen klasifikasi pada Pertemuan III, ditarik beberapa simpulan fundamental:
-\begin{itemize}
-    \item Algoritma klasifikasi, baik yang berbasis regresi probabilitas (Logistic Regression), pendekatan jarak spasial (KNN), pembagian keputusan (Decision Tree), hingga integrasi \textit{ensemble learning} (Random Forest dan AdaBoost) memiliki mekanisme kerja yang berbeda dalam membangun batas keputusan pembagian kelas (\textit{decision boundary}).
-    \item Hasil dari dataset observasi (Stroke dan Loan) menegaskan bahwa metrik akurasi tunggal (\textit{Accuracy}) seringkali bersifat menyesatkan, terutama pada kasus \textit{imbalanced dataset}. Akurasi yang tinggi pada model Stroke didominasi oleh prediksi tebakan mayoritas absolut tanpa kemampuan memprediksi sampel kelas positif yang riil.
-    \item Metrik pendamping seperti \textit{Precision} dan \textit{Recall} adalah kunci evaluasi model sejati. Khusus pada mitigasi perbankan untuk menyetujui pinjaman, \textit{precision} tinggi pada model seperti Random Forest sangat vital dalam meminimalisasi risiko penyaluran kredit gagal bayar (\textit{False Positive}).
-\end{itemize}
+
+Praktikum klasifikasi ini membuktikan bahwa karakteristik algoritma menentukan efektivitas pembentukan batas keputusan. Logistic Regression bekerja optimal pada pemisahan linear, sedangkan Random Forest tangguh memetakan relasi non-linear tanpa mudah terjebak \textit{overfitting}. Keberhasilan pemodelan ini bertumpu pada tahapan pra-pemrosesan yang disiplin, mulai dari penanganan nilai hilang, transformasi kategori, hingga standardisasi skala fitur.
+
+Akurasi tunggal terbukti bukan tolok ukur yang dapat diandalkan, terutama saat menghadapi dataset dengan sebaran kelas yang timpang. Tingginya akurasi pada kasus deteksi stroke lahir dari kecenderungan model menebak kelas mayoritas semata, sementara sampel positif aktual gagal terdeteksi. Oleh karena itu, metrik presisi dan recall memegang peranan penentu sesuai profil risiko domain terapan. Pada kasus evaluasi pinjaman bank, keunggulan presisi Random Forest sebesar 76.67\% menjadi prioritas utama guna meminimalkan kerugian akibat meloloskan debitur berisiko gagal bayar.
 \clearpage
 
 %======================================================================
