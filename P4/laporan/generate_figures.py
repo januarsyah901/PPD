@@ -181,7 +181,7 @@ df_X_car = df_car.drop(['car_ID', 'CarName', 'price'], axis=1)
 y_car = df_car['price'].values
 
 le = LabelEncoder()
-cats_car = df_X_car.select_dtypes(include=['object', 'str']).columns
+cats_car = df_X_car.select_dtypes(include=['object']).columns
 for col in cats_car:
     df_X_car[col] = le.fit_transform(df_X_car[col].astype(str))
 
