@@ -25,20 +25,19 @@ Seluruh grafik berikut sudah dirender otomatis ke dalam folder `P4/laporan/gamba
 
 ---
 
-## B. Daftar Titik Output Kode Colab (Area Screenshot Teks / Tabel)
+## B. Daftar Tangkapan Layar Output Kode Colab (Sudah Masuk ke Naskah Laporan)
 
-Berikut daftar sel Google Colab yang menghasilkan teks/tabel output kode (termasuk output Train R2, Test R2, dan RMSE):
+Seluruh tangkapan layar output kode Google Colab telah diintegrasikan ke dalam folder `P4/laporan/gambar/` dan naskah laporan LaTeX:
 
-| No | Nama Potensial File | Sel di Google Colab (`p4_regression.ipynb`) | Letak di Laporan LaTeX / PDF | Isi Output Kode yang Muncul |
+| No | Nama File Gambar | Sel di Google Colab (`p4_regression.ipynb`) | Letak di Laporan LaTeX / PDF | Status & Keterangan |
 |---|---|---|---|---|
-| 1 | `colab-eda-head.png` | Cell 5 (`df.head()` dan `df.tail()`) | Bab III, Subbab 3.2 poin 1 (Hal. 6) | Tabel 5 baris pertama dan 5 baris terakhir dataset KC House |
-| 2 | `colab-eda-describe.png` | Cell 6 (`df.describe()`) | Bab III, Subbab 3.2 poin 2 (Hal. 6) | Tabel ringkasan statistik deskriptif (count, mean, std, min, quartile, max) |
-| 3 | `colab-eda-corr.png` | Cell 8 (`df.corr(numeric_only=True)`) | Bab III, Subbab 3.2 poin 4 (Hal. 7) | Matriks angka korelasi antarfitur numerik |
-| 4 | `colab-eda-null-cats.png` | Cell 9 & 10 (`isnull().sum()` & `cats`) | Bab III, Subbab 3.2 poin 5 (Hal. 8) | Teks pengecekan missing value (total 0) dan `Index([], dtype='object')` |
-| 5 | `colab-model-lr-output.png` | Cell 11 & 12 (Linear Regression) | Bab III, Subbab 3.3.1 (Hal. 9) | `Train R2: 0.6995`, `Test R2: 0.6995`, `RMSE: 208296.73`, `Intercept`, koefisien, dan 10 prediksi |
-| 6 | `colab-model-dt-output.png` | Cell 14 & 15 (Decision Tree) | Bab III, Subbab 3.3.2 (Hal. 10) | `Train R2: 0.9185`, `Test R2: 0.7586`, `RMSE: 186675.48`, dan 10 perbandingan prediksi |
-| 7 | `colab-model-rf-output.png` | Cell 17 & 18 (Random Forest) | Bab III, Subbab 3.3.3 (Hal. 11) | `Train R2: 0.982463...`, `Test R2: 0.853950...`, `RMSE: 145205.694...`, dan 10 perbandingan prediksi |
-| 8 | `colab-kc-eval-table.png` | Cell 20 (`df_kc_eval`) | Bab III, Subbab 3.4 (Hal. 12, Tabel 2) | Output tabel perbandingan performa 3 model regresi KC House |
-| 9 | `colab-car-head.png` | Cell 23 (`df_car.head()`) | Bab III, Subbab 3.5 (Hal. 13-14) | Output dimensi data (205, 26) dan tabel cuplikan data mobil |
-| 10 | `colab-car-corr-text.png` | Cell 24 (`corr_car`) | Bab III, Subbab 3.6 (Hal. 15) | Teks daftar koefisien korelasi Pearson fitur numerik terhadap price |
-| 11 | `colab-car-results-table.png` | Cell 28 (`df_results_car`) | Bab III, Subbab 3.8 (Hal. 18, Tabel 4) | Output tabel evaluasi akhir model mobil: Linear (3722.33 / 0.8000 / 0.8968), DT (2994.77 / 0.8706 / 0.9449), RF (1955.87 / 0.9448 / 0.9727) |
+| 1 | `colab-eda-head.png` | Cell 5 (`df.head()` dan `df.tail()`) | Bab III, Subbab 3.2 poin 1 (Gambar 1) | Terpasang (output 5 baris awal & akhir) |
+| 2 | `colab-eda-describe.png` | Cell 6 (`df.describe()`) | Bab III, Subbab 3.2 poin 2 (Gambar 2) | Terpasang (tabel statistik deskriptif KC House) |
+| 3 | `colab-eda-corr.png` | Cell 8 (`df.corr(numeric_only=True)`) | Bab III, Subbab 3.2 poin 4 (Gambar 4) | Terpasang (matriks nilai angka korelasi) |
+| 4 | `colab-eda-null.png` | Cell 9 (`df.isnull().sum()`) | Bab III, Subbab 3.2 poin 5 (Gambar 6) | Terpasang (verifikasi 0 missing value) |
+| 5 | `colab-model-lr-output.png` | Cell 12 (Evaluasi Linear Regression) | Bab III, Subbab 3.3.1 (Gambar 7) | Terpasang (output RMSE dan R2 Linear Regression) |
+| 6 | `colab-model-dt-output.png` | Cell 15 (Evaluasi Decision Tree) | Bab III, Subbab 3.3.2 (Gambar 9) | Terpasang (output RMSE dan R2 Decision Tree) |
+| 7 | `colab-model-rf-output.png` | Cell 18 (Evaluasi Random Forest) | Bab III, Subbab 3.3.3 (Gambar 11) | Terpasang (output RMSE dan R2 Random Forest) |
+| 8 | `colab-kc-eval-table.png` | Cell 20 (`df_kc_eval`) | Bab III, Subbab 3.4 (Gambar 13) | Terpasang (tabel evaluasi komparasi KC House) |
+| 9 | `colab-car-head.png` | Cell 23 (`df_car.head()`) | Bab III, Subbab 3.5 (Gambar 15) | Terpasang (dimensi dan cuplikan data mobil) |
+| 10 | `colab-car-results-table.png` | Cell 28 (`df_results_car`) | Bab III, Subbab 3.8 (Gambar 18) | Terpasang (tabel performa akhir model mobil) |

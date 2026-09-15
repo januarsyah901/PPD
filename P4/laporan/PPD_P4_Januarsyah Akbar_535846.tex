@@ -96,12 +96,12 @@
     }
 }
 
-\newcommand{\screenshotimage}[3]{%
+\newcommand{\screenshotimage}[4][0.88\textwidth]{%
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.88\textwidth]{#1}
-        \caption{#2}
-        \label{fig:#3}
+        \includegraphics[width=#1]{#2}
+        \caption{#3}
+        \label{fig:#4}
     \end{figure}
 }
 
@@ -146,8 +146,8 @@
 \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 
-\setcounter{secnumdepth}{3}
-\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
 
 \renewcommand{\cftchapdotsep}{\cftdotsep}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
@@ -309,10 +309,14 @@ Inspeksi data dilakukan guna memeriksa struktur nilai, sebaran frekuensi, kebera
 
 \begin{enumerate}
     \item \textbf{Inspeksi Baris Pertama dan Terakhir}: \\
-    Perintah \texttt{df.head()} dan \texttt{df.tail()} menampilkan lima data teratas dan terbawah. Kolom dataset mencakup identitas rumah (\texttt{id}), tanggal penjualan (\texttt{date}), variabel target harga (\texttt{price}), jumlah kamar tidur (\texttt{bedrooms}), kamar mandi (\texttt{bathrooms}), luas bangunan (\texttt{sqft\_living}), luas tanah (\texttt{sqft\_lot}), lantai (\texttt{floors}), tepi laut (\texttt{waterfront}), kualitas pemandangan (\texttt{view}), kondisi fisik (\texttt{condition}), tingkat kualitas konstruksi (\texttt{grade}), koordinat lokasi (\texttt{lat}, \texttt{long}), serta spesifikasi lingkungan sekitar (\texttt{sqft\_living15}, \texttt{sqft\_lot15}).
+    Perintah \texttt{df.head()} dan \texttt{df.tail()} menampilkan lima data teratas dan terbawah. Kolom dataset mencakup identitas rumah (\texttt{id}), tanggal penjualan (\texttt{date}), variabel target harga (\texttt{price}), jumlah kamar tidur (\texttt{bedrooms}), kamar mandi (\texttt{bathrooms}), luas bangunan (\texttt{sqft\_living}), luas tanah (\texttt{sqft\_lot}), lantai (\texttt{floors}), tepi laut (\texttt{waterfront}), kualitas pemandangan (\texttt{view}), kondisi fisik (\texttt{condition}), tingkat kualitas konstruksi (\texttt{grade}), koordinat lokasi (\texttt{lat}, \texttt{long}), serta spesifikasi lingkungan sekitar (\texttt{sqft\_living15}, \texttt{sqft\_lot15}). Hasil eksekusi pada Google Colab disajikan pada Gambar \ref{fig:colab-eda-head}.
+
+    \screenshotimage{gambar/colab-eda-head.png}{Output Lima Baris Pertama dan Terakhir KC House Data di Google Colab}{colab-eda-head}
 
     \item \textbf{Statistik Deskriptif Dataset}: \\
-    Fungsi \texttt{df.describe()} menyajikan ringkasan statistik dari 21.613 unit rumah. Harga jual (\texttt{price}) memiliki nilai rata-rata sebesar 540.088 USD, nilai minimum 75.000 USD, kuartil bawah (Q1) 321.950 USD, median 450.000 USD, kuartil atas (Q3) 645.000 USD, dan harga maksimum menyentuh 7.700.000 USD. Standar deviasi harga yang mencapai 367.127 USD menandakan variasi nilai properti yang lebar.
+    Fungsi \texttt{df.describe()} menyajikan ringkasan statistik dari 21.613 unit rumah. Harga jual (\texttt{price}) memiliki nilai rata-rata sebesar 540.088 USD, nilai minimum 75.000 USD, kuartil bawah (Q1) 321.950 USD, median 450.000 USD, kuartil atas (Q3) 645.000 USD, dan harga maksimum menyentuh 7.700.000 USD. Standar deviasi harga yang mencapai 367.127 USD menandakan variasi nilai properti yang lebar. Tampilan statistik deskriptif pada Google Colab disajikan pada Gambar \ref{fig:colab-eda-describe}.
+
+    \screenshotimage{gambar/colab-eda-describe.png}{Output Ringkasan Statistik Deskriptif KC House Data di Google Colab}{colab-eda-describe}
 
     \item \textbf{Visualisasi Histogram Fitur Numerik}: \\
     Perintah \texttt{df.hist(figsize=(10,10))} memetakan distribusi sebaran data seluruh fitur, sebagaimana disajikan pada Gambar \ref{fig:hist_kc_house}.
@@ -322,7 +326,9 @@ Inspeksi data dilakukan guna memeriksa struktur nilai, sebaran frekuensi, kebera
     Kurva harga rumah (\texttt{price}), luas bangunan (\texttt{sqft\_living}), dan luas tanah (\texttt{sqft\_lot}) memperlihatkan pola miring ke kanan (\textit{right-skewed distribution}), di mana sebagian besar hunian berada pada rentang harga menengah ke bawah dengan sejumlah kecil transaksi bernilai sangat tinggi.
 
     \item \textbf{Korelasi Antarfitur Numerik}: \\
-    Pemeriksaan keterkaitan linear dilakukan lewat matriks korelasi \texttt{df.corr(numeric\_only=True)}. Gambar \ref{fig:corr_kc_house} menampilkan matriks korelasi Pearson.
+    Pemeriksaan keterkaitan linear dilakukan lewat matriks korelasi \texttt{df.corr(numeric\_only=True)}. Gambar \ref{fig:colab-eda-corr} memperlihatkan tabel matriks korelasi di Google Colab, sedangkan Gambar \ref{fig:corr_kc_house} menampilkan visualisasi matriks korelasi Pearson.
+
+    \screenshotimage{gambar/colab-eda-corr.png}{Output Tabel Matriks Korelasi Numerik KC House Data di Google Colab}{colab-eda-corr}
 
     \screenshotimage{gambar/corr_kc_house.png}{Matriks Korelasi Pearson Fitur Numerik KC House Data}{corr_kc_house}
 
@@ -340,16 +346,14 @@ cats = df_X.select_dtypes(include=['object', 'bool']).columns
 print("Kolom kategorikal:", cats)
 \end{lstlisting}
 
-\begin{outputbox}
-Missing values total: 0
-Kolom kategorikal: Index([], dtype='object')
-\end{outputbox}
+\screenshotimage[0.78\textwidth]{gambar/colab-eda-null.png}{Output Pengecekan Missing Values Dataset KC House di Google Colab}{colab-eda-null}
 
 \subsection{Pemodelan Regresi dan Evaluasi (KC House Data)}
 Fitur prediktor dibentuk dengan membuang kolom non-informatif (\texttt{id} dan \texttt{date}) serta kolom target (\texttt{price}). Data dikonversi ke array numerik dan dibagi menjadi 70\% data latih (15.129 baris) dan 30\% data uji (6.484 baris) menggunakan \texttt{random\_state=42}.
 
-\subsubsection{1. Linear Regression}
-Model Linear Regression diinisialisasi dan dilatih menggunakan metode \textit{Ordinary Least Squares}.
+\begin{enumerate}
+    \item \textbf{Linear Regression} \\
+    Model Linear Regression diinisialisasi dan dilatih menggunakan metode \textit{Ordinary Least Squares}.
 \begin{lstlisting}[style=pythonstyle, caption=Pelatihan dan Evaluasi Linear Regression pada KC House]
 X = df_X.astype(float).values
 y = df['price'].astype(float).values
@@ -369,19 +373,14 @@ print('RMSE    :', rmse)
 print('Intercept:', reg.intercept_)
 \end{lstlisting}
 
-\begin{outputbox}
-Train R2 : 0.6995155846436756
-Test R2  : 0.6994627057969904
-RMSE     : 208296.72772118862
-Intercept: 6641646.708095346
-\end{outputbox}
+\screenshotimage[0.72\textwidth]{gambar/colab-model-lr-output.png}{Output Evaluasi Model Linear Regression KC House di Google Colab}{colab-model-lr-output}
 
 Skor koefisien determinasi data latih ($0.6995$) dan data uji ($0.6995$) bernilai identik, membuktikan model linear berada dalam kondisi stabil tanpa gejala overfitting. Namun, nilai RMSE sebesar 208.296,73 USD masih tergolong besar karena relasi harga rumah terhadap kombinasi fitur lingkungan memiliki kecenderungan non-linear. Gambar \ref{fig:bar_comp_lr} memperlihatkan diagram perbandingan antara nilai aktual dan estimasi Linear Regression pada 50 sampel pengujian awal.
 
 \screenshotimage{gambar/bar_comp_lr.png}{Diagram Batang Perbandingan Nilai Riil vs Prediksi Linear Regression (50 Sampel)}{bar_comp_lr}
 
-\subsubsection{2. Decision Tree Regression}
-Pohon keputusan dibangun menggunakan batasan kedalaman maksimum \texttt{max\_depth=10} untuk membatasi kompleksitas simpul percabangan.
+    \item \textbf{Decision Tree Regression} \\
+    Pohon keputusan dibangun menggunakan batasan kedalaman maksimum \texttt{max\_depth=10} untuk membatasi kompleksitas simpul percabangan.
 \begin{lstlisting}[style=pythonstyle, caption=Pelatihan dan Evaluasi Decision Tree Regression pada KC House]
 dt = DecisionTreeRegressor(max_depth=10, random_state=42)
 dt.fit(X_train, y_train)
@@ -396,18 +395,14 @@ print('Test R2 :', r2_dt)
 print('RMSE    :', rmse_dt)
 \end{lstlisting}
 
-\begin{outputbox}
-Train R2: 0.9185274272472612
-Test R2 : 0.7586161408892403
-RMSE    : 186675.47954628285
-\end{outputbox}
+\screenshotimage[0.72\textwidth]{gambar/colab-model-dt-output.png}{Output Evaluasi Model Decision Tree Regression KC House di Google Colab}{colab-model-dt-output}
 
 Pembatasan kedalaman menghasilkan nilai $R^2$ data latih sebesar $0.9185$ dan $R^2$ data uji sebesar $0.7586$. Nilai RMSE berhasil ditekan menjadi 186.675,48 USD (turun sekitar 21.600 USD dibanding Linear Regression). Struktur pemisahan hierarkis mampu memetakan interaksi wilayah dan kondisi rumah secara lebih fleksibel. Gambar \ref{fig:bar_comp_dt} menunjukkan profil diagram batang Decision Tree yang lebih mendekati batang nilai aktual.
 
 \screenshotimage{gambar/bar_comp_dt.png}{Diagram Batang Perbandingan Nilai Riil vs Prediksi Decision Tree (50 Sampel)}{bar_comp_dt}
 
-\subsubsection{3. Random Forest Regression}
-Model ensemble Random Forest menggabungkan banyak pohon keputusan acak melalui prinsip agregasi rata-rata (\textit{bagging}).
+    \item \textbf{Random Forest Regression} \\
+    Model ensemble Random Forest menggabungkan banyak pohon keputusan acak melalui prinsip agregasi rata-rata (\textit{bagging}).
 \begin{lstlisting}[style=pythonstyle, caption=Pelatihan dan Evaluasi Random Forest Regression pada KC House]
 rf = RandomForestRegressor(random_state=42)
 rf.fit(X_train, y_train)
@@ -422,37 +417,17 @@ print('Test R2 :', r2_rf)
 print('RMSE    :', rmse_rf)
 \end{lstlisting}
 
-\begin{outputbox}
-Train R2: 0.9824632190847251
-Test R2 : 0.8539504812398517
-RMSE    : 145205.69421804798
-\end{outputbox}
+\screenshotimage[0.72\textwidth]{gambar/colab-model-rf-output.png}{Output Evaluasi Model Random Forest Regression KC House di Google Colab}{colab-model-rf-output}
 
 Random Forest mencatatkan performa paling unggul di seluruh parameter uji. Nilai $R^2$ data uji melonjak ke angka $0.8540$ dan nilai RMSE terpangkas menjadi 145.205,69 USD. Hal ini mengonfirmasi bahwa perpaduan multi-pohon acak efektif menekan varians kesalahan prediksi individu pohon. Gambar \ref{fig:bar_comp_rf} memperlihatkan diagram batang prediksi Random Forest yang paling selaras dengan nilai riil pasar.
 
 \screenshotimage{gambar/bar_comp_rf.png}{Diagram Batang Perbandingan Nilai Riil vs Prediksi Random Forest (50 Sampel)}{bar_comp_rf}
+\end{enumerate}
 
 \subsection{Rekapitulasi Evaluasi Model Percobaan}
-Tabel \ref{tab:kc_house_summary} dan Gambar \ref{fig:kc_house_eval_comp} merangkum perbandingan metrik performa ketiga model pada data uji KC House.
+Hasil perbandingan metrik performa ketiga model pada data uji KC House dirangkum pada Gambar \ref{fig:colab-kc-eval-table} dan visualisasi diagram batang pada Gambar \ref{fig:kc_house_eval_comp}.
 
-\begin{table}[H]
-\centering
-\caption{Rekapitulasi Evaluasi Model Regresi pada Data Uji KC House Data}
-\label{tab:kc_house_summary}
-\vspace{0.2cm}
-\footnotesize
-\rowcolors{2}{gray!10}{white}
-\begin{tabularx}{\textwidth}{l c c c}
-\toprule
-\rowcolor{darkblue}
-\thead{Model Regresi} & \thead{Train $R^2$} & \thead{Test $R^2$} & \thead{Test RMSE (USD)} \\
-\midrule
-Linear Regression & 0.6995 & 0.6995 & 208.296,73 \\
-Decision Tree Regression (\texttt{max\_depth=10}) & 0.9185 & 0.7586 & 186.675,48 \\
-\textbf{Random Forest Regression} & \textbf{0.9825} & \textbf{0.8540} & \textbf{145.205,69} \\
-\bottomrule
-\end{tabularx}
-\end{table}
+\screenshotimage[0.78\textwidth]{gambar/colab-kc-eval-table.png}{Tabel Ringkasan Evaluasi Model Regresi KC House Data di Google Colab}{colab-kc-eval-table}
 
 \screenshotimage{gambar/kc_house_eval_comp.png}{Perbandingan Metrik RMSE dan $R^2$ Ketiga Algoritma Regresi pada KC House Data}{kc_house_eval_comp}
 
@@ -467,7 +442,9 @@ Eksperimen tugas menerapkan ketiga algoritma regresi untuk mengestimasi harga ju
 \subsection{Tujuan Penggunaan Dataset dan Definisi Atribut}
 \begin{enumerate}
     \item \textbf{Tujuan Penggunaan Dataset}: \\
-    Dataset ini digunakan oleh analis industri otomotif untuk memodelkan faktor-faktor teknis dan preferensi rancang bangun yang menentukan harga pasar suatu kendaraan. Model regresi yang dihasilkan membantu pabrikan menentukan strategi spesifikasi mesin, dimensi bodi, serta segmentasi harga yang tepat guna bersaing di pasar global.
+    Dataset ini digunakan oleh analis industri otomotif untuk memodelkan faktor-faktor teknis dan preferensi rancang bangun yang menentukan harga pasar suatu kendaraan. Model regresi yang dihasilkan membantu pabrikan menentukan strategi spesifikasi mesin, dimensi bodi, serta segmentasi harga yang tepat guna bersaing di pasar global. Hasil pembacaan dataset serta pemeriksaan dimensi awal di Google Colab disajikan pada Gambar \ref{fig:colab-car-head}.
+
+    \screenshotimage{gambar/colab-car-head.png}{Pemuatan Dataset Mobil dan Cuplikan Data di Google Colab}{colab-car-head}
 
     \item \textbf{Definisi Atribut Input dan Output}: \\
     Rincian 26 kolom atribut penyusun dataset dipetakan pada Tabel \ref{tab:car_attributes}.
@@ -598,32 +575,14 @@ Visualisasi kesesuaian nilai aktual terhadap hasil prediksi dari masing-masing m
 \end{figure}
 
 \subsection{Tabel Performa Model Machine Learning}
-Tabel performa evaluasi yang membandingkan metrik RMSE, $R^2$, dan $R$ dari ketiga model regresi untuk kasus dataset harga mobil disajikan pada Tabel \ref{tab:car_model_perf} dan Gambar \ref{fig:car_price_summary_table}.
+Hasil evaluasi performa yang membandingkan metrik RMSE, $R^2$, dan $R$ dari ketiga model regresi untuk kasus dataset harga mobil disajikan pada Gambar \ref{fig:colab-car-results-table} dan visualisasi diagram batang pada Gambar \ref{fig:car_price_metrics_comp}.
 
-\begin{table}[H]
-\centering
-\caption{Tabel Performa Model Machine Learning pada Dataset Car Price Prediction}
-\label{tab:car_model_perf}
-\vspace{0.2cm}
-\rowcolors{2}{gray!10}{white}
-\begin{tabularx}{0.85\textwidth}{X c c c}
-\toprule
-\rowcolor{darkblue}
-\thead{model} & \thead{RMSE} & \thead{R2} & \thead{R} \\
-\midrule
-Linear Regression & 3722.33 & 0.8000 & 0.8968 \\
-Decision Tree Regression & 2994.77 & 0.8706 & 0.9449 \\
-\textbf{Random Forest Regression} & \textbf{1955.87} & \textbf{0.9448} & \textbf{0.9727} \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-\screenshotimage{gambar/car_price_summary_table.png}{Tabel Ringkasan Performa Model Machine Learning pada Car Price Dataset}{car_price_summary_table}
+\screenshotimage[0.75\textwidth]{gambar/colab-car-results-table.png}{Tabel Ringkasan Performa Model Machine Learning pada Car Price Dataset di Google Colab}{colab-car-results-table}
 
 \screenshotimage{gambar/car_price_metrics_comp.png}{Diagram Batang Komparasi Tiga Metrik Evaluasi (RMSE, $R^2$, $R$) pada Dataset Mobil}{car_price_metrics_comp}
 
 \subsection{Analisis Model Terbaik}
-Berdasarkan hasil eksperimen pemodelan pada Tabel \ref{tab:car_model_perf}, model \textbf{Random Forest Regression} terbukti menjadi model yang paling baik.
+Berdasarkan hasil evaluasi pemodelan pada Gambar \ref{fig:colab-car-results-table}, model \textbf{Random Forest Regression} terbukti menjadi model yang paling baik.
 
 Pertimbangan dan alasan teknis pemilihan model ini didasarkan pada empat argumen berikut:
 
