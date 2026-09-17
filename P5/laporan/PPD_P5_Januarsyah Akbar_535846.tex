@@ -1,0 +1,620 @@
+\documentclass[a4paper,oneside,12pt]{report}
+% Package yang diperlukan
+\usepackage[table]{xcolor} % Untuk menggunakan warna
+\usepackage{graphicx}      % Untuk memasukkan gambar
+\usepackage{titling}       % Untuk kustomisasi halaman judul
+\usepackage{geometry}      % Untuk mengatur margin halaman
+\usepackage{listings}      % Untuk menampilkan blok kode
+\usepackage{float}         % Untuk kontrol penempatan float (seperti gambar)
+\usepackage{hyperref}      % Untuk membuat hyperlink (URL, referensi)
+\usepackage{indentfirst}   % Untuk memberi indentasi pada paragraf pertama setiap seksi
+\usepackage{url}           % Untuk format URL
+\usepackage{fancyhdr}      % Untuk kustomisasi header dan footer
+\usepackage{tocloft}       % Untuk kustomisasi Daftar Isi
+\usepackage{bookmark}      % Untuk manajemen bookmark PDF yang lebih baik
+\usepackage{amsmath}       % Untuk notasi matematika
+\usepackage[most]{tcolorbox} % Untuk box output terminal
+
+% Paket untuk tabel agar sesuai format referensi
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{colortbl}
+
+% Macro untuk header tabel
+\newcommand{\thead}[1]{\textcolor{white}{\textbf{#1}}}
+
+%======================================================================
+% PENGATURAN GEOMETRI HALAMAN
+%======================================================================
+\geometry{left=3cm, right=2.5cm, top=2cm, bottom=2.5cm}
+\sloppy
+
+%======================================================================
+% PENGATURAN WARNA UNTUK BLOK KODE
+%======================================================================
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{darkblue}{rgb}{0,0,0.6}
+\definecolor{outputbg}{RGB}{241,245,249}
+\definecolor{outputborder}{RGB}{203,213,225}
+
+%======================================================================
+% PENGATURAN BLOK KODE (LISTINGS)
+%======================================================================
+\lstdefinestyle{commonstyle}{
+    backgroundcolor=\color{backcolour},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    basicstyle=\ttfamily\footnotesize,
+    numberstyle=\tiny\color{codegray},
+    columns=flexible,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    breakindent=0pt,
+    breakautoindent=false
+}
+
+\lstdefinestyle{pythonstyle}{
+    style=commonstyle,
+    language=Python,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{darkblue},
+    stringstyle=\color{codepurple},
+    emph={import,from,class,def,for,while,if,else,elif,try,except,finally,as,lambda,return},
+    emphstyle=\color{darkblue}
+}
+
+% Box Format Output / Terminal Box (Verbatim via tcblisting)
+\newtcblisting{outputbox}{
+    enhanced,
+    colback=outputbg,
+    colframe=outputborder,
+    boxrule=0.6pt,
+    arc=1.2mm,
+    left=3mm,
+    right=3mm,
+    top=1.2mm,
+    bottom=1.2mm,
+    listing only,
+    listing options={
+        basicstyle=\ttfamily\footnotesize,
+        breaklines=true,
+        numbers=none,
+        showstringspaces=false
+    }
+}
+
+\newcommand{\screenshotimage}[4][0.88\textwidth]{%
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#1]{#2}
+        \caption{#3}
+        \label{fig:#4}
+    \end{figure}
+}
+
+%======================================================================
+% PENGATURAN LAIN-LAIN
+%======================================================================
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\tablename}{Tabel}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Laporan Praktikum Penambangan Data Pertemuan V},
+    pdfpagemode=FullScreen,
+    breaklinks=true
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+%======================================================================
+% PENGATURAN STRUKTUR BAB DAN DAFTAR ISI
+%======================================================================
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\bibname}{Daftar Pustaka}
+
+\renewcommand{\thechapter}{}
+\renewcommand{\chaptername}{}
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\setlength{\cftchapindent}{0em}
+\setlength{\cftsecindent}{2em}
+\setlength{\cftsubsecindent}{4em}
+\setlength{\cftchapnumwidth}{0em}
+\setlength{\cftsecnumwidth}{2.5em}
+\setlength{\cftsubsecnumwidth}{3.2em}
+\renewcommand{\cftchappresnum}{}
+\renewcommand{\cftchapaftersnum}{}
+
+%======================================================================
+% AWAL DOKUMEN
+%======================================================================
+\begin{document}
+
+\newgeometry{left=3cm, right=2.5cm, top=2.5cm, bottom=3cm}
+\begin{titlingpage}
+\begin{center}
+\vspace*{0.5cm}
+{\large \textbf{\MakeUppercase{Laporan Praktikum}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Praktikum Penambangan Data}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Pertemuan V}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Forecasting}}} \\[1.5cm]
+
+\includegraphics[height=7cm]{lambang ugm.png} \\[1cm]
+
+{\normalsize \textbf{Disusun oleh:}} \\[0.4cm]
+\begin{tabular}{@{}l l @{}}
+  \textbf{Nama}           & : Januarsyah Akbar \\
+  \textbf{NIM}            & : 24/535846/SV/24314 \\
+  \textbf{Kelas}          & : B2 \\
+  \textbf{Dosen Pengampu} & : Dr. Ganjar Alfian, S.T., M.Eng. \\
+                          & \phantom{:} Dr. Imam Fahrurrozi, S.T., M.Cs.
+\end{tabular} \\[1.2cm]
+
+{\normalsize \textbf{PROGRAM STUDI D-IV}} \\[0.2cm]
+{\normalsize \textbf{TEKNOLOGI REKAYASA PERANGKAT LUNAK}} \\[0.2cm]
+{\normalsize \textbf{DEPARTEMEN TEKNIK ELEKTRO DAN INFORMATIKA}} \\[0.2cm]
+{\normalsize \textbf{SEKOLAH VOKASI}} \\[0.2cm]
+{\normalsize \textbf{UNIVERSITAS GADJAH MADA}} \\[0.2cm]
+{\normalsize \textbf{YOGYAKARTA}} \\[0.2cm]
+{\normalsize \textbf{2026}} \\[1.2cm]
+\end{center}
+\end{titlingpage}
+\restoregeometry
+
+\thispagestyle{empty}
+\clearpage
+\stepcounter{page}
+\thispagestyle{empty}
+
+% --- Daftar Isi ---
+\addcontentsline{toc}{chapter}{Daftar Isi}
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{3}
+
+%======================================================================
+% BAB I: TUJUAN PRAKTIKUM
+%======================================================================
+\chapter[Tujuan Praktikum]{Tujuan Praktikum}
+Tujuan pelaksanaan praktikum pada Pertemuan V adalah sebagai berikut:
+\begin{enumerate}
+    \item Mahasiswa dapat menerapkan metode peramalan (\textit{forecasting}) berbasis algoritma \textit{machine learning}, meliputi Multilayer Perceptron (MLP/Neural Network), K-Nearest Neighbors (KNN), Decision Tree, dan Random Forest, untuk memprediksi nilai periode berikutnya berdasarkan data historis deret waktu.
+    \item Mahasiswa dapat memahami dan mengimplementasikan teknik pembentukan pasangan data deret waktu menggunakan metode jendela geser (\textit{sliding window}) serta menambahkan rekayasa fitur statistik (\textit{feature engineering}) pada setiap jendela pengamatan.
+    \item Mahasiswa dapat melakukan analisis dan komparasi performa model menggunakan metrik evaluasi Root Mean Squared Error (RMSE) dan Koefisien Korelasi Pearson (\textit{Pearson Correlation Coefficient}).
+    \item Mahasiswa dapat membandingkan efektivitas pemodelan deret waktu satu variabel (\textit{univariate}) dan multi-variabel (\textit{multivariate}) pada kasus peramalan harga saham Tesla (TSLA) untuk horizon dua hari ke depan.
+    \item Mahasiswa dapat menganalisis perbedaan mendasar kapasitas generalisasi dan ekstrapolasi nilai antaralgoritma dalam menangkap tren pergerakan data riil.
+\end{enumerate}
+\clearpage
+
+%======================================================================
+% BAB II: DASAR TEORI
+%======================================================================
+\chapter{Dasar Teori}
+
+\section{Supervised Learning}
+\textit{Supervised learning} merupakan paradigma pembelajaran mesin di mana model dilatih menggunakan himpunan data berlabel (\textit{labeled dataset}) \cite{ref_retno}. Setiap baris observasi terdiri atas pasangan fitur masukan ($X$) dan nilai target luaran ($y$). Selama fase pelatihan, model menyesuaikan parameter internalnya agar fungsi pemetaan matematis $f(X) \approx y$ mampu menghasilkan galat estimasi sekecil mungkin. Pola hubungan yang terbentuk selanjutnya menjadi acuan dalam memprediksi data baru yang belum pernah dilihat sebelumnya \cite{ref_santoso}. Pada ranah regresi dan peramalan, nilai target $y$ bertipe numerik kontinu.
+
+\section{Forecasting dan Karakteristik Data Time Series}
+Peramalan (\textit{forecasting}) adalah proses memproyeksikan besaran nilai pada periode mendatang dengan menguji dan memodelkan pola historis masa lalu \cite{ref_vimala}. Berbeda dari data tabular statis, data deret waktu (\textit{time series}) terikat kuat oleh urutan kronologis. Observasi pada waktu $t$ memiliki autokorelasi dengan observasi pada langkah waktu terdahulu ($t-1, t-2, \dots$). Pemisahan data latih dan data uji pada kasus deret waktu wajib mempertahankan urutan waktu tanpa proses pengacakan (\textit{shuffle=False}) guna mencegah terjadinya kebocoran informasi masa depan (\textit{data leakage}).
+
+\section{Metode Sliding Window}
+Algoritma pembelajaran mesin konvensional memerlukan representasi matriks fitur dua dimensi. Metode \textit{sliding window} (jendela geser) mentransformasikan deret sekuensial menjadi kumpulan sampel tabular \cite{ref_han}. Jendela sepanjang $n_{in}$ langkah waktu digeser langkah demi langkah sepanjang barisan data untuk membentuk fitur prediktor, sedangkan nilai pada langkah ke-($n_{in} + n_{out}$) ditetapkan sebagai label sasaran. Jika model dirancang untuk memprediksi target satu langkah ke depan, maka $n_{out} = 1$. Sebaliknya, jika target berada pada dua periode mendatang, maka digunakan parameter $n_{out} = 2$.
+
+\section{Rekayasa Fitur Statistik pada Deret Waktu}
+Guna memperkaya konteks distribusi nilai di dalam setiap jendela pengamatan, dilakukan penambahan fitur statistik (\textit{statistical feature engineering}). Sebanyak delapan besaran statistik deskriptif diekstraksi dari setiap larik sampel input:
+\begin{enumerate}
+    \item Nilai minimum ($\min$) dan maksimum ($\max$).
+    \item Selisih rentang nilai ($\text{range} = \max - \min$).
+    \item Standar deviasi ($\sigma$) untuk mengukur dispersi nilai terhadap titik pusat.
+    \item Rata-rata hitung ($\mu$) dan median (kuartil tengah) untuk mengidentifikasi tendensi sentral.
+    \item Kurtosis untuk mengukur derajat keruncingan ekor distribusi data.
+    \item Skewness (kemiringan) untuk mengetahui asimetri sebaran data terhadap rata-rata.
+\end{enumerate}
+Penambahan atribut ini menyediakan ringkasan bentuk distribusi lokal kepada model sehingga model tidak hanya membaca urutan angka mentah, melainkan juga menangkap dinamika volatilitas deret waktu.
+
+\section{Algoritma Machine Learning untuk Forecasting}
+Empat algoritma regresi dan pembelajaran mesin diterapkan dalam percobaan ini:
+
+\begin{enumerate}
+    \item \textbf{Multilayer Perceptron (MLP Regressor)}: \\
+    MLP merupakan jaringan syaraf tiruan (\textit{feedforward neural network}) yang tersusun atas lapisan masukan (\textit{input layer}), satu atau lebih lapisan tersembunyi (\textit{hidden layers}), dan lapisan luaran (\textit{output layer}) \cite{ref_russell}. Setiap neuron memproses kombinasi linear dari bobot masukan yang kemudian ditransformasikan oleh fungsi aktivasi non-linear, seperti \textit{Rectified Linear Unit} (ReLU):
+    \begin{equation}
+        f(z) = \max(0, z)
+    \end{equation}
+    Optimalisasi bobot dilakukan secara iteratif menggunakan algoritma propagasi balik (\textit{backpropagation}) berbasis gradien. Keunggulan utama MLP terletak pada kapasitasnya memodelkan fungsi kontinu non-linear serta kemampuannya melakukan ekstrapolasi tren data di luar rentang nilai pelatihan.
+
+    \item \textbf{K-Nearest Neighbors (KNN Regressor)}: \\
+    KNN merupakan algoritma regresi berbasis memori (\textit{instance-based learning}) tanpa pembentukan model parametrik secara eksplisit \cite{ref_pedregosa}. Prediksi diperoleh dengan mencari $k$ sampel terdekat di dalam ruang fitur berdasarkan metrik jarak Euclidean:
+    \begin{equation}
+        d(x, x') = \sqrt{\sum_{j=1}^p (x_j - x'_j)^2}
+    \end{equation}
+    Nilai estimasi target merupakan rata-rata sederhana dari nilai target milik $k$ tetangga terdekat tersebut. Model ini rentan mengalami degradasi performa ketika berhadapan dengan dimensi fitur yang tinggi serta tidak dapat memprediksi nilai di luar batas ekstrem data latih.
+
+    \item \textbf{Decision Tree Regressor}: \\
+    Pohon keputusan mempartisi ruang fitur secara hierarkis menjadi wilayah-wilayah ortogonal yang lebih homogen menggunakan pemisahan biner rekursif (\textit{recursive binary splitting}) \cite{ref_han}. Titik pemisahan simpul ditentukan berdasarkan reduksi galat variansi terkecil, lazimnya diukur dengan kriteria \textit{Mean Squared Error} (MSE). Estimasi akhir pada simpul daun (\textit{leaf node}) dihitung sebagai rata-rata dari target observasi yang terperangkap pada daun tersebut.
+
+    \item \textbf{Random Forest Regressor}: \\
+    Random Forest merupakan metode ansambel (\textit{ensemble learning}) yang menggabungkan keluaran dari ratusan pohon keputusan independen yang dibangun melalui teknik \textit{bootstrap aggregating} (\textit{bagging}) dan seleksi subset fitur acak \cite{ref_pedregosa}. Agregasi rata-rata prediksi dari seluruh pohon terbukti efektif meredam varians galat acak tanpa menambah bias model, menghasilkan estimasi yang jauh lebih stabil dibanding pohon tunggal:
+    \begin{equation}
+        \hat{y} = \frac{1}{B}\sum_{b=1}^B T_b(x)
+    \end{equation}
+\end{enumerate}
+
+\section{Metrik Evaluasi Performa Model}
+Kualitas dan ketepatan estimasi model peramalan dievaluasi menggunakan dua metrik statistik utama:
+
+\begin{enumerate}
+    \item \textbf{Root Mean Squared Error (RMSE)}: \\
+    RMSE mengukur akar kuadrat dari rata-rata kuadrat deviasi antara nilai riil ($y_i$) dan nilai estimasi model ($\hat{y}_i$) \cite{ref_chai}:
+    \begin{equation}
+        \text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^n (y_i - \hat{y}_i)^2}
+    \end{equation}
+    Karena nilai selisih dikuadratkan sebelum ditarik akar, RMSE memberikan bobot penalti yang sangat tegas terhadap galat berukuran besar. Nilai RMSE yang semakin mendekati angka nol mengindikasikan tingkat akurasi model yang semakin presisi.
+
+    \item \textbf{Koefisien Korelasi Pearson ($R$)}: \\
+    Koefisien korelasi Pearson mengukur kekuatan dan arah hubungan linear antara barisan target aktual dengan hasil peramalan model \cite{ref_benesty}:
+    \begin{equation}
+        R = \frac{\sum_{i=1}^n (y_i - \bar{y})(\hat{y}_i - \bar{\hat{y}})}{\sqrt{\sum_{i=1}^n (y_i - \bar{y})^2 \sum_{i=1}^n (\hat{y}_i - \bar{\hat{y}})^2}}
+    \end{equation}
+    Nilai $R$ berada pada rentang $-1$ hingga $+1$. Dalam konteks peramalan, nilai $R$ positif yang mendekati $+1$ membuktikan bahwa keluaran model berhasil menangkap pola fluktuasi data riil secara konsisten.
+\end{enumerate}
+\clearpage
+
+%======================================================================
+% BAB III: HASIL DAN PEMBAHASAN
+%======================================================================
+\chapter{Hasil dan Pembahasan}
+
+\section{Langkah Percobaan (Bike Sharing Dataset)}
+Percobaan modul berfokus pada pemodelan peramalan deret waktu jumlah peminjaman sepeda harian pada dataset \textit{Bike Sharing} yang mencakup observasi harian sepanjang tahun 2011 hingga 2012.
+
+\subsection{Import Pustaka dan Pembacaan Dataset}
+Pustaka komputasi numerik, manipulasi data, pemodelan \textit{machine learning}, dan fungsi statistik dimuat secara berurutan. Dataset diimpor melalui URL repositori GitHub resmi praktikum.
+
+\begin{lstlisting}[style=pythonstyle, caption=Import Pustaka Komputasi dan Machine Learning]
+import numpy as np
+import pandas as pd
+from math import sqrt
+import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
+from numpy import array
+from sklearn.neural_network import MLPRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from scipy.stats import pearsonr, kurtosis, skew
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.model_selection import train_test_split
+
+url = 'https://raw.githubusercontent.com/ganjar87/data_science_practice/main/bikesharing_day.csv'
+df = pd.read_csv(url)
+df.head()
+\end{lstlisting}
+
+Dataset tersimpan dengan volume total 731 baris observasi harian dan 16 kolom atribut, mencakup indeks hari, tanggal, musim, cuaca, kelembapan, kecepatan angin, pengguna kasual, pengguna terdaftar, dan total peminjaman (\texttt{cnt}). Gambar \ref{fig:colab-bike-head} menyajikan tampilan lima baris pertama dataset pada Google Colab.
+
+\screenshotimage{gambar/colab-bike-head.png}{Output Lima Baris Pertama Dataset Bike Sharing di Google Colab}{colab-bike-head}
+
+\subsection{Konversi Format Tanggal dan Target Prediksi}
+Atribut tanggal (\texttt{dteday}) dikonversi ke tipe data waktu (\texttt{datetime}) untuk mempermudah pengurutan kronologis. Variabel target yang dianalisis adalah kolom \texttt{cnt} yang menyatakan jumlah total sepeda yang dipinjam per hari. Tampilan eksekusi pada Google Colab disajikan pada Gambar \ref{fig:colab-bike-datetime}.
+
+\begin{lstlisting}[style=pythonstyle, caption=Konversi Tanggal dan Inspeksi Nilai Kolom Target]
+df_ori = df.copy()
+df_ori["date"] = pd.to_datetime(df_ori['dteday'])
+df_ori['cnt'].iloc[:10]
+\end{lstlisting}
+
+\screenshotimage[0.78\textwidth]{gambar/colab-bike-datetime.png}{Konversi Tanggal dan Sepuluh Nilai Pertama Kolom cnt di Google Colab}{colab-bike-datetime}
+
+\subsection{Formulasi Sliding Window dan Rekayasa Fitur Statistik}
+Fungsi \textit{sliding window} dibentuk melalui fungsi \texttt{split\_sequences} dengan ukuran jendela masuk 7 hari ($n_{in} = 7$) dan langkah keluar 1 hari ($n_{out} = 1$). Artinya, nilai peminjaman sepeda selama 7 hari berturut-turut digunakan untuk mengestimasi peminjaman sepeda pada hari ke-8.
+
+\begin{lstlisting}[style=pythonstyle, caption=Definisi Fungsi Sliding Window dan Ekstraksi Fitur Statistik]
+def split_sequences(sequences, n_steps_in, n_steps_out):
+    X, y = list(), list()
+    for i in range(len(sequences)):
+        end_ix = i + n_steps_in
+        out_end_ix = end_ix + n_steps_out
+        if out_end_ix > len(sequences):
+            break
+        seq_x, seq_y = sequences[i:end_ix, :-1], sequences[out_end_ix - 1, -1]
+        X.append(seq_x)
+        y.append(seq_y)
+    return array(X), array(y)
+
+def stats_features(input_data):
+    inp = list()
+    for i in range(len(input_data)):
+        inp2 = list(input_data[i])
+        min_v = float(np.min(inp2))
+        max_v = float(np.max(inp2))
+        diff = (max_v - min_v)
+        std = float(np.std(inp2))
+        mean = float(np.mean(inp2))
+        median = float(np.median(inp2))
+        kurt = float(kurtosis(inp2))
+        sk = float(skew(inp2))
+        inp2.extend([min_v, max_v, diff, std, mean, median, kurt, sk])
+        inp.append(inp2)
+    return np.array(inp)
+\end{lstlisting}
+
+Setelah dilakukan pemisahan jendela, data dipecah menjadi 80\% data latih (579 sampel) dan 20\% data uji (145 sampel) secara kronologis tanpa pengacakan (\texttt{shuffle=False}). Setiap larik sampel masukan yang semula memiliki 7 fitur lag kemudian diperkaya dengan 8 ringkasan statistik deskriptif sehingga dimensi akhir setiap sampel menjadi 15 kolom fitur. Gambar \ref{fig:colab-bike-sliding-shape} menampilkan konfirmasi dimensi data hasil pra-pemrosesan di Google Colab.
+
+\screenshotimage[0.78\textwidth]{gambar/colab-bike-sliding-shape.png}{Struktur Dimensi Sampel Data Bike Sharing di Google Colab}{colab-bike-sliding-shape}
+
+\subsection{Visualisasi Deret Waktu Dataset Bike Sharing}
+Grafik deret waktu pada Gambar \ref{fig:bike_sharing_timeseries} memetakan fluktuasi total peminjaman sepeda harian selama kurun waktu dua tahun. Terlihat jelas pola musiman yang kuat, di mana volume peminjaman meningkat pesat pada pertengahan tahun (musim panas) dan mengalami penurunan signifikan pada akhir tahun (musim dingin). Selain itu, terdapat tren pertumbuhan positif dari tahun 2011 ke 2012.
+
+\screenshotimage{gambar/bike_sharing_timeseries.png}{Pola Deret Waktu Total Peminjaman Sepeda Harian (cnt) 2011-2012}{bike_sharing_timeseries}
+
+\subsection{Pelatihan Empat Algoritma Forecasting}
+Keempat algoritma regresi dilatih menggunakan data latih dan diuji pada 145 hari data pengujian:
+\begin{enumerate}
+    \item \textbf{Multilayer Perceptron (MLP)}: Menggunakan dua lapisan tersembunyi dengan konfigurasi masing-masing 100 neuron (\texttt{hidden\_layer\_sizes=(100, 100)}) dan batas iterasi maksimum 1000.
+    \item \textbf{K-Nearest Neighbors (KNN)}: Menggunakan parameter bawaan dengan 5 tetangga terdekat.
+    \item \textbf{Decision Tree (DT)}: Model pohon regresi tunggal berbasis optimasi galat kuadrat dengan \texttt{random\_state=42}.
+    \item \textbf{Random Forest (RF)}: Ansambel 100 pohon keputusan acak dengan \texttt{random\_state=42}.
+\end{enumerate}
+
+\begin{lstlisting}[style=pythonstyle, caption=Pelatihan Model dan Kalkulasi Metrik Evaluasi pada Bike Sharing]
+# Eksekusi Pemodelan
+rmse_mlp, corr_mlp, y_pred_mlp = mlp(X_train, X_test, y_train, y_test)
+rmse_knn, corr_knn, y_pred_knn = knn(X_train, X_test, y_train, y_test)
+rmse_dt, corr_dt, y_pred_dt = dt(X_train, X_test, y_train, y_test)
+rmse_rf, corr_rf, y_pred_rf = rf(X_train, X_test, y_train, y_test)
+\end{lstlisting}
+
+\subsection{Visualisasi Hasil Prediksi Data Uji}
+Gambar \ref{fig:bike_sharing_predictions} memperlihatkan keselarasan kurva estimasi masing-masing model terhadap kurva nilai riil peminjaman sepeda pada 145 hari data pengujian.
+
+\screenshotimage{gambar/bike_sharing_predictions.png}{Perbandingan Kurva Nilai Riil vs Prediksi Model pada Data Uji Bike Sharing}{bike_sharing_predictions}
+
+Kurva prediksi Multilayer Perceptron (garis putus-putus biru) dan Random Forest (garis merah) terlihat paling konsisten dalam mengikuti ritme naik-turun deret waktu asli. Sebaliknya, kurva Decision Tree (garis oranye) memperlihatkan deviasi tajam pada titik-titik balik ekstrim akibat sensitivitas simpul tunggal pohon terhadap fluktuasi lokal.
+
+\subsection{Evaluasi Model dan Rekapitulasi Performa}
+Hasil pencetakan nilai evaluasi pada konsol Google Colab disajikan pada Gambar \ref{fig:colab-bike-eval-output}, sedangkan komparasi diagram batang disajikan pada Gambar \ref{fig:bike_sharing_eval_comp}. Ringkasan performa numerik dipetakan pada Tabel \ref{tab:bike_sharing_summary} serta tampilan visual pada Gambar \ref{fig:bike_sharing_summary_table}.
+
+\screenshotimage[0.72\textwidth]{gambar/colab-bike-eval-output.png}{Output Metrik Evaluasi Model Bike Sharing di Google Colab}{colab-bike-eval-output}
+
+\begin{table}[H]
+\centering
+\caption{Rekapitulasi Evaluasi Model Forecasting pada Data Uji Bike Sharing}
+\label{tab:bike_sharing_summary}
+\vspace{0.2cm}
+\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabularx}{0.88\textwidth}{X c c}
+\toprule
+\rowcolor{darkblue}
+\thead{Algoritma Forecasting} & \thead{RMSE} & \thead{Koefisien Korelasi Pearson ($R$)} \\
+\midrule
+\textbf{Multilayer Perceptron (MLP)} & \textbf{1243.150} & \textbf{0.751} \\
+Random Forest Regressor & 1324.452 & 0.716 \\
+K-Nearest Neighbors (KNN) & 1357.710 & 0.696 \\
+Decision Tree Regressor & 1854.465 & 0.484 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\screenshotimage{gambar/bike_sharing_eval_comp.png}{Diagram Batang Evaluasi Metrik RMSE dan Korelasi Pearson Model Bike Sharing}{bike_sharing_eval_comp}
+
+\screenshotimage[0.72\textwidth]{gambar/bike_sharing_summary_table.png}{Tabel Ringkasan Performa Model Bike Sharing}{bike_sharing_summary_table}
+
+Berdasarkan hasil pengujian di atas, model \textbf{Multilayer Perceptron (MLP)} mencatatkan performa terbaik dengan nilai galat terkecil (RMSE sebesar 1243.150) dan nilai korelasi Pearson paling kuat ($R = 0.751$). Random Forest menempati posisi kedua dengan RMSE 1324.452 dan $R = 0.716$. Decision Tree mencatatkan performa paling rendah dengan galat membengkak hingga 1854.465 serta korelasi lemah ($R = 0.484$), membuktikan bahwa pemodelan deret waktu memerlukan pendekatan ansambel atau jaringan syaraf tiruan non-linear guna mencegah galat variansi tinggi.
+
+\clearpage
+
+%======================================================================
+% BAGIAN TUGAS DAN ANALISIS
+%======================================================================
+\section{Tugas dan Analisis (Tesla Stock Price Dataset 2010 - 2020)}
+Eksperimen tugas menerapkan empat algoritma peramalan untuk memproyeksikan harga penutupan (\texttt{Close}) saham Tesla Inc. (TSLA) untuk horizon dua hari ke depan ($t+2$) berdasarkan data transaksi historis sepuluh tahun (2010 hingga 2020).
+
+\subsection{Eksplorasi Dataset Saham Tesla}
+Dataset saham Tesla bersumber dari Kaggle (\textit{timoboz}) yang memuat data perdagangan harian bursa NASDAQ. Karakteristik dataset mencakup 2.416 baris observasi tanpa adanya data kosong (\textit{zero missing values}). Atribut terdiri atas tanggal transaksi (\texttt{Date}), harga pembukaan (\texttt{Open}), harga tertinggi (\texttt{High}), harga terendah (\texttt{Low}), harga penutupan (\texttt{Close}), harga penutupan yang disesuaikan (\texttt{Adj Close}), serta volume transaksi (\texttt{Volume}). Cuplikan data pada Google Colab disajikan pada Gambar \ref{fig:colab-tsla-head}.
+
+\screenshotimage{gambar/colab-tsla-head.png}{Pemuatan dan Cuplikan Dataset Saham Tesla di Google Colab}{colab-tsla-head}
+
+Grafik pergerakan harga saham Tesla sepanjang 2010 hingga awal 2020 disajikan pada Gambar \ref{fig:tsla_timeseries}. Terlihat bahwa selama periode 2010 sampai pertengahan 2019, harga saham Tesla bergerak relatif stabil pada rentang 20 hingga 380 USD. Namun, memasuki kuartal keempat 2019 hingga awal 2020, harga saham mengalami reli kenaikan eksponensial (\textit{bull run}) yang menembus level 780 USD.
+
+\screenshotimage{gambar/tsla_timeseries.png}{Dinamika Pergerakan Harga Saham Tesla (Close vs Open) Periode 2010-2020}{tsla_timeseries}
+
+\subsection{Tugas 2: Forecasting Target Close 2 Hari ke Depan Berbasis Close 7 Hari Sebelumnya (Univariate)}
+Pada Tugas 2, peramalan dirancang secara \textit{univariate} dengan spesifikasi:
+\begin{itemize}
+    \item \textbf{Fitur Input}: Nilai \texttt{Close} 7 hari sebelumnya ($n_{in} = 7$, dari $t-6$ hingga $t$).
+    \item \textbf{Target Prediksi}: Nilai \texttt{Close} pada 2 hari mendatang ($n_{out} = 2$, yaitu hari ke-$t+2$).
+\end{itemize}
+
+Setelah pemisahan jendela geser dan ekstraksi 8 fitur statistik, data dibagi menjadi 80\% data latih (1.926 sampel) dan 20\% data uji (482 sampel) secara kronologis. Hasil pengujian numerik pada Google Colab disajikan pada Gambar \ref{fig:colab-tsla-u-eval}.
+
+\begin{lstlisting}[style=pythonstyle, caption=Pra-pemrosesan dan Pelatihan Model Tugas 2 (Univariate)]
+seq_u = df_tsla[['Close', 'Close']].astype(float).values
+n_in_tsla, n_out_tsla = 7, 2
+X_u, y_u = split_sequences(seq_u, n_in_tsla, n_out_tsla)
+X_u = X_u.reshape((X_u.shape[0], X_u.shape[1] * X_u.shape[2]))
+
+X_u_tr, X_u_te, y_u_tr, y_u_te = train_test_split(
+    X_u, y_u, test_size=0.2, random_state=42, shuffle=False
+)
+X_u_tr = stats_features(X_u_tr)
+X_u_te = stats_features(X_u_te)
+\end{lstlisting}
+
+\screenshotimage[0.72\textwidth]{gambar/colab-tsla-u-eval.png}{Hasil Evaluasi Model Tugas 2 (Univariate) di Google Colab}{colab-tsla-u-eval}
+
+Kurva perbandingan hasil prediksi seluruh model terhadap harga riil disajikan pada Gambar \ref{fig:tsla_u_predictions}. Terlihat jelas bahwa model MLP (garis putus-putus biru) mampu menelusuri lonjakan harga saham pada fase akhir data uji, sedangkan model Random Forest, KNN, dan Decision Tree tertahan pada plafon nilai tertentu.
+
+\screenshotimage{gambar/tsla_u_predictions.png}{Perbandingan Nilai Riil vs Prediksi Model Tugas 2 (Univariate)}{tsla_u_predictions}
+
+\subsection{Tugas 3: Forecasting Target Close 2 Hari ke Depan Berbasis Close dan Open 7 Hari Sebelumnya (Multivariate)}
+Pada Tugas 3, model diperluas menjadi pemodelan \textit{multivariate} dengan memanfaatkan riwayat harga penutupan (\texttt{Close}) sekaligus harga pembukaan (\texttt{Open}) selama 7 hari sebelumnya. Informasi harga pembukaan menyediakan indikasi momentum pembukaan bursa yang melengkapi profil harga penutupan harian.
+
+\begin{itemize}
+    \item \textbf{Fitur Input}: Nilai \texttt{Close} dan \texttt{Open} 7 hari sebelumnya ($7 \times 2 = 14$ fitur dasar + 8 fitur statistik = 22 total fitur).
+    \item \textbf{Target Prediksi}: Nilai \texttt{Close} pada 2 hari mendatang ($n_{out} = 2$, yaitu hari ke-$t+2$).
+\end{itemize}
+
+\begin{lstlisting}[style=pythonstyle, caption=Pra-pemrosesan dan Pelatihan Model Tugas 3 (Multivariate)]
+seq_m = df_tsla[['Close', 'Open', 'Close']].astype(float).values
+X_m, y_m = split_sequences(seq_m, n_in_tsla, n_out_tsla)
+X_m = X_m.reshape((X_m.shape[0], X_m.shape[1] * X_m.shape[2]))
+
+X_m_tr, X_m_te, y_m_tr, y_m_te = train_test_split(
+    X_m, y_m, test_size=0.2, random_state=42, shuffle=False
+)
+X_m_tr = stats_features(X_m_tr)
+X_m_te = stats_features(X_m_te)
+\end{lstlisting}
+
+Hasil evaluasi numerik pada Google Colab disajikan pada Gambar \ref{fig:colab-tsla-m-eval}, dan visualisasi perbandingan kurva prediksi disajikan pada Gambar \ref{fig:tsla_m_predictions}.
+
+\screenshotimage[0.72\textwidth]{gambar/colab-tsla-m-eval.png}{Hasil Evaluasi Model Tugas 3 (Multivariate) di Google Colab}{colab-tsla-m-eval}
+
+\screenshotimage{gambar/tsla_m_predictions.png}{Perbandingan Nilai Riil vs Prediksi Model Tugas 3 (Multivariate)}{tsla_m_predictions}
+
+\subsection{Analisis Komparatif: Univariate vs Multivariate}
+Perbandingan langsung metrik performa antara skenario Tugas 2 (Univariate) dan Tugas 3 (Multivariate) disajikan pada Tabel \ref{tab:tsla_comparison}, tangkapan layar Colab pada Gambar \ref{fig:colab-tsla-compare-table}, serta diagram batang komparasi pada Gambar \ref{fig:tsla_eval_comp} dan visualisasi tabel pada Gambar \ref{fig:tsla_summary_table}.
+
+\begin{table}[H]
+\centering
+\caption{Komparasi Performa Model Saham Tesla: Univariate (U) vs Multivariate (M)}
+\label{tab:tsla_comparison}
+\vspace{0.2cm}
+\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabularx}{\textwidth}{X c c c c c}
+\toprule
+\rowcolor{darkblue}
+\thead{Model Algoritma} & \thead{RMSE (U)} & \thead{RMSE (M)} & \thead{$R$ (U)} & \thead{$R$ (M)} & \thead{$\Delta$ RMSE} \\
+\midrule
+\textbf{MLP Regressor} & \textbf{19.01 USD} & \textbf{18.27 USD} & \textbf{0.9679} & \textbf{0.9708} & \textbf{-0.74 USD} \\
+K-Nearest Neighbors & 45.18 USD & 44.70 USD & 0.7998 & 0.8059 & -0.48 USD \\
+Decision Tree & 47.23 USD & 45.66 USD & 0.7749 & 0.7934 & -1.57 USD \\
+Random Forest & 45.00 USD & 44.78 USD & 0.8050 & 0.8067 & -0.22 USD \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\screenshotimage{gambar/colab-tsla-compare-table.png}{Tabel Komparasi Hasil Evaluasi Univariate vs Multivariate di Google Colab}{colab-tsla-compare-table}
+
+\screenshotimage{gambar/tsla_eval_comp.png}{Perbandingan Metrik RMSE dan Koefisien Korelasi Pearson (Tugas 2 vs Tugas 3)}{tsla_eval_comp}
+
+\screenshotimage[0.85\textwidth]{gambar/tsla_summary_table.png}{Tabel Ringkasan Lengkap Evaluasi Model Saham Tesla}{tsla_summary_table}
+
+Dari data komparasi di atas, diperoleh dua temuan penting:
+\begin{enumerate}
+    \item \textbf{Pengaruh Positif Fitur Multivariate}:
+    Pada seluruh algoritma tanpa terkecuali, penambahan fitur harga pembukaan (\texttt{Open}) secara konsisten menurunkan nilai galat RMSE dan mendongkrak nilai korelasi Pearson. Pada model MLP, RMSE berkurang sebesar 0.74 USD dan korelasi naik menjadi 0.9708. Penurunan RMSE terbesar dicapai oleh Decision Tree yang terpangkas sebesar 1.57 USD. Hal ini membuktikan bahwa selisih harga buka-tutup harian memberikan sinyal volatilitas intraday yang bermakna bagi penaksiran pergerakan harga dua hari berikutnya.
+    \item \textbf{Dominasi Absolut Model MLP}:
+    Model MLP mencatatkan nilai RMSE 18.27 USD, lebih dari dua kali lipat lebih rendah dibandingkan Random Forest (44.78 USD), KNN (44.70 USD), dan Decision Tree (45.66 USD). Korelasi Pearson MLP yang mencapai 0.9708 membuktikan akurasi peramalan yang sangat tinggi.
+\end{enumerate}
+
+\subsection{Analisis Fenomena Ekstrapolasi: Mengapa MLP Jauh Mengungguli Tree Models?}
+Perbedaan kontras performa antara MLP dan model pohon keputusan pada dataset saham Tesla merupakan konsekuensi teoretis dari mekanisme inferensi masing-masing algoritma \cite{ref_russell, ref_pedregosa}. Fenomena ini dianalisis secara visual pada Gambar \ref{fig:tsla_extrapolation_analysis} yang menyoroti 100 sampel data uji terakhir ketika harga saham Tesla melonjak drastis dari 350 USD hingga menyentuh 780 USD.
+
+\screenshotimage{gambar/tsla_extrapolation_analysis.png}{Analisis Fenomena Ekstrapolasi pada 100 Sampel Data Uji Terakhir Saham Tesla}{tsla_extrapolation_analysis}
+
+Alasan teknis di balik fenomena ini dirinci sebagai berikut:
+
+\begin{enumerate}
+    \item \textbf{Ketidakmampuan Model Berbasis Pohon Melakukan Ekstrapolasi (\textit{Plateau Effect})}: \\
+    Decision Tree dan Random Forest membagi ruang fitur menjadi wilayah-wilayah hiperkotak (\textit{hyper-rectangles}). Nilai prediksi untuk wilayah daun tertentu adalah nilai konstan berupa rata-rata target observasi latih yang masuk ke daun tersebut. Akibatnya, model pohon keputusan secara teoritis \textbf{tidak akan pernah mampu menghasilkan prediksi yang lebih besar daripada nilai target maksimum di data latih}. Ketika harga saham Tesla menembus level 400 hingga 780 USD pada data uji, Decision Tree dan Random Forest mengalami kejenuhan dan mendatar (\textit{plateau}) pada rentang 350 sampai 380 USD. Hal serupa terjadi pada KNN, di mana tetangga terdekat yang ditemukan selalu terbatas pada titik-titik data latih terdahulu.
+
+    \item \textbf{Kapasitas Pemetaan Tren Non-Linear Kontinu pada MLP}: \\
+    Sebaliknya, Multilayer Perceptron memodelkan target sebagai fungsi kontinu melalui kombinasi matriks bobot dan fungsi aktivasi ReLU. Komposisi lapisan tersembunyi mampu menangkap laju perubahan (\textit{slope}) dan kemiringan tren pertumbuhan harga. Ketika fitur masukan menunjukkan kenaikan sekuensial yang konsisten, jaringan syaraf tiruan mampu mengekstrapolasikan nilai keluaran ke domain angka yang belum pernah ada pada masa pelatihan, sehingga kurva prediksi MLP dapat terus menanjak mengikuti lonjakan riil harga saham Tesla hingga level 780 USD.
+\end{enumerate}
+
+\subsection{Penentuan Model Terbaik}
+Berdasarkan seluruh pengujian numerik dan visualisasi, model \textbf{Multilayer Perceptron (MLP) dengan konfigurasi masukan Multivariate (Close + Open 7 hari)} dinobatkan sebagai model forecasting terbaik. Model ini berhasil menekan galat rata-rata hingga \textbf{18.27 USD} serta mempertahankan tingkat korelasi sebesar \textbf{0.9708}.
+
+\clearpage
+
+%======================================================================
+% BAB IV: KESIMPULAN
+%======================================================================
+\chapter{Kesimpulan}
+
+Praktikum modul peramalan (\textit{forecasting}) ini membuktikan bahwa metode pembelajaran mesin mampu diterapkan secara efektif untuk memproyeksikan data deret waktu sekuensial pada kasus peramalan permintaan peminjaman sepeda (\textit{Bike Sharing}) maupun proyeksi harga saham pasar modal (\textit{Tesla Stock Price}). Urutan kronologis data deret waktu menuntut pembagian data latih dan data uji tanpa proses pengacakan (\textit{shuffle=False}) guna menjamin validitas evaluasi. Penerapan teknik jendela geser (\textit{sliding window}) berhasil mengonversi deret satu dimensi menjadi matriks masukan terstruktur, sedangkan penambahan delapan ringkasan fitur statistik deskriptif memperkaya konteks representasi volatilitas lokal.
+
+Hasil eksperimen pada dataset Bike Sharing memperlihatkan keunggulan model Multilayer Perceptron (MLP) dengan perolehan RMSE terendah sebesar 1243.150 dan koefisien korelasi Pearson tertinggi sebesar 0.751, diikuti oleh Random Forest (RMSE 1324.452). Sementara itu, implementasi pada kasus saham Tesla mengonfirmasi dua temuan penting:
+\begin{enumerate}
+    \item Pendekatan \textit{multivariate} yang menggabungkan riwayat harga penutupan (\texttt{Close}) dan harga pembukaan (\texttt{Open}) selama 7 hari sebelumnya terbukti lebih unggul dibanding pendekatan \textit{univariate}. Penambahan fitur harga pembukaan secara konsisten memangkas nilai galat RMSE pada seluruh algoritma pengujian.
+    \item Multilayer Perceptron (MLP) terbukti menjadi model terbaik secara mutlak dengan nilai RMSE sebesar 18.27 USD dan korelasi Pearson mencapai 0.9708 pada skenario \textit{multivariate}. Keunggulan ini dipicu oleh kemampuan intrinsik arsitektur jaringan syaraf tiruan dalam mengekstrapolasikan tren pertumbuhan harga non-linear ke wilayah nilai baru, melampaui keterbatasan algoritma berbasis pohon keputusan (Decision Tree dan Random Forest) yang mengalami saturasi batas atas saat menghadapi reli lonjakan harga saham.
+\end{enumerate}
+
+\clearpage
+
+%======================================================================
+% DAFTAR PUSTAKA
+%======================================================================
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Daftar Pustaka}
+
+\bibitem{ref_benesty}
+Benesty, J., Chen, J., Huang, Y., \& Cohen, I. (2009). Pearson Correlation Coefficient. Dalam \textit{Noise Reduction in Speech Processing} (pp. 1--4). Springer. \url{https://doi.org/10.1007/978-3-642-00296-0_5}
+
+\bibitem{ref_chai}
+Chai, T., \& Draxler, R. R. (2014). Root mean square error (RMSE) or mean absolute error (MAE)? Arguments against avoiding RMSE in the literature. \textit{Geoscientific Model Development}, 7(3), 1247--1250. \url{https://doi.org/10.5194/gmd-7-1247-2014}
+
+\bibitem{ref_han}
+Han, J., Pei, J., \& Tong, H. (2022). \textit{Data Mining: Concepts and Techniques} (4th ed.). Morgan Kaufmann/Elsevier.
+
+\bibitem{ref_maysofa}
+Maysofa, R., Syaliman, I., \& Sapriadi, D. (2023). Implementasi Forecasting pada Penjualan Inaura Hair Care dengan Metode Single Exponential Smoothing. \textit{Jurnal Testing dan Implementasi Sistem Informasi}, 82--91.
+
+\bibitem{ref_pedregosa}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., \& Duchesnay, \'E. (2011). Scikit-learn: Machine Learning in Python. \textit{Journal of Machine Learning Research}, 12, 2825--2830.
+
+\bibitem{ref_retno}
+Retnoningsih, E., \& Pramudita, A. (2020). Mengenal Machine Learning Dengan Teknik Supervised dan Unsupervised Learning Menggunakan Python. \textit{Bina Insani ICT Journal}, 56--165.
+
+\bibitem{ref_russell}
+Russell, S., \& Norvig, P. (2020). \textit{Artificial Intelligence: A Modern Approach} (4th ed.). Pearson.
+
+\bibitem{ref_santoso}
+Santoso, A., Abijono, H., \& Anggreini, D. (2021). Algoritma Supervised Learning dan Unsupervised Learning dalam Pengolahan Data. \textit{Jurnal Teknologi Terapan}, 315--318.
+
+\bibitem{ref_vimala}
+Vimala, T., \& Nugroho, S. (2022). Forecasting Penjualan Obat Menggunakan Metode Single, Double, dan Triple Exponential Smoothing (Studi Kasus: Apotek Mandiri Medika). \textit{Jurnal Penerapan Teknologi Informasi dan Komunikasi}, 90--99.
+
+\end{thebibliography}
+
+\end{document}

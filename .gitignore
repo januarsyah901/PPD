@@ -31,3 +31,7 @@ template/
 template.zip
 *.zip
 
+# Virtual environments & Python cache
+.venv/
+__pycache__/
+*.pyc
