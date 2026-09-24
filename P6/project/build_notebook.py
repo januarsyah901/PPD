@@ -92,7 +92,10 @@ else:
 cells.append(nbf.v4.new_markdown_cell("""### 2. Impor Pustaka (Library)
 Mengimpor library manipulasi data, analisis statistik, standarisasi, algoritma clustering (K-Means, K-Medoids), evaluasi, serta visualisasi."""))
 
-cells.append(nbf.v4.new_code_cell("""import numpy as np
+cells.append(nbf.v4.new_code_cell("""# Instalasi library tambahan jika berjalan di Google Colab
+!pip install -q scikit-learn-extra kneed
+
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
