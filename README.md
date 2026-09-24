@@ -155,3 +155,28 @@ Untuk mempercepat pengerjaan laporan praktikum di setiap pertemuan, gunakan form
   2. **Ekstraksi Gambar/Grafik**: Menjalankan skrip Python untuk merender seluruh plot percobaan & tugas ke `Pn/laporan/gambar/`.
   3. **Penulisan LaTeX (`.tex`)**: Menyusun laporan lengkap mengikuti sistematika Bab III di atas (bukan 5 bab). Metadata nama/NIM/kelas UGM, code listings, tabel, analisis.
   4. **Kompilasi Otomatis PDF**: Menjalankan `latexmk -pdf -interaction=nonstopmode` hingga file `PPD_P{n}_Januarsyah Akbar_535846.pdf` siap kumpul.
+
+---
+
+## 6. Preferensi & Karakteristik Penulisan Bang Jan
+
+Panduan khusus bagi asisten AI saat mendampingi atau menyusun laporan praktikum bersama Bang Jan:
+
+1. **Otentisitas Laporan (No Hardcoded Output/Code)**
+   - Jangan menyajikan output eksekusi atau tabel hasil evaluasi menggunakan teks tiruan (seperti environment `lstlisting` atau `tabularx` ganda yang di-hardcode).
+   - Selalu gunakan bukti visual riil berupa tangkapan layar Google Colab (`\screenshotimage{...}`) lengkap dengan tanda centang hijau eksekusi dan tabel output aslinya.
+   - Tabel LaTeX hanya digunakan jika benar-benar diperlukan sebagai pelengkap, bukan pengganti tangkapan layar.
+
+2. **Kebersihan Ruang Kerja (Clean Workspace)**
+   - Selalu bersihkan file sementara atau folder penampung gambar mentah (seperti folder `gambar ss`) setelah gambar dipilah dan direname ke folder `gambar/`.
+   - Repositori harus selalu rapi tanpa sampah file yang menumpuk.
+
+3. **Gaya Penulisan Natural, Ringkas, dan Mengalir**
+   - **Bukan Format List Berlebihan**: Hindari memecah narasi teknis ke dalam deretan bullet points atau penomoran kaku (`itemize`/`enumerate`), terutama di bagian Pembahasan dan Bab Kesimpulan. Gunakan format paragraf utuh.
+   - **Paragraf Pendek dan Nyaman Dibaca**: Jangan membuat paragraf tebal bertumpuk (*wall of text*). Pecah ide pembahasan menjadi beberapa paragraf pendek (2 hingga 4 kalimat per paragraf) agar alur membaca tetap ringan dan fokus.
+   - **Bebas dari Slop AI**: Hindari frasa klise robotik, pembuka klise, em dash/en dash berlebihan, dan sampaikan analisis secara lugas langsung ke inti permasalahan.
+
+4. **Instruksi Berorientasi Eksekusi Langsung**
+   - Berikan solusi kode atau naskah yang siap pakai.
+   - Jalankan proses hingga tahapan *final build* (kompilasi dokumen PDF) selesai secara mandiri tanpa bertele-tele.
+

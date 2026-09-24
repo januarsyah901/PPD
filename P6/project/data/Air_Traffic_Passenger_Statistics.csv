@@ -1,0 +1,1001 @@
+activity_period,activity_period_start_date,operating_airline,operating_airline_iata_code,published_airline,published_airline_iata_code,geo_summary,geo_region,activity_type_code,price_category_code,terminal,boarding_area,passenger_count,data_as_of,data_loaded_at
+199907,1999-07-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,31432,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,31353,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Thru / Transit,Low Fare,Terminal 1,B,2518,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,1324,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,1198,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,24124,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,23613,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,4983,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,4604,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Air Europe,PE,Air Europe,PE,International,Europe,Deplaned,Other,Terminal 2,D,205,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,10118,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,9093,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,41433,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,47409,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,4135,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,9595,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,10082,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,277,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,6266,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,6765,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,1056,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,4229,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,5624,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,4506,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,3282,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,124057,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,119356,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,4702,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,4146,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,24606,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,21161,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,5236,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,5699,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,6432,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,5759,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Champion Air,MG,Champion Air,MG,Domestic,US,Deplaned,Other,Terminal 1,A,1503,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Champion Air,MG,Champion Air,MG,Domestic,US,Enplaned,Other,Terminal 1,A,1442,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,9823,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,7594,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,1794,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,957,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,120258,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,114735,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,11117,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,10117,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Finnair,AY,Finnair,AY,International,Europe,Deplaned,Other,Terminal 2,D,4598,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Finnair,AY,Finnair,AY,International,Europe,Enplaned,Other,Terminal 2,D,4195,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,9927,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,10007,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,8667,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,8809,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,9997,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,9070,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,8672,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,8210,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,9889,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,9373,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,23003,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,21110,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,16650,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,16453,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,Domestic,US,Deplaned,Other,Terminal 2,D,171,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,Domestic,US,Enplaned,Other,Terminal 2,D,164,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,International,Canada,Deplaned,Other,Terminal 2,D,477,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,International,Canada,Enplaned,Other,Terminal 2,D,474,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Deplaned,Other,Terminal 1,B,3037,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Enplaned,Other,Terminal 1,B,3006,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,6486,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,6093,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,81204,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,80371,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,5008,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,9194,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,8645,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,9164,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,6783,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Reno Air,QQ,Reno Air,QQ,Domestic,US,Deplaned,Other,Terminal 3,E,26850,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Reno Air,QQ,Reno Air,QQ,Domestic,US,Enplaned,Other,Terminal 3,E,26399,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,17346,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,18669,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,6541,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,4763,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,16023,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,15151,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,2307,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,2394,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,49493,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,51042,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,427,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,408,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,38102,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,36438,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Sports Jet,,Sports Jet,,Domestic,US,Enplaned,Other,Terminal 1,A,53,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Star Air,S6,Star Air,S6,Domestic,US,Deplaned,Other,Terminal 1,B,85,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Star Air,S6,Star Air,S6,Domestic,US,Enplaned,Other,Terminal 1,B,142,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,3153,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,2912,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,4973,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,4527,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,3947,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,4390,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,37742,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,35323,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,8894,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,9385,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,4026,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,4040,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,55142,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,55228,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,35131,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,31947,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,68247,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,67479,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,E,57971,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,E,54936,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,E,1181,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,784782,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,792965,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,16837,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,51309,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,47487,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,706,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,9202,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,8977,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,477,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,15849,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,15873,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,238,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,Terminal 3,F,7495,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,24456,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,16271,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,665,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,3732,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,3994,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,104,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,12456,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199907,1999-07-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,11039,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,34523,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,32551,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Thru / Transit,Low Fare,Terminal 1,B,2089,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,1437,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,1252,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,25730,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,24808,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,5364,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,4050,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air Europe,PE,Air Europe,PE,International,Europe,Deplaned,Other,Terminal 2,D,389,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air Europe,PE,Air Europe,PE,International,Europe,Enplaned,Other,Terminal 2,D,398,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,9976,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,9537,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,43769,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,61755,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,4278,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,9554,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,8560,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,321,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,6808,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,6939,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,796,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,5253,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,5219,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,4785,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,4295,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,120250,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,118524,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,4571,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,3847,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,23177,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,22820,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,5640,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,5935,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,6962,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,6529,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Champion Air,MG,Champion Air,MG,Domestic,US,Deplaned,Other,Terminal 1,A,1381,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Champion Air,MG,Champion Air,MG,Domestic,US,Enplaned,Other,Terminal 1,A,1285,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,9636,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,9471,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,2440,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,2119,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,115657,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,116837,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,10528,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,10987,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Finnair,AY,Finnair,AY,International,Europe,Deplaned,Other,Terminal 2,D,4179,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Finnair,AY,Finnair,AY,International,Europe,Enplaned,Other,Terminal 2,D,3493,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,10442,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,9968,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,9073,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,8012,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,9526,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,9984,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,8689,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,8295,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,8364,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,7804,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,22231,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,22984,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,17671,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,15765,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Deplaned,Other,Terminal 1,B,3056,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Enplaned,Other,Terminal 1,B,3129,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,7892,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,7807,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,80561,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,80787,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,4119,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,9994,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,9795,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,8769,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,6527,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,19094,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,16751,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,7204,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,6694,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,16117,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,15546,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,2482,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,2180,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,50065,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,46152,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,880,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,778,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,38281,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,38050,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Star Air,S6,Star Air,S6,Domestic,US,Deplaned,Other,Terminal 1,A,48,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,2903,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,2823,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,4775,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,4727,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,4540,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,3542,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,36896,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,37573,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,10157,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,10161,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,3694,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,3398,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,57150,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,55368,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,35344,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,30637,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,66832,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,71503,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,856501,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,846421,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,18872,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,51786,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,53373,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,518,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,9163,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,6741,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,378,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,16964,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,16025,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,211,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,Terminal 3,F,6896,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,23960,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,17540,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,743,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,3635,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,4064,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,81,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,12242,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199908,1999-08-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,12287,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,21258,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,20659,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,850,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,640,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,22207,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,20929,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,3722,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,4485,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air Europe,PE,Air Europe,PE,International,Europe,Deplaned,Other,Terminal 2,D,14,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air Europe,PE,Air Europe,PE,International,Europe,Enplaned,Other,Terminal 2,D,204,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,9079,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,9542,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,33387,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,36938,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,3821,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,7232,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,6580,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,395,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,3992,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,5161,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,922,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,5608,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,4468,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,4506,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,3282,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,122529,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,120397,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,3103,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,3660,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,22657,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,21500,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,4647,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,4792,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,5065,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,5287,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Champion Air,MG,Champion Air,MG,Domestic,US,Enplaned,Other,Terminal 1,A,123,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,4815,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,5357,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,1552,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,1912,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,95082,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,95607,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,8260,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,8981,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Finnair,AY,Finnair,AY,International,Europe,Deplaned,Other,Terminal 2,D,1359,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Finnair,AY,Finnair,AY,International,Europe,Enplaned,Other,Terminal 2,D,1026,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,6961,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,7107,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,7401,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,7621,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,8171,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,8161,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,8618,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,8653,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,6822,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,7107,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,21987,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,22763,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,8854,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,10407,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,Domestic,US,Deplaned,Other,Terminal 2,D,64,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,Domestic,US,Enplaned,Other,Terminal 2,D,202,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Deplaned,Other,Terminal 1,B,2763,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Enplaned,Other,Terminal 1,B,2647,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,9554,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,9907,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,60968,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,60775,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,3932,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,8729,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,8591,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,6096,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,5423,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,9659,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,9538,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,4526,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,4766,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,15178,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,14196,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,2058,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,2336,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,44143,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,45405,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,338,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,575,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,33168,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,32118,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Sports Jet,,Sports Jet,,Domestic,US,Deplaned,Other,Terminal 1,A,120,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Star Air,S6,Star Air,S6,Domestic,US,Deplaned,Other,Terminal 1,B,100,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Star Air,S6,Star Air,S6,Domestic,US,Enplaned,Other,Terminal 1,B,115,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,2417,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,2377,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,5062,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,5008,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,2810,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,2267,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,28530,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,28943,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,6205,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,6994,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,3235,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,2893,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,41737,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,41053,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,32116,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,29236,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,58513,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,61077,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,721873,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,733383,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,12287,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,45352,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,46391,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,614,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,8190,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,7198,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,385,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,14059,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,14752,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,435,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,23046,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,16644,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,570,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,3171,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,3536,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,92,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,11599,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199909,1999-09-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,11699,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,19730,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,19696,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,786,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,516,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,21918,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,19808,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,4262,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,4437,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,9390,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,8074,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,30664,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,37117,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,6720,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,5019,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,5430,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,920,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,5384,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,7315,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,1624,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,4445,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,4992,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,3930,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,4028,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,131884,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,133788,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Thru / Transit,Other,Terminal 3,E,266,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,3575,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,3567,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,20336,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,19604,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,4065,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,4272,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,5470,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,6866,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,4636,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,5609,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,2089,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,1393,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,97669,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,98920,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,7641,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,9069,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,6637,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,6513,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,9133,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,9130,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,6847,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,8704,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,8844,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,8657,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,6564,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,6812,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,21398,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,20694,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,8963,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,14190,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,Domestic,US,Deplaned,Other,Terminal 2,D,87,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Deplaned,Other,Terminal 1,B,2957,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Enplaned,Other,Terminal 1,B,2937,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,10972,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,10459,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,64854,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,64364,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,5610,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,8268,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,8445,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,6008,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,7340,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,9764,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,9921,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,5589,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,5756,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,14726,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,16633,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,1339,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,2014,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,48834,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,49910,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,34,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Sobelair Airlines,,Sobelair Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,267,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,35152,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,33971,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Star Air,S6,Star Air,S6,Domestic,US,Deplaned,Other,Terminal 1,A,41,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,2960,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,2985,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,4744,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,4934,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,2446,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,2754,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,29374,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,28793,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,5900,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,6026,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,3289,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,2928,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,45902,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,45245,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,33913,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,29661,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,60355,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,64829,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,E,51861,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,E,49271,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,E,926,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,705671,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,705491,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,11903,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,44023,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,47661,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,744,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,7376,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,9805,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,468,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,13030,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,12188,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,485,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,Terminal 3,F,6499,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,22209,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,15475,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,1191,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,3290,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,3926,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,122,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,10932,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199910,1999-10-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,10999,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,18851,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,19009,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Thru / Transit,Low Fare,Terminal 1,B,526,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,704,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,535,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,19348,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,18302,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,3636,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,2957,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,5441,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,5353,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,32904,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,40365,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,6495,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,4703,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,5190,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,1085,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,7057,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,9831,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,2042,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,3523,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,3183,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,4677,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,4663,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,120837,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,123378,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Thru / Transit,Other,Terminal 3,E,190,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,3771,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,3864,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,12243,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,11933,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,3992,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,4071,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,5577,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,6714,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,6516,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,7540,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,1608,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,1205,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,88461,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,90151,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,8231,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,9176,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,6116,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,6317,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,7862,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,7965,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,8434,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,8854,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,8229,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,7908,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,5144,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,5534,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,12605,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,12779,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,9158,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,16912,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Deplaned,Other,Terminal 1,B,2491,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Enplaned,Other,Terminal 1,B,2511,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,10766,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,10082,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,North American Airlines,,North American Airlines,,Domestic,US,Deplaned,Other,Terminal 1,C,58,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,North American Airlines,,North American Airlines,,Domestic,US,Enplaned,Other,Terminal 1,C,58,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,55158,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,56146,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,4622,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,7278,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,7809,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,6707,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,7521,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,8899,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,7867,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,6369,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,7007,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,15539,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,15326,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,1168,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,1619,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,46294,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,47672,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,35889,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,35614,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,3695,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,3466,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,3479,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,3675,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,3291,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,3352,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,27247,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,26542,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,5315,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,5384,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,2518,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,2243,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,42005,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,41363,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,32952,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,28788,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,50504,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,53245,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,E,46244,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,E,44227,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,E,783,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,627120,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,634629,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,10454,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,41462,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,43002,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,592,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,7908,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,7305,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,281,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,10162,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,11135,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,208,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,Terminal 3,F,5655,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,19834,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,13371,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,941,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,2938,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,4018,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,117,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,9710,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199911,1999-11-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,9955,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,17765,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,18255,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,887,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,599,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,18923,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,19031,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,2625,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,2938,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,4075,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,4691,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,35334,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,41448,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,4681,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,5968,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,6273,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,381,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,5649,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,10232,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,2876,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,2675,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,3039,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,5289,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,5485,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,112386,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,118675,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Thru / Transit,Other,Terminal 3,E,98,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,3815,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,3792,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,10421,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,11466,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,3939,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,4061,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,5631,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,6674,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,6770,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,8045,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,1317,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,1704,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,81543,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,87225,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,9007,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,8617,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,5955,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,6095,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,6999,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,7866,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,6699,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,8286,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,7110,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,6323,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,5080,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,5522,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,11699,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,10983,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,10268,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,17294,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Miami Air International,GL,Miami Air International,GL,Domestic,US,Deplaned,Other,Terminal 2,D,58,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Deplaned,Other,Terminal 1,B,1920,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Enplaned,Other,Terminal 1,B,2173,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,12190,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,12455,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,52817,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,54150,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,3260,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,7074,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,7110,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Thru / Transit,Other,Terminal 2,D,248,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,7231,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,10433,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,6344,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,6535,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,5068,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,4878,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,16271,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,14834,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,1270,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,1459,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,48584,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,50061,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,31148,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,30915,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,3173,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,3200,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,3459,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,3391,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,2456,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,4229,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,24958,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,22856,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,6668,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,6462,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,2103,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Trans States Airlines,AX,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,1792,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,40357,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,40582,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,30578,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,28681,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,49788,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,52065,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,663627,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,678327,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,14653,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,41009,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,40782,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,504,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,8119,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,8019,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,322,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,10947,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,11642,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,205,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,18493,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,19114,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,694,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,2962,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,4127,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,55,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,8602,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+199912,1999-12-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,9171,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,17578,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,16606,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Thru / Transit,Low Fare,Terminal 1,B,2616,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,International,Canada,Deplaned,Low Fare,Terminal 1,B,95,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,811,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,605,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,19173,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,17231,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,2996,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,2253,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,5894,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,4660,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,28328,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,34696,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,5974,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,5657,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,5270,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,513,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,7026,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,7748,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,1545,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,3273,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,3375,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,5465,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,4501,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,108269,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,99772,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Thru / Transit,Other,Terminal 3,E,269,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,4102,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,3809,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,12370,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,11167,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,3830,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,3865,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,6749,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,7250,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,7873,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,6881,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,1485,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,841,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,75972,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,71332,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,9106,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,10084,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,5977,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,6035,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,7703,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,5944,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,7190,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,7616,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,7056,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,6270,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,5831,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,5168,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,12906,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,12222,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,15401,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,13516,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Deplaned,Other,Terminal 1,B,138,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Midwest Airlines,YX,Midwest Airlines,YX,Domestic,US,Enplaned,Other,Terminal 1,B,163,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,13350,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,12558,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,45826,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,44706,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,1823,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,7425,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,6760,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,11316,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,7827,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,6331,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,6077,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,4204,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,3705,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,16493,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,17200,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,1272,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,1673,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,41251,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,42027,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,28691,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,27294,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,3312,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,3343,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,3566,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,3604,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,3756,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,2490,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,21133,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,20885,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,5663,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,4759,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,31572,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,31912,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,28458,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,22649,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,46337,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,45866,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,E,41723,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,E,38925,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,E,711,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,553316,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,549600,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,9596,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,43088,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,41434,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,715,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,9259,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,8243,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,236,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,11405,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,11729,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,212,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,Terminal 3,F,6105,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,19339,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,12369,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,585,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,3656,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,3504,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,103,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,10299,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200001,2000-01-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,9812,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,17220,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Enplaned,Low Fare,Terminal 1,B,17317,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Thru / Transit,Low Fare,Terminal 1,B,5901,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Deplaned,Other,Terminal 2,D,425,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Aeroflot Russian International Airlines,,Aeroflot Russian International Airlines,,International,Europe,Enplaned,Other,Terminal 2,D,434,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Deplaned,Other,Terminal 1,B,19238,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Air Canada,AC,Air Canada,AC,International,Canada,Enplaned,Other,Terminal 1,B,18791,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Deplaned,Other,Terminal 2,D,2770,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Air China,CA,Air China,CA,International,Asia,Enplaned,Other,Terminal 2,D,2123,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Deplaned,Other,Terminal 2,D,5100,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Air France,AF,Air France,AF,International,Europe,Enplaned,Other,Terminal 2,D,5060,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Deplaned,Other,Terminal 2,D,27950,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Enplaned,Other,Terminal 2,D,35618,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,Domestic,US,Thru / Transit,Other,Terminal 2,D,6496,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Deplaned,Other,Terminal 2,D,5710,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Enplaned,Other,Terminal 2,D,5961,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Canada,Thru / Transit,Other,Terminal 2,D,642,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Deplaned,Other,Terminal 2,D,4384,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Enplaned,Other,Terminal 2,D,7734,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alaska Airlines,AS,Alaska Airlines,AS,International,Mexico,Thru / Transit,Other,Terminal 2,D,3125,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Deplaned,Other,Terminal 2,D,3001,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Alitalia Airlines,AZ,Alitalia Airlines,AZ,International,Europe,Enplaned,Other,Terminal 2,D,2903,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Deplaned,Other,Terminal 2,D,5726,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,"All Nippon Company Airways, Ltd.",NH,"All Nippon Company Airways, Ltd.",NH,International,Asia,Enplaned,Other,Terminal 2,D,5147,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Deplaned,Other,Terminal 3,E,102998,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Enplaned,Other,Terminal 3,E,102706,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,American Airlines,AA,American Airlines,AA,Domestic,US,Thru / Transit,Other,Terminal 3,E,31,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Deplaned,Other,Terminal 2,D,3632,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Asiana Airlines,OZ,Asiana Airlines,OZ,International,Asia,Enplaned,Other,Terminal 2,D,3417,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Deplaned,Other,Terminal 2,D,12186,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,British Airways,BA,British Airways,BA,International,Europe,Enplaned,Other,Terminal 2,D,12806,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Deplaned,Other,Terminal 3,E,4500,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Canadian Airlines,CP,Canadian Airlines,CP,International,Canada,Enplaned,Other,Terminal 3,E,4648,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Deplaned,Other,Terminal 2,D,5902,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Cathay Pacific,CX,Cathay Pacific,CX,International,Asia,Enplaned,Other,Terminal 2,D,5757,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Deplaned,Other,Terminal 2,D,5869,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,China Airlines,CI,China Airlines,CI,International,Asia,Enplaned,Other,Terminal 2,D,7873,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Deplaned,Other,Terminal 2,D,710,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,"China Eastern Airlines, Inc",,"China Eastern Airlines, Inc",,International,Asia,Enplaned,Other,Terminal 2,D,665,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,72402,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Delta Air Lines,DL,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,71263,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Deplaned,Other,Terminal 2,D,9107,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,EVA Airways,BR,EVA Airways,BR,International,Asia,Enplaned,Other,Terminal 2,D,9265,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Deplaned,Low Fare,Terminal 1,B,8063,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Frontier Airlines,F9,Frontier Airlines,F9,Domestic,US,Enplaned,Low Fare,Terminal 1,B,6841,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Deplaned,Other,Terminal 1,C,7077,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Hawaiian Airlines,HA,Hawaiian Airlines,HA,Domestic,US,Enplaned,Other,Terminal 1,C,7154,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Deplaned,Other,Terminal 2,D,6037,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Japan Airlines,JL,Japan Airlines,JL,International,Asia,Enplaned,Other,Terminal 2,D,7227,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Deplaned,Other,Terminal 2,D,6873,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,KLM Royal Dutch Airlines,KL,KLM Royal Dutch Airlines,KL,International,Europe,Enplaned,Other,Terminal 2,D,6192,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Deplaned,Other,Terminal 2,D,5135,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Korean Air Lines,KE,Korean Air Lines,KE,International,Asia,Enplaned,Other,Terminal 2,D,4921,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Deplaned,Other,Terminal 2,D,12173,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Lufthansa German Airlines,LH,Lufthansa German Airlines,LH,International,Europe,Enplaned,Other,Terminal 2,D,12053,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Deplaned,Other,Terminal 2,D,12708,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Mexicana Airlines,MX,Mexicana Airlines,MX,International,Mexico,Enplaned,Other,Terminal 2,D,11080,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Deplaned,Other,Terminal 1,B,14470,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,National Airlines,N7,National Airlines,N7,Domestic,US,Enplaned,Other,Terminal 1,B,15139,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Deplaned,Other,Terminal 1,C,43610,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Enplaned,Other,Terminal 1,C,43220,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,Domestic,US,Thru / Transit,Other,Terminal 1,C,3292,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Deplaned,Other,Terminal 2,D,6601,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Northwest Airlines (became Delta),NW,Northwest Airlines (became Delta),NW,International,Asia,Enplaned,Other,Terminal 2,D,5928,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Deplaned,Other,Terminal 2,D,7917,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Philippine Airlines,PR,Philippine Airlines,PR,International,Asia,Enplaned,Other,Terminal 2,D,6292,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Deplaned,Other,Terminal 2,D,5223,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,Domestic,US,Enplaned,Other,Terminal 2,D,5632,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Deplaned,Other,Terminal 2,D,4229,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Ryan International Airlines,RD,Ryan International Airlines,RD,International,Europe,Enplaned,Other,Terminal 2,D,4312,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Deplaned,Other,Terminal 2,D,15120,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Singapore Airlines,SQ,Singapore Airlines,SQ,International,Asia,Enplaned,Other,Terminal 2,D,15172,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Deplaned,Other,Terminal 1,C,1493,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,SkyWest Airlines,OO,Delta Air Lines,DL,Domestic,US,Enplaned,Other,Terminal 1,C,1764,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,39475,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,SkyWest Airlines,OO,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,40611,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Deplaned,Low Fare,Terminal 1,A,30232,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Southwest Airlines,WN,Southwest Airlines,WN,Domestic,US,Enplaned,Low Fare,Terminal 1,A,29458,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Deplaned,Low Fare,Terminal 3,E,2873,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Sun Country Airlines,SY,Sun Country Airlines,SY,Domestic,US,Enplaned,Low Fare,Terminal 3,E,2720,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Deplaned,Other,Terminal 2,D,3154,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Swissair,SR,Swissair,SR,International,Europe,Enplaned,Other,Terminal 2,D,2979,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Deplaned,Other,Terminal 2,D,2120,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,"TACA International Airlines, S.A.",TA,"TACA International Airlines, S.A.",TA,International,Central America,Enplaned,Other,Terminal 2,D,2369,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Deplaned,Other,Terminal 1,B,20240,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,TWA,TW,TWA,TW,Domestic,US,Enplaned,Other,Terminal 1,B,19892,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Deplaned,Other,Terminal 3,E,1487,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Tower Air,FF,Tower Air,FF,Domestic,US,Enplaned,Other,Terminal 3,E,991,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Other,Terminal 1,A,33407,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Other,Terminal 1,A,32899,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Deplaned,Low Fare,Terminal 1,B,25490,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,US Airways,US,US Airways,US,Domestic,US,Enplaned,Low Fare,Terminal 1,B,22421,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Deplaned,Other,Terminal 1,B,42994,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines,UA,United Airlines,UA,Domestic,US,Enplaned,Other,Terminal 1,B,42253,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,E,40605,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,E,38981,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,E,823,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Deplaned,Other,Terminal 3,F,545366,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Enplaned,Other,Terminal 3,F,556087,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,Domestic,US,Thru / Transit,Other,Terminal 3,F,11373,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Deplaned,Other,International,G,40415,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Enplaned,Other,International,G,39049,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Asia,Thru / Transit,Other,International,G,529,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Deplaned,Other,International,G,6897,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Enplaned,Other,International,G,7342,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Australia / Oceania,Thru / Transit,Other,International,G,324,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Deplaned,Other,International,G,10657,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,International,G,11580,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Thru / Transit,Other,International,G,204,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Canada,Enplaned,Other,Terminal 3,F,5466,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Deplaned,Other,International,G,16401,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Enplaned,Other,International,G,11157,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Europe,Thru / Transit,Other,International,G,755,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Deplaned,Other,International,G,3177,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Enplaned,Other,International,G,3211,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,United Airlines - Pre 07/01/2013,UA,United Airlines - Pre 07/01/2013,UA,International,Mexico,Thru / Transit,Other,International,G,76,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Deplaned,Other,Terminal 2,D,9840,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200002,2000-02-01T00:00:00.000,Virgin Atlantic,VS,Virgin Atlantic,VS,International,Europe,Enplaned,Other,Terminal 2,D,9552,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000
+200003,2000-03-01T00:00:00.000,ATA Airlines,TZ,ATA Airlines,TZ,Domestic,US,Deplaned,Low Fare,Terminal 1,B,19649,2026-09-20T13:00:17.000,2026-09-22T15:04:37.000

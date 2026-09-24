@@ -1,0 +1,440 @@
+\documentclass[a4paper,oneside,12pt]{report}
+% Package yang diperlukan
+\usepackage[table]{xcolor} % Untuk menggunakan warna
+\usepackage{graphicx}      % Untuk memasukkan gambar
+\usepackage{titling}       % Untuk kustomisasi halaman judul
+\usepackage{geometry}      % Untuk mengatur margin halaman
+\usepackage{listings}      % Untuk menampilkan blok kode
+\usepackage{float}         % Untuk kontrol penempatan float
+\usepackage{hyperref}      % Untuk membuat hyperlink
+\usepackage{indentfirst}   % Untuk memberi indentasi pada paragraf pertama
+\usepackage{url}           % Untuk format URL
+\usepackage{fancyhdr}      % Untuk kustomisasi header dan footer
+\usepackage{tocloft}       % Untuk kustomisasi Daftar Isi
+\usepackage{bookmark}      % Untuk manajemen bookmark PDF
+\usepackage{amsmath}       % Untuk notasi matematika
+\usepackage[most]{tcolorbox} % Untuk box output terminal
+
+% Paket untuk tabel
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{colortbl}
+
+% Macro untuk header tabel
+\newcommand{\thead}[1]{\textcolor{white}{\textbf{#1}}}
+
+%======================================================================
+% PENGATURAN GEOMETRI HALAMAN
+%======================================================================
+\geometry{left=3cm, right=2.5cm, top=2cm, bottom=2.5cm}
+\sloppy
+
+%======================================================================
+% PENGATURAN WARNA UNTUK BLOK KODE
+%======================================================================
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{darkblue}{rgb}{0,0,0.6}
+\definecolor{outputbg}{RGB}{241,245,249}
+\definecolor{outputborder}{RGB}{203,213,225}
+
+%======================================================================
+% PENGATURAN BLOK KODE (LISTINGS)
+%======================================================================
+\lstdefinestyle{commonstyle}{
+    backgroundcolor=\color{backcolour},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    basicstyle=\ttfamily\footnotesize,
+    numberstyle=\tiny\color{codegray},
+    columns=flexible,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    breakindent=0pt,
+    breakautoindent=false
+}
+
+\lstdefinestyle{pythonstyle}{
+    style=commonstyle,
+    language=Python,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{darkblue},
+    stringstyle=\color{codepurple},
+    emph={import,from,class,def,for,while,if,else,elif,try,except,finally,as,lambda,return},
+    emphstyle=\color{darkblue}
+}
+
+% Macro untuk screenshot gambar Colab
+\newcommand{\screenshotimage}[4][0.88\textwidth]{%
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#1]{#2}
+        \caption{#3}
+        \label{fig:#4}
+    \end{figure}
+}
+
+%======================================================================
+% PENGATURAN LAIN-LAIN
+%======================================================================
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\tablename}{Tabel}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Laporan Praktikum Penambangan Data P6 - Januarsyah Akbar},
+    pdfauthor={Januarsyah Akbar}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+%======================================================================
+% DOKUMEN UTAMA
+%======================================================================
+\begin{document}
+
+%======================================================================
+% HALAMAN JUDUL (COVER)
+%======================================================================
+\begin{titlepage}
+    \centering
+    \vspace*{0.2cm}
+    
+    {\Large \textbf{LAPORAN PRAKTIKUM}}\\[0.2cm]
+    {\Large \textbf{PENAMBANGAN DATA}}\\[0.6cm]
+    
+    {\large \textbf{PERTEMUAN VI}}\\[0.3cm]
+    {\Large \textbf{CLUSTERING}}\\[1.2cm]
+    
+    \vfill
+    \includegraphics[width=0.42\textwidth]{lambang ugm.png}\\[1.2cm]
+    \vfill
+    
+    \textbf{Disusun oleh:}\\[0.3cm]
+    \begin{tabular}{ll}
+        \textbf{Nama} & : Januarsyah Akbar \\
+        \textbf{NIM} & : 24/535846/SV/24314 \\
+        \textbf{Kelas} & : B2 \\
+    \end{tabular}
+    
+    \vspace{1.5cm}
+    
+    \textbf{PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK}\\
+    \textbf{DEPARTEMEN TEKNIK ELEKTRO DAN INFORMATIKA}\\
+    \textbf{SEKOLAH VOKASI}\\
+    \textbf{UNIVERSITAS GADJAH MADA}\\
+    \textbf{YOGYAKARTA}\\
+    \textbf{2026}\\
+\end{titlepage}
+
+%======================================================================
+% DAFTAR ISI
+%======================================================================
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\renewcommand{\contentsname}{DAFTAR ISI}
+\tableofcontents
+\newpage
+
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+%======================================================================
+% BAB I: TUJUAN PRAKTIKUM
+%======================================================================
+\chapter{Tujuan Praktikum}
+
+\begin{enumerate}
+    \item Mahasiswa memahami konsep dasar \textit{unsupervised learning} dan perannya dalam pembelajaran mesin.
+    \item Mahasiswa mampu menerapkan berbagai teknik \textit{clustering} seperti K-Means, K-Medoids, dan DBSCAN untuk mengelompokkan data berdasarkan karakteristik tertentu.
+    \item Mahasiswa dapat membandingkan kualitas hasil \textit{clustering} menggunakan metrik evaluasi seperti Inertia dan Silhouette Score.
+    \item Mahasiswa memahami konsep \textit{Association Rule} dan mampu menerapkannya untuk menemukan pola hubungan antar-item dalam dataset.
+\end{enumerate}
+
+%======================================================================
+% BAB II: DASAR TEORI
+%======================================================================
+\chapter{Dasar Teori}
+
+\section{Unsupervised Learning}
+\textit{Unsupervised Learning} merupakan salah satu paradigma pembelajaran mesin di mana model dilatih untuk menemukan struktur tersembunyi atau pola dari sekumpulan data tanpa bantuan label target eksternal. Algoritma ini menganalisis hubungan antar-variabel data tanpa intervensi atau arahan manusia. Fokus utamanya adalah eksplorasi data deskriptif dan pengelompokan menggunakan algoritma seperti K-Means, Artificial Neural Network (ANN), dan Gaussian Mixture Model (GMM) yang menawarkan fleksibilitas tinggi dalam menjelajahi karakteristik data yang belum diketahui sebelumnya (Nurhalizah \& Ardianto, 2024).
+
+Keunggulan utama \textit{unsupervised learning} terletak pada kemampuannya mengolah data mentah dalam jumlah besar yang belum ber-label. Teknik ini sangat populer pada aplikasi deteksi anomali, rekomendasi produk, serta analisis segmentasi pasar di berbagai bidang industri (Wijoyo et al., 2024).
+
+\section{Clustering}
+\textit{Clustering} atau klasterisasi adalah teknik analisis data statistik yang bertujuan mengelompokkan sekumpulan objek atau sampel data ke dalam beberapa kelompok (\textit{cluster}). Setiap kelompok berisi objek yang memiliki tingkat kemiripan (\textit{homogeneity}) tinggi satu sama lain, sementara antar-kelompok memiliki tingkat perbedaan (\textit{heterogeneity}) yang maksimal. Analisis klaster telah dimanfaatkan secara luas di bidang statistik, ekonomi, kesehatan, hingga sosiologi kependudukan (Afidaha \& Masrukan, 2023).
+
+\section{Algoritma K-Means}
+K-Means merupakan salah satu algoritma \textit{partitioning clustering} non-hirarki yang paling populer. Algoritma ini mempartisi $N$ sampel data ke dalam $K$ buah klaster berdasarkan jarak Euclidean terdekat terhadap titik pusat massa (\textit{centroid}). Proses K-Means beriterasi secara independen dimulai dari penentuan posisi awal $K$ centroid secara acak, pengalokasian data ke centroid terdekat, hingga pembaruan lokasi centroid berdasarkan rata-rata (\textit{mean}) koordinat seluruh anggota klaster (Sulistiyawati \& Supriyanto, 2021).
+
+Tujuan utama dari optimasi K-Means adalah meminimalkan fungsi objektif \textit{Within-Cluster Sum of Squares} (WCSS) atau Inertia. Meskipun cepat dan efisien untuk dataset berskala besar, K-Means rentan terhadap penentuan centroid awal dan sangat sensitif terhadap keberadaan pencilan (\textit{outliers}).
+
+\section{Algoritma K-Medoids}
+K-Medoids atau \textit{Partitioning Around Medoids} (PAM) merupakan varian algoritma pemartisian yang menggunakan titik data aktual (\textit{medoid}) sebagai pusat klaster, bukan nilai rata-rata imajiner seperti pada K-Means. Pendekatan ini membuat K-Medoids jauh lebih resisten dan tangguh (\textit{robust}) terhadap pengaruh *noise* maupun pencilan ekstrem pada data (Herviany et al., 2021).
+
+Meskipun secara komputasi K-Medoids memerlukan iterasi perhitungan matriks jarak yang lebih kompleks dibanding K-Means, algoritma ini sangat cocok digunakan pada data yang memiliki pencilan atau ketika pusat klaster dituntut merupakan sampel data yang riil.
+
+\section{Algoritma DBSCAN}
+\textit{Density-Based Spatial Clustering of Applications with Noise} (DBSCAN) adalah algoritma *clustering* berbasis kepadatan area. Berbeda dari K-Means dan K-Medoids yang mengharuskan penentuan jumlah klaster $K$ di awal, DBSCAN menentukan klaster berdasarkan kerapatan titik data yang dibatasi oleh radius epsilon ($\epsilon$) dan jumlah minimum tetangga (\textit{minPts}). Algoritma ini sangat unggul dalam menemukan klaster ber-bentuk arbitrer serta mampu mengisolasi titik pencilan sebagai *noise* secara otomatis (Ester et al., 1996; Han et al., 2011).
+
+\section{Association Rule Mining}
+\textit{Association Rule Mining} merupakan teknik penambangan data untuk menemukan aturan keterkaitan atau pola asosiasi antar-item dalam sekumpulan transaksi. Aturan umumnya dinyatakan dalam bentuk $A \rightarrow B$, yang berarti kemunculan item $A$ cenderung diikuti oleh kemunculan item $B$. Evaluasi kualitas aturan asosiasi diukur menggunakan tiga metrik utama, yaitu *support* (frekuensi kemunculan), *confidence* (kepastian probabilitas bersyarat), dan *lift* (kekuatan keterikatan aturan dibanding acak) (Agrawal et al., 1993; Han et al., 2011).
+
+\section{Inertia (Within-Cluster Sum of Squares)}
+Inertia atau WCSS adalah metrik evaluasi internal pada K-Means yang mengukur tingkat kerapatan (\textit{compactness}) di dalam klaster. Nilai Inertia dihitung sebagai jumlah total kuadrat jarak antara setiap titik sampel terhadap centroid klaster masing-masing. Semakin kecil nilai Inertia, semakin rapat dan representatif anggota di dalam klaster tersebut. Metrik Inertia menjadi acuan utama pada *Elbow Method* untuk menentukan jumlah klaster optimal (Bishop, 2006).
+
+\section{Silhouette Score}
+\textit{Silhouette Score} merupakan metrik evaluasi kualitas pengelompokan yang mengukur seberapa baik suatu titik data ditempatkan pada klasternya dibandingkan dengan klaster tetangga terdekatnya. Nilai Silhouette Score berada pada rentang -1 hingga +1. Nilai yang mendekati +1 mengindikasikan pemisahan antar-klaster yang sangat jelas dan baik, nilai 0 menunjukkan adanya *overlap* antar-klaster, sedangkan nilai negatif menandakan adanya kesalahan pengelompokan (Rousseeuw, 1987; Tan et al., 2019).
+
+%======================================================================
+% BAB III: HASIL DAN PEMBAHASAN
+%======================================================================
+\chapter{Hasil dan Pembahasan}
+
+\section{Langkah Praktikum}
+
+\subsection{Langkah Percobaan Clustering Credit Card Dataset}
+
+Praktikum dimulai dengan mempersiapkan lingkungan pengembangan di Google Colab. Seluruh pustaka Python yang diperlukan untuk manipulasi data, kalkulasi statistik, standarisasi, pemodelan kluster, dan evaluasi diimpor ke dalam notebook.
+
+\screenshotimage{gambar/colab-p6-imports.png}{Import Pustaka dan Setup Dependensi Google Colab}{colab-imports}
+
+Setelah dependensi siap, dataset perilaku nasabah kartu kredit (\textit{Credit Card Dataset for Clustering}) dimuat ke dalam DataFrame pandas. Dataset memiliki dimensi sebanyak 8.950 baris sampel nasabah dan 18 atribut transaksi.
+
+\screenshotimage{gambar/colab-p6-read-dataset.png}{Cuplikan Lima Baris Pertama Credit Card Dataset (df.head())}{colab-read}
+
+Pemeriksaan ringkasan statistik deskriptif dilakukan untuk memahami distribusi min, max, mean, dan standar deviasi pada setiap atribut fitur transaksi nasabah.
+
+\screenshotimage{gambar/colab-p6-describe.png}{Ringkasan Statistik Deskriptif Atribut Dataset (df.describe().T)}{colab-describe}
+
+Selanjutnya dilakukan analisis matriks korelasi Pearson untuk mengidentifikasi tingkat keterkaitan linier antar-fitur transaksi.
+
+\screenshotimage{gambar/colab-p6-corr.png}{Heatmap Korelasi Pearson Antar-Fitur Transaksi Credit Card}{colab-corr}
+
+Tahap pembersihan data (\textit{data cleaning}) diawali dengan menghapus atribut \texttt{CUST\_ID} karena atribut tersebut hanya berfungsi sebagai identitas nasabah dan tidak memiliki relevansi terhadap proses pengelompokan.
+
+\screenshotimage{gambar/colab-p6-drop-custid.png}{Penghapusan Atribut Identitas CUST\_ID dari DataFrame}{colab-drop-custid}
+
+Pemeriksaan *missing values* menunjukkan adanya nilai kosong pada atribut \texttt{MINIMUM\_PAYMENTS} dan \texttt{CREDIT\_LIMIT}. Nilai kosong tersebut diimputasi menggunakan nilai median dari masing-masing atribut agar tidak mengganggu proses konvergensi algoritma kluster.
+
+\screenshotimage{gambar/colab-p6-isnull.png}{Pengecekan dan Imputasi Missing Values dengan Nilai Median}{colab-isnull}
+
+Sebelum menjalankan algoritma kluster, seluruh fitur distandarisasi menggunakan \texttt{StandardScaler}. Standarisasi ini sangat krusial agar fitur berskala besar seperti \texttt{BALANCE} atau \texttt{PURCHASES} tidak mendominasi perhitungan jarak Euclidean terhadap fitur rasio/frekuensi.
+
+\screenshotimage{gambar/colab-p6-scaling.png}{Matriks Hasil Standarisasi Fitur Menggunakan StandardScaler}{colab-scaling}
+
+Pengujian jumlah kluster optimal $k=1 \dots 10$ dilakukan menggunakan *Elbow Method* pada algoritma K-Means. Penurunan nilai Inertia dicatat pada setiap iterasi.
+
+\screenshotimage{gambar/colab-p6-kmeans-elbow-data.png}{Daftar Nilai Inertia K-Means untuk k=1 hingga k=10}{colab-km-elbow-data}
+
+\screenshotimage{gambar/colab-p6-kmeans-elbow-plot.png}{Grafik Kurva Elbow Method pada Algoritma K-Means}{colab-km-elbow-plot}
+
+Untuk menentukan titik tekukan siku (*knee point*) secara objektif dan akurat, digunakan pustaka \texttt{KneeLocator} yang menghasilkan titik siku optimal pada $k=4$.
+
+\screenshotimage{gambar/colab-p6-kmeans-knee-plot.png}{Deteksi Siku Optimal K-Means (k=4) Menggunakan KneeLocator}{colab-km-knee-plot}
+
+Proses serupa dijalankan untuk menguji nilai Inertia pada algoritma K-Medoids untuk rentang kluster $k=1 \dots 10$.
+
+\screenshotimage{gambar/colab-p6-kmedoids-elbow-data.png}{Daftar Nilai Inertia K-Medoids untuk k=1 hingga k=10}{colab-kmed-elbow-data}
+
+\screenshotimage{gambar/colab-p6-kmedoids-elbow-plot.png}{Grafik Kurva Elbow Method pada Algoritma K-Medoids}{colab-kmed-elbow-plot}
+
+\screenshotimage{gambar/colab-p6-kmedoids-knee-plot.png}{Deteksi Siku Optimal K-Medoids (k=4) Menggunakan KneeLocator}{colab-kmed-knee-plot}
+
+Selain *Elbow Method*, evaluasi kualitas pemisahan kluster diuji menggunakan *Silhouette Score*. Pada algoritma K-Means, skor puncak tertinggi diperoleh pada jumlah kluster $k=2$ dengan skor sebesar 0,2795.
+
+\screenshotimage{gambar/colab-p6-kmeans-sh-data.png}{Output Perhitungan Silhouette Score K-Means}{colab-km-sh-data}
+
+\screenshotimage{gambar/colab-p6-kmeans-sh-plot.png}{Grafik Silhouette Score K-Means Memuncak Tajam pada k=2}{colab-km-sh-plot}
+
+Pengujian *Silhouette Score* pada K-Medoids juga menunjukkan nilai tertinggi berada pada $k=2$ dengan skor 0,1945, yang kemudian mengalami penurunan seiring bertambahnya jumlah kluster.
+
+\screenshotimage{gambar/colab-p6-kmedoids-sh-data.png}{Output Perhitungan Silhouette Score K-Medoids}{colab-kmed-sh-data}
+
+\screenshotimage{gambar/colab-p6-kmedoids-sh-plot.png}{Grafik Silhouette Score K-Medoids terhadap Jumlah Kluster}{colab-kmed-sh-plot}
+
+Model K-Means kemudian dilatih menggunakan parameter optimal $k=2$. Persebaran data divisualisasikan dalam bentuk *scatter plot* 2D antara fitur \texttt{PURCHASES} dan \texttt{PAYMENTS}.
+
+\screenshotimage{gambar/colab-p6-kmeans-scatter2d.png}{Visualisasi 2D Scatter Plot K-Means Clustering (k=2)}{colab-km-scatter2d}
+
+Untuk memperoleh gambaran sebaran data yang lebih kaya, dibuat pula visualisasi 3D yang melibatkan tiga atribut utama, yaitu \texttt{PURCHASES}, \texttt{PAYMENTS}, dan \texttt{BALANCE}.
+
+\screenshotimage{gambar/colab-p6-kmeans-scatter3d.png}{Visualisasi 3D Scatter Plot K-Means (PURCHASES vs PAYMENTS vs BALANCE)}{colab-km-scatter3d}
+
+Model K-Medoids dilatih menggunakan $k=4$ berdasarkan hasil *Elbow Method* untuk melihat segmentasi nasabah secara lebih mendalam ke dalam empat kelompok perilaku.
+
+\screenshotimage{gambar/colab-p6-kmedoids-scatter2d.png}{Visualisasi 2D Scatter Plot K-Medoids Clustering (k=4)}{colab-kmed-scatter2d}
+
+Analisis profil keempat kluster K-Medoids dilakukan dengan membandingkan nilai rata-rata atribut \texttt{PURCHASES}, \texttt{PAYMENTS}, dan \texttt{BALANCE} menggunakan diagram batang.
+
+\screenshotimage{gambar/colab-p6-cluster-analysis-barplot.png}{Bar Plot Perbandingan Rata-rata Fitur Utama per Kluster K-Medoids}{colab-bar-analysis}
+
+Berdasarkan hasil visualisasi dan statistik kluster K-Medoids, dapat dirumuskan profil segmen nasabah sebagai berikut:
+1. **Cluster 0 (Nasabah Hemat/Pasif)**: Memiliki rata-rata \texttt{PURCHASES}, \texttt{PAYMENTS}, dan \texttt{BALANCE} paling rendah.
+2. **Cluster 1 (Nasabah Reguler)**: Memiliki nilai transaksi dan saldo berada pada tingkat moderat/sedang.
+3. **Cluster 2 (Nasabah Transaktif Tinggi)**: Memiliki rata-rata \texttt{PURCHASES} dan \texttt{PAYMENTS} tertinggi, menandakan nasabah yang sangat aktif berbelanja dan rutin melunasi tagihan.
+4. **Cluster 3 (Nasabah Peminjam Cash/Pembawa Saldo)**: Memiliki nilai saldo \texttt{BALANCE} paling tinggi dengan frekuensi transaksi pembelian yang sedang.
+
+Sebagai penutup langkah percobaan, ditunjukkan demonstrasi penggunaan \texttt{LabelEncoder} dari pustaka \texttt{scikit-learn} untuk mengonversi variabel ber-tipe kategorial menjadi bentuk representasi angka numerik.
+
+\section{Tugas}
+
+\subsection{Tugas 1: Preparation \& Analisis Dataset Credit Card (CCData)}
+
+Dataset \texttt{CC GENERAL.csv} atau dikenal sebagai Kaggle Credit Card Dataset (CCData) merupakan dataset publik yang merekam transaksi 8.950 nasabah kartu kredit selama 6 bulan.
+
+Tujuan utama penggunaan dataset ini dalam ranah penambangan data mencakup:
+1. **Segmentasi Nasabah**: Membagi basis pelanggan ke dalam beberapa kluster homogen berdasarkan kebiasaan belanja, penarikan tunai di ATM, dan perilaku pembayaran tagihan.
+2. **Pengembangan Strategi Pemasaran Tertarget**: Membantu pihak perbankan merancang kampanye promosi berdaya sasaran tinggi, seperti pemberian hadiah insentif pada nasabah transaktif tinggi atau penawaran cicilan bunga rendah pada nasabah pembawa saldo.
+3. **Manajemen Risiko Kredit**: Mendeteksi kelompok nasabah yang berpotensi mengalami keterlambatan pembayaran dengan mengidentifikasi pola saldo tinggi yang dikombinasikan dengan rasio pelunasan tagihan minimum yang rendah.
+
+Berikut adalah penjelasan rincian 18 atribut fitur yang terdapat di dalam dataset CCData:
+
+\begin{table}[H]
+\centering
+\caption{Deskripsi Rincian 18 Fitur Dataset Credit Card (CCData)}
+\label{tab:cc-features}
+\small
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+\textbf{Nama Fitur} & \textbf{Tipe Data} & \textbf{Deskripsi \& Makna Bisnis} \\
+\midrule
+\texttt{CUST\_ID} & Kategorial & Identitas unik bagi setiap pemilik kartu kredit. \\
+\texttt{BALANCE} & Kontinu & Sisa saldo tagihan yang belum dilunasi oleh nasabah. \\
+\texttt{BALANCE\_FREQUENCY} & Kontinu & Rasio frekuensi pembaruan saldo (skala 0 hingga 1). \\
+\texttt{PURCHASES} & Kontinu & Total akumulasi nominal transaksi pembelian. \\
+\texttt{ONEOFF\_PURCHASES} & Kontinu & Nominal transaksi pembelian sekali bayar (tanpa cicilan). \\
+\texttt{INSTALLMENTS\_PURCHASES} & Kontinu & Total nominal transaksi pembelian berbasis cicilan. \\
+\texttt{CASH\_ADVANCE} & Kontinu & Total nominal penarikan uang tunai di muka dari ATM. \\
+\texttt{PURCHASES\_FREQUENCY} & Kontinu & Frekuensi keaktifan transaksi pembelian. \\
+\texttt{ONEOFF\_PURCHASES\_FREQ} & Kontinu & Frekuensi transaksi pembelian sekali bayar. \\
+\texttt{PURCHASES\_INSTALL\_FREQ} & Kontinu & Frekuensi transaksi pembelian berbasis cicilan. \\
+\texttt{CASH\_ADVANCE\_FREQ} & Kontinu & Frekuensi penarikan tunai uang di muka. \\
+\texttt{CASH\_ADVANCE\_TRX} & Diskret & Jumlah total frekuensi transaksi penarikan tunai. \\
+\texttt{PURCHASES\_TRX} & Diskret & Jumlah total frekuensi transaksi pembelian yang berhasil. \\
+\texttt{CREDIT\_LIMIT} & Kontinu & Batas maksimum limit kartu kredit yang diberikan bank. \\
+\texttt{PAYMENTS} & Kontinu & Total jumlah pembayaran tagihan yang telah disetor. \\
+\texttt{MINIMUM\_PAYMENTS} & Kontinu & Batas pembayaran tagihan minimum yang diwajibkan. \\
+\texttt{PRC\_FULL\_PAYMENT} & Kontinu & Persentase pelunasan tagihan secara penuh oleh nasabah. \\
+\texttt{TENURE} & Diskret & Masa durasi keanggotaan kartu kredit (dalam bulan). \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Tugas 2: Clustering Dataset Air Traffic Passengers Statistics}
+
+Tugas kedua mengaplikasikan algoritma K-Means dan K-Medoids pada dataset \textit{Air Traffic Passengers Statistics} yang disediakan oleh Pemerintah Kota San Francisco (SF Open Data). Dataset ini merekam data statistik lalu lintas penumpang penerbangan di Bandara Internasional San Francisco (SFO).
+
+\screenshotimage{gambar/colab-p6-air-head.png}{Cuplikan Data Statistik Penumpang Penerbangan SFO (df\_air.head())}{colab-air-head}
+
+Struktur data diperiksa untuk memastikan jumlah sampel baris dan keberadaan nilai kosong. Dataset terdiri dari 1.000 sampel data transaksi penerbangan dengan atribut utama seperti \texttt{operating\_airline}, \texttt{geo\_summary}, \texttt{geo\_region}, \texttt{activity\_type\_code}, dan \texttt{passenger\_count}.
+
+\screenshotimage{gambar/colab-p6-air-info.png}{Ringkasan Struktur Informasi dan Pengecekan Missing Values Dataset Air Traffic}{colab-air-info}
+
+Tahap pra-pemrosesan data dilakukan dengan menyaring fitur numerik dan mengodekan atribut kategorial kuncinya (\texttt{operating\_airline}, \texttt{geo\_summary}, \texttt{geo\_region}, \texttt{activity\_type\_code}, \texttt{price\_category\_code}) menjadi bentuk angka numerik menggunakan \texttt{LabelEncoder}. Selanjutnya dilakukan standarisasi fitur menggunakan \texttt{StandardScaler}.
+
+Evaluasi penentuan jumlah kluster optimal dijalankan pada rentang $k=1 \dots 10$ menggunakan *Elbow Method* dan *Silhouette Score* untuk kedua algoritma.
+
+\screenshotimage{gambar/colab-p6-air-elbow-sh.png}{Perbandingan Kurva Elbow dan Silhouette Score Air Traffic (K-Means vs K-Medoids)}{colab-air-elbow-sh}
+
+Berdasarkan titik tekukan siku kurva Inertia dan skor Silhouette terbaik, ditentukan jumlah kluster optimal $k=3$. Kedua algoritma dilatih pada matriks data terstandarisasi untuk mengelompokkan karakteristik lalu lintas penumpang penerbangan.
+
+\screenshotimage{gambar/colab-p6-air-eval.png}{Perbandingan Hasil Perhitungan Silhouette Score Air Traffic Clustering}{colab-air-eval}
+
+Hasil pengujian menunjukkan bahwa model \textbf{K-Means} mencapai Silhouette Score sebesar \textbf{0,4428}, mengungguli \textbf{K-Medoids} yang memperoleh skor \textbf{0,3812}.
+
+\screenshotimage{gambar/colab-p6-air-scatter-comp.png}{Visualisasi Scatter Plot Kluster Air Traffic (K-Means vs K-Medoids)}{colab-air-scatter-comp}
+
+Visualisasi *scatter plot* memperlihatkan bahwa K-Means mampu memisahkan titik-titik data penumpang penerbangan secara lebih rapi dan konsisten sesuai dengan tingkat kerapatan volume penumpang pada sumbu vertikal.
+
+\screenshotimage{gambar/colab-p6-air-bar-summary.png}{Rata-rata Jumlah Penumpang per Kluster K-Means pada Dataset Air Traffic}{colab-air-bar-summary}
+
+Berdasarkan hasil analisis distribusi nilai pada kluster K-Means, dapat dirumuskan tiga kelompok utama lalu lintas penumpang di Bandara Internasional San Francisco:
+1. **Kluster 0 (High-Volume Mainline Hub)**: Kelompok penerbangan dengan volume penumpang sangat tinggi ($>100.000$ penumpang per periode) yang didominasi oleh maskapai penerbangan internasional utama dan rute antar-benua.
+2. **Kluster 1 (Medium-Volume Regional Direct Flight)**: Kelompok penerbangan domestik dan regional dengan volume penumpang sedang ($20.000 - 80.000$ penumpang).
+3. **Kluster 2 (Low-Volume Niche \& Charter Flight)**: Kelompok penerbangan ber-volume penumpang rendah ($<20.000$ penumpang) yang mencakup penerbangan khusus, rute kargo, charter, dan maskapai regional kecil.
+
+Hasil segmentasi ini memberikan implikasi manajerial yang sangat berharga bagi pihak pengelola bandara SFO. Penerbangan pada Kluster 0 memerlukan alokasi gerbang keberangkatan (*boarding gate*) utama dan fasilitas klaim bagasi kapasitas besar untuk mencegah penumpukan penumpang, sedangkan Kluster 2 dapat dialokasikan pada terminal sekunder demi efisiensi operasional bandara.
+
+%======================================================================
+% BAB IV: KESIMPULAN
+%======================================================================
+\chapter{Kesimpulan}
+
+\begin{enumerate}
+    \item Praktikum pertemuan keenam berhasil memberikan pemahaman komprehensif mengenai konsep dasar *unsupervised learning*, khususnya teknik pemartisian kluster menggunakan algoritma K-Means dan K-Medoids.
+    \item Algoritma K-Means sangat efektif dan efisien untuk mempartisi data yang memiliki distribusi kontinu dengan struktur kluster bola (*spherical cluster*), sebagaimana dibuktikan oleh capaian Silhouette Score K-Means yang lebih tinggi pada eksperimen Credit Card (0,2795) dan Air Traffic (0,4428).
+    \item Algoritma K-Medoids terbukti memberikan representasi titik pusat kluster yang lebih realitis karena memilih sampel data aktual (*medoid*) sebagai acuan pusat, sehingga lebih tahan terhadap gangguan pencilan (*outliers*).
+    \item Penggunaan kombinasi *Elbow Method* (Inertia) dan *Silhouette Score* terbukti sangat krusial dalam menentukan jumlah kluster optimal secara obyektif dan terukur.
+    \item Penerapan analisis kluster pada kasus nyata seperti Credit Card dan Air Traffic Passengers Statistics mampu memberikan wawasan operasional yang bernilai tinggi untuk segmentasi pelanggan dan optimasi alokasi sumber daya.
+\end{enumerate}
+
+%======================================================================
+% DAFTAR PUSTAKA
+%======================================================================
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Daftar Pustaka}
+
+\begin{thebibliography}{99}
+
+\bibitem{afidaha2023}
+Afidaha, M. W., \& Masrukan, M. H. (2023). Penerapan Metode Clustering dengan Algoritma K-Means untuk Pengelompokkan Data Migrasi Penduduk Tiap Kecamatan di Kabupaten Rembang. \textit{PRISMA, Prosiding Seminar Nasional Matematika} (pp. 729-738). Semarang: Jurusan Matematika, Universitas Negeri Semarang.
+
+\bibitem{agrawal1993}
+Agrawal, R., Imieliński, T., \& Swami, A. (1993). Mining association rules between sets of items in large databases. \textit{Proceedings of the 1993 ACM SIGMOD International Conference on Management of Data}, 207-216.
+
+\bibitem{bishop2006}
+Bishop, C. M. (2006). \textit{Pattern Recognition and Machine Learning}. Springer.
+
+\bibitem{ester1996}
+Ester, M., Kriegel, H.-P., Sander, J., \& Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. \textit{Proceedings of the Second International Conference on Knowledge Discovery and Data Mining (KDD)}, 226-231.
+
+\bibitem{han2011}
+Han, J., Kamber, M., \& Pei, J. (2011). \textit{Data Mining: Concepts and Techniques} (3rd ed.). Morgan Kaufmann.
+
+\bibitem{herviany2021}
+Herviany, N., Delima, R., Nurhidayah, S., \& Kasini, A. (2021). Perbandingan Algoritma K-Means dan K-Medoids untuk Pengelompokkan Daerah Rawan Tanah Longsor di Provinsi Jawa Barat. \textit{MALCOM: Indonesian Journal of Machine Learning and Computer Science}, 34-40.
+
+\bibitem{nurhalizah2024}
+Nurhalizah, S., \& Ardianto, D. (2024). Penerapan Unsupervised Learning dalam Analisis Pola Data. \textit{Jurnal Sains Komputer dan Informatika}.
+
+\bibitem{rousseeuw1987}
+Rousseeuw, P. J. (1987). Silhouettes: A graphical aid to the interpretation and validation of cluster analysis. \textit{Journal of Computational and Applied Mathematics}, 20, 53-65.
+
+\bibitem{sulistiyawati2021}
+Sulistiyawati, A., \& Supriyanto, E. (2021). Pengelompokan Data Menggunakan Metode K-Means untuk Analisis Cluster. \textit{Jurnal Matematika dan Statistika}.
+
+\bibitem{tan2019}
+Tan, P.-N., Steinbach, M., \& Kumar, V. (2019). \textit{Introduction to Data Mining} (2nd ed.). Pearson.
+
+\bibitem{wijoyo2024}
+Wijoyo, S., et al. (2024). Unsupervised Learning and Its Application in Pattern Discovery. \textit{Jurnal Teknologi Informasi dan Sains Data}.
+
+\bibitem{scikit2024}
+scikit-learn. (2024). \textit{Clustering Performance Evaluation}. Dokumentasi resmi scikit-learn. Inertia \& Silhouette Score.
+
+\end{thebibliography}
+
+\end{document}
