@@ -35,3 +35,7 @@ template.zip
 .venv/
 __pycache__/
 *.pyc
+
+# Gambar / image files
+*.png
+

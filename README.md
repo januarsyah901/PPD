@@ -1,4 +1,4 @@
-# PPD — Praktikum Penambangan Data
+# PPD - Praktikum Penambangan Data
 
 ## 1. Manfaat Mata Kuliah
 
@@ -33,7 +33,7 @@ Untuk menjalankan notebook praktikum secara efektif menggunakan Google Colab yan
 
 ### C. Penamaan File Notebook
 
-Format: `p{n}_{topik}.ipynb` — nomor pertemuan + isi yang dibahas, snake_case, tanpa spasi.
+Format: `p{n}_{topik}.ipynb` (nomor pertemuan + topik pembahasan, snake_case, tanpa spasi).
 
 Contoh:
 - `P1/project/p1_numpy_pandas.ipynb`
@@ -100,45 +100,33 @@ Pn/
 
 ### C. Sistematika Isi Laporan
 
-Empat bab (`report` class). Heading LaTeX berhenti di `\subsection`. Isi tugas pakai `\enumerate` biasa (1, 2, 3), **bukan** `\subsubsection`.
+Empat bab (`report` class). Penomoran tugas tidak menggunakan hirarki bertingkat (tanpa leveling seperti 3.2.1 atau 3.2.2). Cukup gunakan nomor tugas langsung: `Tugas 1: [Judul]` dan `Tugas 2: [Judul]`. Bab Kesimpulan disusun dalam bentuk paragraf naratif utuh, bukan daftar list bernomor.
 
 ```text
-Cover
-Daftar Isi
+Cover (Desain standar P5 dengan titlingpage dan logo UGM height=7cm)
+Daftar Isi (Penomoran romawi, awal isi bab mulai halaman 3 angka arab)
 
 BAB I   Tujuan Praktikum
-        enumerate capaian (tanpa section)
+        enumerate capaian (tanpa nomor section)
 
 BAB II  Dasar Teori
-        \section per konsep (contoh P1: NumPy, Pandas;
-        P2: AI, ML, EDA, Data Preprocessing)
+        \section per konsep materi
 
 BAB III Hasil dan Pembahasan
-        \section{Langkah Praktikum}          % P2: Langkah Percobaan
-            \subsection{Langkah Percobaan ...}  per topik/dataset
-        \section{Tugas}                      % P2: Tugas dan Analisis
-            \subsection{Tugas N / Bagian X: ...}
-                1. Deskripsi Tugas
-                2. Implementasi Kode
-                3. Hasil Eksekusi
-                4. Analisis dan Pembahasan
+        \section{Langkah Praktikum}
+            \subsection{Langkah Percobaan ...}
+        \section{Tugas}
+            \subsection*{Tugas 1: ...} (tanpa leveling digit 3.2.1)
+            \subsection*{Tugas 2: ...} (tanpa leveling digit 3.2.2)
 
 BAB IV  Kesimpulan
-        enumerate (tanpa section)
+        Paragraf naratif utuh (dilarang menggunakan list atau enumerate)
 
 Daftar Pustaka
 ```
 
-Contoh heading P1:
-- `3.1` Langkah Praktikum → `3.1.1` NumPy, `3.1.2` Pandas
-- `3.2` Tugas → `3.2.1` Tugas 1, `3.2.2` Tugas 2, `3.2.3` Tugas 3
-
-Contoh heading P2:
-- `3.1` Langkah Percobaan → `3.1.1` EDA, `3.1.2` Data Preprocessing (Titanic)
-- `3.2` Tugas dan Analisis → `3.2.1` Bagian A (Bank Churners), `3.2.2` Bagian B (Bengaluru)
-
-### D. Pengelolaan File Build LaTeX di Git
-Sesuai konfigurasi `.gitignore`, **hanya file sumber `.tex` dan aset gambar (`gambar/`, `*.png`)** yang di-push ke repositori. File build sementara seperti `.aux`, `.log`, `.toc`, `.out`, `.synctex.gz`, dan `.pdf` otomatis diabaikan agar repositori tetap bersih dan ringan.
+### D. Pengelolaan File Build dan Gambar di Git
+Sesuai konfigurasi `.gitignore`, berkas tangkapan layar (`*.png`) serta file build sementara (`.aux`, `.log`, `.toc`, `.out`, `.synctex.gz`, dan `.pdf`) otomatis diabaikan agar tidak terdorong ke repositori remote. Hal ini menjaga ukuran repositori tetap ringan dan bersih, dengan fokus pelacakan pada berkas sumber naskah `.tex` dan modul kode praktikum.
 
 ---
 
@@ -158,25 +146,41 @@ Untuk mempercepat pengerjaan laporan praktikum di setiap pertemuan, gunakan form
 
 ---
 
-## 6. Preferensi & Karakteristik Penulisan Bang Jan
+## 6. Preferensi dan Karakteristik Penulisan Laporan Bang Jan
 
-Panduan khusus bagi asisten AI saat mendampingi atau menyusun laporan praktikum bersama Bang Jan:
+Panduan khusus dan kriteria wajib bagi asisten AI saat mendampingi atau menyusun laporan praktikum bersama Bang Jan:
 
-1. **Otentisitas Laporan (No Hardcoded Output/Code)**
-   - Jangan menyajikan output eksekusi atau tabel hasil evaluasi menggunakan teks tiruan (seperti environment `lstlisting` atau `tabularx` ganda yang di-hardcode).
-   - Selalu gunakan bukti visual riil berupa tangkapan layar Google Colab (`\screenshotimage{...}`) lengkap dengan tanda centang hijau eksekusi dan tabel output aslinya.
-   - Tabel LaTeX hanya digunakan jika benar-benar diperlukan sebagai pelengkap, bukan pengganti tangkapan layar.
+1. **Desain Sampul dan Tata Letak (Standar P5)**
+   - Format halaman judul selalu mengacu pada desain P5 menggunakan environment `titlingpage`.
+   - Lambang resmi UGM dipasang proporsional dengan tinggi `height=7cm`.
+   - Informasi penyusun wajib mencantumkan Nama, NIM, Kelas, serta Dosen Pengampu lengkap.
+   - Penomoran romawi berlaku pada halaman awal dan penomoran arab dimulai dari halaman 3 setelah Daftar Isi. Judul bab pada Daftar Isi disusun rapi tanpa nomor ganda.
 
-2. **Kebersihan Ruang Kerja (Clean Workspace)**
-   - Selalu bersihkan file sementara atau folder penampung gambar mentah (seperti folder `gambar ss`) setelah gambar dipilah dan direname ke folder `gambar/`.
-   - Repositori harus selalu rapi tanpa sampah file yang menumpuk.
+2. **Bukti Eksekusi Murni Screenshot (Anti-Output Manual)**
+   - Tidak boleh ada hasil eksekusi terminal, log, atau tabel output yang diketik manual di dalam berkas LaTeX (hindari `verbatim` atau kotak teks imitasi).
+   - Seluruh bukti keberhasilan run kode, pembentukan data, dan hasil metrik evaluasi wajib berupa tangkapan layar asli Google Colab (`\screenshotimage`).
+   - Teks laporan murni difungsikan untuk narasi analisis, pembahasan pola, serta interpretasi bisnis atas hasil yang tampak pada screenshot.
 
-3. **Gaya Penulisan Natural, Ringkas, dan Mengalir**
-   - **Bukan Format List Berlebihan**: Hindari memecah narasi teknis ke dalam deretan bullet points atau penomoran kaku (`itemize`/`enumerate`), terutama di bagian Pembahasan dan Bab Kesimpulan. Gunakan format paragraf utuh.
-   - **Paragraf Pendek dan Nyaman Dibaca**: Jangan membuat paragraf tebal bertumpuk (*wall of text*). Pecah ide pembahasan menjadi beberapa paragraf pendek (2 hingga 4 kalimat per paragraf) agar alur membaca tetap ringan dan fokus.
-   - **Bebas dari Slop AI**: Hindari frasa klise robotik, pembuka klise, em dash/en dash berlebihan, dan sampaikan analisis secara lugas langsung ke inti permasalahan.
+3. **Penomoran Tugas Bebas Hirarki (Tanpa Leveling)**
+   - Penulisan subbab tugas tidak menggunakan nomor bertingkat seperti 3.2.1 atau 3.2.2.
+   - Format judul tugas ditulis lugas dengan nomor tugas langsung, misalnya `Tugas 1: [Topik]` dan `Tugas 2: [Topik]`.
+   - Penyesuaian diimplementasikan menggunakan `\subsection*{...}` yang didampingi perintah `\addcontentsline` agar entri Daftar Isi tetap sejajar rapi di bawah seksi tugas.
 
-4. **Instruksi Berorientasi Eksekusi Langsung**
-   - Berikan solusi kode atau naskah yang siap pakai.
-   - Jalankan proses hingga tahapan *final build* (kompilasi dokumen PDF) selesai secara mandiri tanpa bertele-tele.
+4. **Bab Kesimpulan Wajib Paragraf Utuh (Tanpa List atau Enumerate)**
+   - Bab Kesimpulan dilarang keras berbentuk poin-poin daftar bernomor (`enumerate` atau `itemize`).
+   - Kesimpulan wajib ditulis dalam bentuk paragraf naratif utuh yang runtut, menghubungkan esensi metodologi, komparasi performa algoritma, objektivitas metrik pengujian, hingga implikasi praktis pada studi kasus.
+
+5. **Desain Tabel Profesional dan Estetis**
+   - Setiap tabel yang dibuat wajib memiliki tata letak modern dan elegan.
+   - Gunakan kombinasi warna header biru tua (`#1E3A8A`), teks header putih tebal, zebra striping selang-seling abu-abu muda (`#F8FAFC`), dan garis pembatas tipis `booktabs`.
+   - Lebar kolom dan spasi baris (`\arraystretch`) diatur longgar agar teks nyaman dibaca tanpa pemotongan kata yang canggung.
+
+6. **Tipografi Bersih dan Bebas Residu Markdown**
+   - Berkas `.tex` harus bersih dari kebocoran sintaks markdown seperti tanda bintang ganda (`**`), tanda bintang miring (`*`), atau angka list mentah (`1. `).
+   - Gunakan sintaks resmi LaTeX seperti `\textbf{...}`, `\textit{...}`, dan blok `enumerate` yang sah jika list diperlukan pada bagian isi langkah percobaan.
+   - Bahasa narasi menerapkan kaidah anti-slop yang ketat, tanpa tanda strip panjang (em dash atau en dash), kalimat bervariasi ritmenya, dan langsung fokus ke inti pembahasan tanpa basa-basi pembuka robotik.
+
+7. **Manajemen Git dan Proteksi Aset Gambar**
+   - Berkas gambar tangkapan layar (`*.png`) dimasukkan ke `.gitignore` agar tidak di-push ke repositori remote, menjaga repo tetap bersih dan ringan.
+   - Hanya berkas sumber dokumen `.tex` dan naskah pendukung yang dilacak dalam kontrol versi git.
 
