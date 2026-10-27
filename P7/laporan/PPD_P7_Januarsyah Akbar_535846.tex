@@ -1,0 +1,616 @@
+\documentclass[a4paper,oneside,12pt]{report}
+% Package yang diperlukan
+\usepackage[table]{xcolor} % Untuk menggunakan warna
+\usepackage{graphicx}      % Untuk memasukkan gambar
+\usepackage{titling}       % Untuk kustomisasi halaman judul
+\usepackage{geometry}      % Untuk mengatur margin halaman
+\usepackage{listings}      % Untuk menampilkan blok kode
+\usepackage{float}         % Untuk kontrol penempatan float
+\usepackage{hyperref}      % Untuk membuat hyperlink
+\usepackage{indentfirst}   % Untuk memberi indentasi pada paragraf pertama
+\usepackage{url}           % Untuk format URL
+\usepackage{fancyhdr}      % Untuk kustomisasi header dan footer
+\usepackage{tocloft}       % Untuk kustomisasi Daftar Isi
+\usepackage{bookmark}      % Untuk manajemen bookmark PDF
+\usepackage{amsmath}       % Untuk notasi matematika
+\usepackage[most]{tcolorbox} % Untuk box output terminal
+
+% Paket untuk tabel
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{colortbl}
+
+% Macro dan warna untuk tabel
+\newcommand{\thead}[1]{\textcolor{white}{\textbf{#1}}}
+\definecolor{tableheader}{RGB}{30, 58, 138}
+\definecolor{tablezebra}{RGB}{248, 250, 252}
+\definecolor{tableborder}{RGB}{203, 213, 225}
+
+%======================================================================
+% PENGATURAN GEOMETRI HALAMAN
+%======================================================================
+\geometry{left=3cm, right=2.5cm, top=2cm, bottom=2.5cm}
+\sloppy
+
+%======================================================================
+% PENGATURAN WARNA UNTUK BLOK KODE
+%======================================================================
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{darkblue}{rgb}{0,0,0.6}
+\definecolor{outputbg}{RGB}{241,245,249}
+\definecolor{outputborder}{RGB}{203,213,225}
+
+%======================================================================
+% PENGATURAN BLOK KODE (LISTINGS)
+%======================================================================
+\lstdefinestyle{commonstyle}{
+    backgroundcolor=\color{backcolour},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,
+    basicstyle=\ttfamily\footnotesize,
+    numberstyle=\tiny\color{codegray},
+    columns=flexible,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    breakindent=0pt,
+    breakautoindent=false
+}
+
+\lstdefinestyle{pythonstyle}{
+    style=commonstyle,
+    language=Python,
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{darkblue},
+    stringstyle=\color{codepurple},
+    emph={import,from,class,def,for,while,if,else,elif,try,except,finally,as,lambda,return},
+    emphstyle=\color{darkblue}
+}
+
+% Macro untuk screenshot gambar Colab
+\newcommand{\screenshotimage}[4][0.88\textwidth]{%
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=#1]{#2}
+        \caption{#3}
+        \label{fig:#4}
+    \end{figure}
+}
+
+%======================================================================
+% PENGATURAN LAIN-LAIN
+%======================================================================
+\renewcommand{\figurename}{Gambar}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\tablename}{Tabel}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Laporan Praktikum Penambangan Data Pertemuan VII},
+    pdfpagemode=FullScreen,
+    breaklinks=true
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0pt}
+}
+
+%======================================================================
+% PENGATURAN STRUKTUR BAB DAN DAFTAR ISI
+%======================================================================
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\bibname}{Daftar Pustaka}
+
+\renewcommand{\thechapter}{}
+\renewcommand{\chaptername}{}
+
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\setlength{\cftchapindent}{0em}
+\setlength{\cftsecindent}{2em}
+\setlength{\cftsubsecindent}{4em}
+\setlength{\cftchapnumwidth}{0em}
+\setlength{\cftsecnumwidth}{2.5em}
+\setlength{\cftsubsecnumwidth}{3.2em}
+\renewcommand{\cftchappresnum}{}
+\renewcommand{\cftchapaftersnum}{}
+
+%======================================================================
+% DOKUMEN UTAMA
+%======================================================================
+\begin{document}
+
+%======================================================================
+% HALAMAN JUDUL (COVER)
+%======================================================================
+\newgeometry{left=3cm, right=2.5cm, top=2.5cm, bottom=3cm}
+\begin{titlingpage}
+\begin{center}
+\vspace*{0.5cm}
+{\large \textbf{\MakeUppercase{Laporan Praktikum}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Praktikum Penambangan Data}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Pertemuan VII}}} \\[0.4cm]
+{\large \textbf{\MakeUppercase{Imbalanced Dataset}}} \\[1.5cm]
+
+\includegraphics[height=7cm]{lambang ugm.png} \\[1cm]
+
+{\normalsize \textbf{Disusun oleh:}} \\[0.4cm]
+\begin{tabular}{@{}l l @{}}
+  \textbf{Nama}           & : Januarsyah Akbar \\
+  \textbf{NIM}            & : 24/535846/SV/24314 \\
+  \textbf{Kelas}          & : B2 \\
+  \textbf{Dosen Pengampu} & : Dr. Ganjar Alfian, S.T., M.Eng. \\
+                          & \phantom{:} Dr. Imam Fahrurrozi, S.T., M.Cs.
+\end{tabular} \\[1.2cm]
+
+{\normalsize \textbf{PROGRAM STUDI D-IV}} \\[0.2cm]
+{\normalsize \textbf{TEKNOLOGI REKAYASA PERANGKAT LUNAK}} \\[0.2cm]
+{\normalsize \textbf{DEPARTEMEN TEKNIK ELEKTRO DAN INFORMATIKA}} \\[0.2cm]
+{\normalsize \textbf{SEKOLAH VOKASI}} \\[0.2cm]
+{\normalsize \textbf{UNIVERSITAS GADJAH MADA}} \\[0.2cm]
+{\normalsize \textbf{YOGYAKARTA}} \\[0.2cm]
+{\normalsize \textbf{2026}} \\[1.2cm]
+\end{center}
+\end{titlingpage}
+\restoregeometry
+
+\thispagestyle{empty}
+\clearpage
+\stepcounter{page}
+\thispagestyle{empty}
+
+% --- Daftar Isi ---
+\addcontentsline{toc}{chapter}{Daftar Isi}
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{page}{3}
+
+%======================================================================
+% BAB I: TUJUAN PRAKTIKUM
+%======================================================================
+\chapter[Tujuan Praktikum]{Tujuan Praktikum}
+
+\begin{enumerate}
+    \item Mahasiswa memahami konsep \textit{imbalanced dataset} serta permasalahan yang muncul akibat ketidakseimbangan kelas dalam model \textit{machine learning}.
+    \item Mahasiswa mampu menerapkan teknik \textit{balancing data} seperti SMOTE dan ADASYN untuk menyeimbangkan distribusi kelas pada dataset.
+    \item Mahasiswa memahami konsep dan metode \textit{feature selection} (\textit{filter}, \textit{wrapper}, \textit{embedded}) untuk memilih fitur yang paling relevan.
+\end{enumerate}
+
+\section*{Alat dan Bahan}
+\begin{itemize}
+    \item \textbf{Perangkat Keras}:
+    \begin{enumerate}
+        \item Laptop dengan RAM minimal 4 GB.
+        \item Koneksi internet stabil.
+    \end{enumerate}
+    \item \textbf{Perangkat Lunak}:
+    \begin{enumerate}
+        \item Peramban web (Google Chrome, Mozilla Firefox, Microsoft Edge, atau Safari).
+        \item Google Colab / Jupyter Notebook dengan Python 3.11.
+        \item Pustaka pendukung data science (\texttt{pandas}, \texttt{numpy}, \texttt{matplotlib}, \texttt{seaborn}, \texttt{scikit-learn}, dan \texttt{imbalanced-learn}).
+    \end{enumerate}
+\end{itemize}
+
+\clearpage
+
+%======================================================================
+% BAB II: DASAR TEORI
+%======================================================================
+\chapter[Dasar Teori]{Dasar Teori}
+
+\section{Imbalanced Class}
+\textit{Imbalance class} adalah kondisi ketika suatu himpunan data memiliki satu kelas yang jumlah sampelnya jauh lebih sedikit dibandingkan kelas lainnya. Kondisi ini membuat kelas minoritas sering kali diprediksi secara keliru menjadi kelas mayoritas oleh algoritma machine learning standar.
+
+Selain itu, ketidakseimbangan kelas mengakibatkan nilai sensitivitas (\textit{recall}) yang rendah pada data biner (dua kategori). Masalah lain yang dapat timbul adalah banyaknya nilai kosong yang dapat menyebabkan sebagian algoritma klasifikasi tidak dapat dijalankan secara optimal. Hal tersebut berujung pada rendahnya akurasi dan buruknya kualitas data saat diolah. Data dengan ketimpangan kelas dan nilai kosong membutuhkan perlakuan khusus agar model klasifikasi menghasilkan prediksi yang tepat dan dapat diandalkan. Penanganan kelas tidak seimbang dapat diselesaikan dengan memanipulasi data (\textit{resampling}), memodifikasi algoritma, maupun menggabungkan kedua pendekatan tersebut \cite{ref_istiana}.
+
+\section{Confusion Matrix}
+\textit{Confusion Matrix} merupakan matriks kontingensi yang digunakan untuk mengevaluasi kinerja algoritma klasifikasi dalam bidang machine learning dan penambangan data \cite{ref_normawati}. Matriks ini diimplementasikan dalam bentuk tabel yang membandingkan keluaran prediksi model terhadap label sebenarnya dari data. Melalui tabel ini, peneliti dapat melihat sejauh mana model memprediksi data secara tepat maupun keliru.
+
+Parameter pengujian yang diturunkan dari tabel ini mencakup akurasi, presisi, dan recall \cite{ref_septiana}. Struktur Confusion Matrix terdiri atas empat elemen dasar:
+\begin{itemize}
+    \item \textbf{True Positive (TP)}: Sampel positif yang berhasil diprediksi secara tepat sebagai kelas positif.
+    \item \textbf{True Negative (TN)}: Sampel negatif yang berhasil diprediksi secara tepat sebagai kelas negatif.
+    \item \textbf{False Positive (FP)}: Sampel negatif yang keliru diprediksi sebagai kelas positif (\textit{Type I Error}).
+    \item \textbf{False Negative (FN)}: Sampel positif yang keliru diprediksi sebagai kelas negatif (\textit{Type II Error}).
+\end{itemize}
+
+Persamaan matematis untuk metrik evaluasi yang diturunkan dari Confusion Matrix adalah sebagai berikut:
+\begin{equation}
+    \text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}
+\end{equation}
+\begin{equation}
+    \text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
+\end{equation}
+\begin{equation}
+    \text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
+\end{equation}
+\begin{equation}
+    F_1\text{-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
+
+\section{Feature Selection}
+\textit{Feature selection} adalah proses identifikasi subset fitur yang paling relevan dari kumpulan atribut yang tersedia untuk meningkatkan performa algoritma klasifikasi \cite{ref_pratama}. Seleksi fitur menjadi faktor utama dalam mengoptimalkan akurasi model. Jika suatu dataset memiliki dimensi fitur yang sangat besar, dimensi ruang data membengkak dan tingkat akurasi klasifikasi dapat mengalami penurunan. Seleksi fitur bertujuan mereduksi himpunan fitur yang besar menjadi subset yang lebih ringkas dan informatif agar proses pembentukan model berjalan lebih efisien dan akurat \cite{ref_septiana}. Pendekatan seleksi fitur terbagi menjadi tiga kategori utama:
+
+\subsection{Filter Method}
+\textit{Filter method} mengevaluasi relevansi setiap fitur berdasarkan karakteristik statistiknya terhadap variabel target tanpa melibatkan model klasifikasi secara langsung \cite{ref_guyon}. Metode ini mengukur kekuatan asosiasi menggunakan korelasi statistik, di mana nilai korelasi yang lebih tinggi menandakan fitur yang lebih informatif. Uji statistik seperti ANOVA (\textit{Analysis of Variance}) juga umum digunakan untuk menguji kemampuan fitur dalam membedakan nilai rata-rata antarkelompok target. Fitur dengan nilai uji $F$ yang tinggi dianggap lebih relevan. Karakteristik komputasinya yang cepat dan ringan menjadikan filter method langkah awal yang efektif dalam penyaringan fitur.
+
+\subsection{Wrapper Method}
+\textit{Wrapper method} menilai kualitas suatu subset fitur dengan memanfaatkan algoritma prediktif secara langsung sebagai evaluator \cite{ref_kohavi}. Teknik ini menguji kombinasi fitur melalui strategi pencarian seperti seleksi maju (\textit{forward selection}), eliminasi mundur (\textit{backward elimination}), atau eliminasi fitur rekursif (\textit{Recursive Feature Elimination}/RFE). Karena melatih model secara berulang untuk setiap kombinasi fitur, metode wrapper menghasilkan akurasi yang lebih terarah dibanding metode filter, meskipun memerlukan waktu dan beban komputasi yang lebih tinggi.
+
+\subsection{Embedded Method}
+\textit{Embedded method} menyatukan keunggulan dari pendekatan filter dan wrapper \cite{ref_tibshirani}. Proses pemilihan fitur dilakukan secara terintegrasi bersamaan dengan tahapan pelatihan model. Pendekatan ini lebih hemat komputasi dibanding wrapper, sekaligus memiliki ketepatan seleksi yang lebih baik daripada filter. Contoh penerapan metode embedded meliputi algoritma LASSO (\textit{Least Absolute Shrinkage and Selection Operator}) yang menerapkan penalti regulasi $L_1$ untuk memaksa koefisien fitur yang kurang relevan menjadi nol, serta model berbasis pohon seperti Random Forest yang menghasilkan skor kepentingan fitur (\textit{feature importance}) secara otomatis saat pohon dibangun.
+
+\section{SMOTE (Synthetic Minority Over-sampling Technique)}
+SMOTE merupakan teknik penyeimbangan data berbasis oversampling yang populer \cite{ref_wijayanti}. Alih-alih menggandakan sampel yang ada, SMOTE membangkitkan data sintetis baru pada kelas minoritas. Sampel baru dibentuk dengan mencari $k$ tetangga terdekat (\textit{k-Nearest Neighbors}) dari sampel minoritas acak, lalu menarik garis linier di antara keduanya untuk menyisipkan titik sintetis baru. Persamaan matematis interpolasi SMOTE dinyatakan dengan:
+\begin{equation}
+    x_{\text{sintetis}} = x_i + \lambda \times (x_{zi} - x_i)
+\end{equation}
+dengan $x_i$ menyatakan data minoritas awal, $x_{zi}$ merupakan tetangga terdekat sesama kelas minoritas, dan $\lambda$ adalah angka acak seragam pada rentang $[0, 1]$. Teknik ini menghindari replikasi data identik sehingga mampu mengurangi kecenderungan overfitting.
+
+\section{ADASYN (Adaptive Synthetic Sampling)}
+ADASYN adalah pengembangan adaptif dari konsep SMOTE untuk mengatasi ketidakseimbangan kelas \cite{ref_ramadhanti}. ADASYN membangkitkan sampel sintetis minoritas dengan memperhitungkan tingkat kesulitan belajar model pada wilayah lokal. Sampel minoritas yang berada di area batas keputusan yang padat dikelilingi oleh sampel mayoritas diberi bobot distribusi pembangkitan yang lebih besar. Sebaliknya, wilayah minoritas yang sudah terpisah jelas diberi bobot lebih sedikit. Dengan strategi ini, model dapat memusatkan pembelajaran pada batas kelas yang paling rentan terhadap kesalahan klasifikasi.
+
+\clearpage
+
+%======================================================================
+% BAB III: HASIL DAN PEMBAHASAN
+%======================================================================
+\chapter[Hasil dan Pembahasan]{Hasil dan Pembahasan}
+
+\section{Langkah Praktikum Percobaan}
+
+\subsection{Persiapan IDE}
+Percobaan dilaksanakan menggunakan lingkungan komputasi Google Colab. Lingkungan ini menyediakan ekosistem terpadu untuk pengolahan data machine learning dengan dukungan GPU dan CPU gratis, sehingga eksekusi pustaka seperti \texttt{pandas}, \texttt{scikit-learn}, dan \texttt{imbalanced-learn} dapat berlangsung lancar tanpa konfigurasi perangkat keras lokal yang rumit.
+
+\subsection{Instalasi dan Impor Library}
+Tahap awal percobaan dilakukan dengan mengimpor seluruh pustaka yang diperlukan untuk manipulasi dataset, visualisasi statistik, serta modul penyeimbang kelas minoritas.
+
+\begin{lstlisting}[style=pythonstyle, caption={Impor Pustaka Preprocessing dan Balancing}]
+from imblearn.under_sampling import RandomUnderSampler
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from imblearn.over_sampling import RandomOverSampler
+from scipy.stats import norm
+from imblearn.over_sampling import ADASYN
+from imblearn.over_sampling import SMOTE
+import seaborn as sns
+import matplotlib.pyplot as plt
+import os
+import pandas as pd
+import numpy as np
+\end{lstlisting}
+
+\screenshotimage{gambar/colab-p7-imports.png}{Impor Pustaka Preprocessing dan Balancing (Gambar 7.4.1 Modul)}{colab-imports}
+
+\subsection{Import dan Load Dataset Information}
+Dataset yang digunakan dalam langkah percobaan adalah \textit{Stroke Prediction Dataset} (\texttt{healthcare-dataset-stroke-data.csv}). Dataset ini memuat 5.110 baris data pasien dengan 12 kolom yang merekam kondisi biometrik, demografi, serta status riwayat penyakit kardiovaskular.
+
+\begin{lstlisting}[style=pythonstyle, caption={Pembacaan Dataset dan Pemeriksaan Awal}]
+# Load dataset
+df = pd.read_csv('healthcare-dataset-stroke-data.csv')
+
+# Cek 5 data teratas
+df.head()
+\end{lstlisting}
+
+\screenshotimage{gambar/colab-p7-read-dataset.png}{Pembacaan Dataset dan Tampilan Lima Baris Pertama (Gambar 7.4.2 Modul)}{colab-head}
+
+\screenshotimage{gambar/colab-p7-info.png}{Struktur Kolom dan Tipe Data Dataset Melalui df.info()}{colab-info}
+
+Pemeriksaan nilai yang hilang (\textit{missing value}) dilakukan dengan perintah \texttt{df.isnull().sum()}. Dari pemeriksaan tersebut, ditemukan sebanyak 201 nilai kosong khusus pada atribut \texttt{bmi}, sementara sebelas atribut lainnya terisi lengkap.
+
+\begin{lstlisting}[style=pythonstyle, caption={Pengecekan Missing Values Awal}]
+# Cek missing values
+df.isnull().sum()
+\end{lstlisting}
+
+\screenshotimage[0.72\textwidth]{gambar/colab-p7-null-before.png}{Pengecekan Missing Value Awal pada Seluruh Atribut (Gambar 7.4.3 Modul)}{colab-null-before}
+
+\screenshotimage{gambar/colab-p7-missing-df.png}{Tabel Ringkasan Missing Values dan Persentase per Fitur}{colab-missing-df}
+
+\subsection{Exploratory Data Analysis (EDA)}
+Distribusi kelas pada variabel target \texttt{stroke} dianalisis menggunakan diagram lingkaran (\textit{pie chart}). Visualisasi ini memetakan rasio antara pasien yang tidak mengalami stroke (kelas 0) dan pasien yang terserang stroke (kelas 1).
+
+\begin{lstlisting}[style=pythonstyle, caption={Visualisasi Distribusi Target Stroke}]
+# Distribusi data
+data = df['stroke'].value_counts()
+data.plot(kind='pie', autopct='%.2f%%')
+plt.show()
+\end{lstlisting}
+
+\screenshotimage[0.68\textwidth]{gambar/colab-p7-pie-distribution.png}{Distribusi Persentase Variabel Target Stroke (Gambar 7.4.4 Modul)}{colab-pie-dist}
+
+Hasil visualisasi pada Gambar \ref{fig:colab-pie-dist} membuktikan ketidakseimbangan kelas yang tajam pada dataset:
+\begin{itemize}
+    \item \textbf{Kelas 0 (Tidak Stroke)}: 4.861 pasien (95,13\%).
+    \item \textbf{Kelas 1 (Stroke)}: 249 pasien (4,87\%).
+\end{itemize}
+Rasio ketimpangan ini mencapai hampir 20:1, yang menegaskan urgensi penerapan teknik penyeimbangan data agar model klasifikasi tidak mengabaikan kelas minoritas.
+
+\subsection{Data Cleaning}
+Karena atribut \texttt{bmi} memiliki skala numerik kontinu dengan sebaran mendekati normal, 201 nilai yang hilang diatasi menggunakan teknik imputasi nilai rata-rata (\textit{mean}) sebesar 28,89.
+
+\begin{lstlisting}[style=pythonstyle, caption={Imputasi Missing Values dengan Rata-rata}]
+# Imputasi missing value
+df['bmi'].fillna(df['bmi'].mean(), inplace=True)
+
+# Cek missing values after imputation
+df.isnull().sum()
+\end{lstlisting}
+
+\screenshotimage[0.7\textwidth]{gambar/colab-p7-data-cleaning.png}{Eksekusi Kode Imputasi Missing Value BMI (Gambar 7.4.5 Modul)}{colab-cleaning-code}
+
+\screenshotimage[0.72\textwidth]{gambar/colab-p7-null-after.png}{Pengecekan Ulang Jumlah Missing Values Pasca Imputasi (Gambar 7.4.6 Modul)}{colab-null-after}
+
+Setelah imputasi, seluruh atribut terkonfirmasi bersih dari data kosong dengan nilai null bernilai 0.
+
+\subsection{Random Under Sampling (RUS)}
+Sebelum penyeimbangan, fitur prediktor dipisahkan ke dalam variabel \texttt{df\_X} dengan membuang kolom identitas (\texttt{id}) dan label sasaran (\texttt{stroke}). Kolom target disimpan pada \texttt{df\_y}. Seluruh fitur kategorikal diubah menjadi numerik menggunakan \texttt{LabelEncoder}. Dataset lalu dibagi menjadi data latih (75\%) dan data uji (25\%) dengan parameter pengunci \texttt{random\_state=42}.
+
+Metode \textit{Random Under Sampling} (RUS) diterapkan pada set latih menggunakan \texttt{RandomUnderSampler(random\_state=0)}. RUS memangkas secara acak sampel kelas mayoritas hingga ukurannya sama dengan kelas minoritas (169 sampel per kelas).
+
+\begin{lstlisting}[style=pythonstyle, caption={Penerapan Random Under Sampling pada Data Training}]
+under_sampling = RandomUnderSampler(random_state=0)
+X_resampled, y_resampled = under_sampling.fit_resample(X_train, y_train)
+
+print('sebelum undersampling')
+print(pd.DataFrame(y_train).value_counts())
+print('setelah undersampling')
+print(pd.DataFrame(y_resampled).value_counts())
+\end{lstlisting}
+
+\screenshotimage[0.72\textwidth]{gambar/colab-p7-rus-output.png}{Output Distribusi Kelas Sebelum vs Sesudah RUS (Gambar 7.4.7 Modul)}{colab-rus-out}
+
+\begin{lstlisting}[style=pythonstyle, caption={Menampilkan Kolom Target Stroke}]
+# Menampilkan kolom stroke
+df_y = df[['stroke']]
+df_y
+\end{lstlisting}
+
+\screenshotimage[0.65\textwidth]{gambar/colab-p7-melihat-data.png}{Inspeksi Data Kolom Target Stroke Sebanyak 5110 Baris (Gambar 7.4.8 Modul)}{colab-melihat-data}
+
+Perubahan sebaran fitur akibat pemangkasan sampel diinspeksi melalui histogram BMI dan diagram sebar (kadar glukosa terhadap BMI):
+
+\screenshotimage{gambar/colab-p7-rus-bmi-hist.png}{Perbandingan Distribusi BMI Sebelum vs Sesudah Random Under Sampling (Gambar 7.4.9 Modul)}{colab-rus-hist}
+
+\screenshotimage{gambar/colab-p7-rus-scatter.png}{Visualisasi Sebaran Glukosa vs BMI Sebelum vs Sesudah RUS (Gambar 7.4.10 Modul)}{colab-rus-scatter}
+
+Meskipun keseimbangan 1:1 tercapai, pembuangan data mayoritas dari 3.663 menjadi 169 baris memangkas lebih dari 95\% informasi pelatihan, sebagaimana terlihat pada menipisnya kepadatan titik pada Gambar \ref{fig:colab-rus-scatter}.
+
+\subsection{Random Over Sampling (ROS)}
+Metode \textit{Random Over Sampling} (ROS) bekerja secara berkebalikan dengan menduplikasi sampel kelas minoritas secara acak hingga menyamai volume kelas mayoritas, yaitu 3.663 sampel per kelas (total 7.326 data latih).
+
+\begin{lstlisting}[style=pythonstyle, caption={Penerapan Random Over Sampling}]
+over_sampling = RandomOverSampler(random_state=0)
+X_resampled, y_resampled = over_sampling.fit_resample(X_train, y_train)
+
+print('sebelum random oversampling')
+print(pd.DataFrame(y_train).value_counts())
+print('setelah random oversampling')
+print(pd.DataFrame(y_resampled).value_counts())
+\end{lstlisting}
+
+\screenshotimage[0.72\textwidth]{gambar/colab-p7-ros-output.png}{Output Distribusi Kelas Sebelum vs Sesudah ROS (Gambar 7.4.11 Modul)}{colab-ros-out}
+
+\screenshotimage{gambar/colab-p7-ros-bmi-hist.png}{Perbandingan Distribusi BMI Sebelum vs Sesudah Random Over Sampling (Gambar 7.4.12 Modul)}{colab-ros-hist}
+
+\screenshotimage{gambar/colab-p7-ros-scatter.png}{Visualisasi Sebaran Glukosa vs BMI Sebelum vs Sesudah ROS (Gambar 7.4.13 Modul)}{colab-ros-scatter}
+
+Duplikasi identik sampel minoritas menyebabkan titik merah pada diagram sebar bertumpuk pada koordinat yang sama tanpa memunculkan variasi sebaran baru, sehingga model berisiko mengalami kecocokan lebih (\textit{overfitting}).
+
+\subsection{Synthetic Minority Over-sampling Technique (SMOTE)}
+Metode SMOTE menyempurnakan pendekatan penambahan sampel dengan membangkitkan data sintetis baru melalui interpolasi tetangga terdekat ($k$-NN). Sampel minoritas bertambah secara sintetis menjadi 3.663 data, menyamai kelas mayoritas tanpa menghapus baris data asli.
+
+\begin{lstlisting}[style=pythonstyle, caption={Penerapan Algoritma SMOTE}]
+smote = SMOTE(random_state=0)
+X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
+
+print('Sebelum SMOTE')
+print(pd.DataFrame(y_train).value_counts())
+print('Setelah SMOTE')
+print(pd.DataFrame(y_resampled).value_counts())
+\end{lstlisting}
+
+\screenshotimage[0.72\textwidth]{gambar/colab-p7-smote-output.png}{Output Distribusi Kelas Sebelum vs Sesudah SMOTE (Gambar 7.4.14 Modul)}{colab-smote-out}
+
+\screenshotimage{gambar/colab-p7-smote-bmi-hist.png}{Perbandingan Distribusi BMI Sebelum vs Sesudah SMOTE (Gambar 7.4.15 Modul)}{colab-smote-hist}
+
+\screenshotimage{gambar/colab-p7-smote-scatter.png}{Visualisasi Sebaran Glukosa vs BMI Sebelum vs Sesudah SMOTE (Gambar 7.4.16 Modul)}{colab-smote-scatter}
+
+Pada Gambar \ref{fig:colab-smote-scatter}, titik-titik sampel sintetis minoritas mengisi ruang kosong di antara sampel riil secara berkesinambungan, membentuk batas keputusan yang lebih halus tanpa penumpukan data tiruan berlebih.
+
+\subsection{Adaptive Synthetic Sampling (ADASYN)}
+Metode ADASYN memfokuskan pembentukan sampel sintetis secara adaptif pada sampel minoritas yang berada di batas keputusan yang sulit dipelajari oleh model. Melalui \texttt{ADASYN(random\_state=0)}, dibangkitkan sebanyak 3.676 sampel sintetis minoritas untuk mengimbangi 3.663 sampel kelas mayoritas.
+
+\begin{lstlisting}[style=pythonstyle, caption={Penerapan Algoritma ADASYN}]
+adasyn = ADASYN(random_state=0)
+X_resampled, y_resampled = adasyn.fit_resample(X_train, y_train)
+
+print('Sebelum ADASYN')
+print(pd.DataFrame(y_train).value_counts())
+print('Setelah ADASYN')
+print(pd.DataFrame(y_resampled).value_counts())
+\end{lstlisting}
+
+\screenshotimage[0.72\textwidth]{gambar/colab-p7-adasyn-output.png}{Output Distribusi Kelas Sebelum vs Sesudah ADASYN (Gambar 7.4.17 Modul)}{colab-adasyn-out}
+
+\screenshotimage{gambar/colab-p7-adasyn-bmi-hist.png}{Perbandingan Distribusi BMI Sebelum vs Sesudah ADASYN (Gambar 7.4.18 Modul)}{colab-adasyn-hist}
+
+\screenshotimage{gambar/colab-p7-adasyn-scatter.png}{Visualisasi Sebaran Glukosa vs BMI Sebelum vs Sesudah ADASYN (Gambar 7.4.19 Modul)}{colab-adasyn-scatter}
+
+\subsection{Komparasi Rangkuman Seluruh Metode Penyeimbang}
+Perbandingan kuantitatif seluruh teknik penyeimbang pada data pelatihan dirangkum pada Gambar \ref{fig:colab-summary} dan Gambar \ref{fig:colab-comp-all}.
+
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-summary-table.png}{Tabel Rangkuman Komparasi Metode Balancing pada Data Training}{colab-summary}
+
+\screenshotimage[0.85\textwidth]{gambar/colab-p7-comparison-all.png}{Komparasi Visual Distribusi Sampel Training Seluruh Metode Balancing}{colab-comp-all}
+
+Dari perbandingan di atas, SMOTE dan ADASYN terbukti mempertahankan seluruh data riil kelas mayoritas sekaligus memperkaya variasi kelas minoritas secara sintetis tanpa menyebabkan kehilangan informasi data primer.
+
+\clearpage
+
+%======================================================================
+% BAB IV: TUGAS DAN ANALISIS
+%======================================================================
+\chapter[Tugas dan Analisis]{Tugas dan Analisis}
+
+\section{Tugas 1: Analisis Karakteristik Stroke Prediction Dataset}
+
+\subsection{Pemuatan Dataset ke DataFrame Pandas}
+Dataset Stroke Prediction dimuat langsung dari repository data menggunakan pustaka pandas. Cuplikan sepuluh entri pertama dataset diperlihatkan pada tabel di bawah ini.
+
+\screenshotimage{gambar/colab-p7-read-dataset.png}{Pemuatan Stroke Prediction Dataset ke dalam DataFrame}{colab-t1-head}
+
+\subsection{Tujuan Penggunaan Dataset}
+Tujuan utama penggunaan dataset \textit{Stroke Prediction} adalah untuk membangun dan mengevaluasi model pembelajaran mesin prediktif yang mampu mengidentifikasi risiko kemungkinan seorang individu terserang penyakit stroke berdasarkan parameter biometrik, riwayat kondisi medis, dan pola hidup. Secara praktis, tujuan dataset ini mencakup:
+\begin{enumerate}
+    \item \textbf{Sistem Skrining Medis Dini (\textit{Early Clinical Screening})}: Memungkinkan fasilitas pelayanan kesehatan mendeteksi potensi serangan stroke pada pasien sebelum gejala klinis akut timbul.
+    \item \textbf{Penetapan Intervensi Preventif}: Memberikan dasar klinis bagi dokter untuk menentukan intervensi dini, seperti pengendalian kadar gula darah dan terapi hipertensi.
+    \item \textbf{Analisis Faktor Risiko Kesehatan}: Mengukur korelasi serta kontribusi relatif dari variabel independen seperti usia, penyakit jantung, indeks massa tubuh, dan merokok terhadap probabilitas stroke.
+\end{enumerate}
+
+\subsection{Deskripsi Karakteristik Fitur Dataset}
+Dataset terdiri atas 12 atribut dengan rincian karakteristik klinis dan teknis sebagai berikut:
+
+\begin{table}[H]
+\centering
+\small
+\rowcolors{2}{tablezebra}{white}
+\begin{tabularx}{\textwidth}{c l c c X}
+\toprule
+\rowcolor{tableheader}
+\thead{No} & \thead{Nama Fitur} & \thead{Tipe Data} & \thead{Skala} & \thead{Deskripsi \& Signifikansi Klinis} \\
+\midrule
+1 & \texttt{id} & Integer & Nominal & Nomor identifikasi unik pasien. Tidak memiliki nilai prediktif klinis sehingga diabaikan saat pemodelan. \\
+2 & \texttt{gender} & Object & Nominal & Jenis kelamin pasien (\texttt{Male}, \texttt{Female}, \texttt{Other}). Digunakan untuk menganalisis disparitas risiko biologis. \\
+3 & \texttt{age} & Float & Rasio & Usia pasien dalam satuan tahun. Usia lanjut merupakan faktor risiko independen stroke yang sangat dominan. \\
+4 & \texttt{hypertension} & Integer & Nominal & Riwayat hipertensi (0 = Tidak, 1 = Ya). Tekanan darah tinggi merusak pembuluh darah serebral. \\
+5 & \texttt{heart\_disease} & Integer & Nominal & Riwayat penyakit jantung (0 = Tidak, 1 = Ya). Aritmia dan penyakit koroner dapat memicu gumpalan emboli. \\
+6 & \texttt{ever\_married} & Object & Nominal & Status pernikahan (\texttt{No}, \texttt{Yes}). Variabel demografis penilai stabilitas pola hidup. \\
+7 & \texttt{work\_type} & Object & Nominal & Jenis lapangan pekerjaan (\texttt{Private}, \texttt{Self-employed}, \texttt{Govt\_job}, \texttt{children}, \texttt{Never\_worked}). \\
+8 & \texttt{Residence\_type} & Object & Nominal & Lingkungan domisili (\texttt{Urban}, \texttt{Rural}). Menilai disparitas gaya hidup dan akses medis. \\
+9 & \texttt{avg\_glucose\_level} & Float & Rasio & Kadar glukosa darah rata-rata (mg/dL). Hiperglikemia persisten memicu vaskulopati diabetik. \\
+10 & \texttt{bmi} & Float & Rasio & \textit{Body Mass Index} ($kg/m^2$). Obesitas berkorelasi erat dengan resistensi insulin dan plak vaskular. \\
+11 & \texttt{smoking\_status} & Object & Nominal & Riwayat merokok (\texttt{formerly smoked}, \texttt{never smoked}, \texttt{smokes}, \texttt{Unknown}). \\
+12 & \texttt{stroke} & Integer & Nominal & Target prediksi (0 = Tidak, 1 = Ya). Merupakan variabel dependen dengan ketimpangan tajam (4,87\% positif). \\
+\bottomrule
+\end{tabularx}
+\caption{Deskripsi Lengkap Seluruh Atribut pada Stroke Prediction Dataset}
+\label{tab:stroke-features}
+\end{table}
+
+\section{Tugas 2: Balancing dan Klasifikasi pada Dataset Alternatif}
+
+\subsection{Deskripsi Dataset Alternatif: Heart Failure Clinical Records}
+Pada tugas kedua, digunakan dataset alternatif yang juga berasal dari domain medis dengan sifat ketimpangan kelas, yaitu \textit{Heart Failure Clinical Records Dataset}. Dataset ini memiliki 299 baris data pasien dengan 12 fitur klinis dan 1 target prediksi kejadian kematian (\texttt{DEATH\_EVENT}).
+
+\screenshotimage[0.65\textwidth]{gambar/colab-p7-t2-heart-dist.png}{Distribusi Target Kematian Pasien (DEATH\_EVENT)}{colab-hf-dist}
+
+Sebagaimana terlihat pada Gambar \ref{fig:colab-hf-dist}, terdapat 203 pasien yang bertahan hidup (67,89\%) dan 96 pasien yang meninggal dunia (32,11\%). Meskipun ketimpangan tidak seekstrem dataset stroke, rasio 2,1:1 ini cukup membuat model pembelajaran konvensional bias terhadap pasien yang selamat, sehingga pasien berisiko tinggi luput terdeteksi.
+
+\subsection{Eksperimen Pemodelan dan Penyeimbangan}
+Dataset dibagi menjadi 75\% data train dan 25\% data test dengan metode pembagian berstrata (\textit{stratified split}) untuk menjamin proporsi kelas pada data uji murni tetap representatif. Fitur numerik distandarisasi menggunakan \texttt{StandardScaler}. Dua algoritma klasifikasi dengan paradigma berbeda diuji:
+\begin{enumerate}
+    \item \textbf{Logistic Regression}: Model linier parametrik berbasis probabilitas sigmoid.
+    \item \textbf{Random Forest Classifier}: Model ansambel non-parametrik berbasis pohon keputusan majemuk.
+\end{enumerate}
+
+Kedua model diuji dalam tiga skenario data latih: tanpa penyeimbangan (\textit{Baseline}), dengan SMOTE, dan dengan ADASYN. Evaluasi dilakukan secara ketat pada data uji murni (tanpa resampling).
+
+\screenshotimage{gambar/colab-p7-t2-metrics-table.png}{Tabel Komparasi Metrik Performa Model Sebelum vs Sesudah Balancing}{colab-t2-table}
+
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-t2-metrics-bar.png}{Diagram Batang Komparasi Metrik Evaluasi Seluruh Model}{colab-t2-bar}
+
+\screenshotimage{gambar/colab-p7-t2-confusion-matrices.png}{Heatmap Confusion Matrix Komparatif Seluruh Skenario Model}{colab-t2-cm}
+
+\screenshotimage{gambar/colab-p7-t2-roc-pr-curves.png}{Kurva Karakteristik ROC dan Precision-Recall Komparatif}{colab-t2-curves}
+
+\subsection{Analisis Kritis Hasil Eksperimen Tugas 2}
+Berdasarkan hasil pengujian pada Gambar \ref{fig:colab-t2-table} dan Gambar \ref{fig:colab-t2-cm}:
+\begin{enumerate}
+    \item \textbf{Peningkatan Recall pada Kasus Positif}:
+    Pada model \textit{Logistic Regression}, penyeimbangan data latih berhasil meningkatkan metrik \textit{Recall} secara bertahap dari 0,6250 (Baseline) menjadi 0,6667 (SMOTE), dan mencapai puncaknya pada \textbf{0,7083} (ADASYN). Peningkatan sebesar $+8,33\%$ ini berarti model mampu menyelamatkan lebih banyak pasien berisiko kritis dari kesalahan prediksi fatal (\textit{False Negatives} berkurang dari 9 menjadi 7 pasien).
+    \item \textbf{Keseimbangan Trade-off Presisi dan F1-Score}:
+    Penyeimbangan kelas mendorong model menggeser garis batas probabilitas keputusan ke arah yang lebih sensitif. Meskipun presisi terkoreksi sedikit (dari 0,7500 menjadi 0,7391 pada ADASYN), nilai keseluruhan $F_1$-Score justru meningkat dari 0,6818 menjadi \textbf{0,7234}, membuktikan bahwa harmonisasi akurasi dan sensitivitas tercapai lebih baik.
+    \item \textbf{Resistensi Random Forest terhadap Oversampling}:
+    Pada \textit{Random Forest}, perolehan recall relatif konstan di angka 0,6667 karena pohon keputusan secara inheren telah menerapkan pemartisian berbobot pada pembagian daun. Namun, varian ADASYN tetap memberikan $F_1$-Score yang lebih kokoh (0,7273) dibandingkan SMOTE biasa (0,7111).
+    \item \textbf{Analisis Kurva ROC dan PR}:
+    Kurva ROC pada Gambar \ref{fig:colab-t2-curves} menunjukkan area di bawah kurva (AUC) yang stabil di atas 0,86 untuk seluruh model. ADASYN memberikan bentuk kurva Precision-Recall yang lebih dominan pada rentang recall tinggi, menunjukkan keandalannya dalam menangani area keputusan yang kompleks.
+\end{enumerate}
+
+\section{Kesimpulan}
+\begin{enumerate}
+    \item Ketidakseimbangan kelas (\textit{imbalanced dataset}) merupakan tantangan signifikan dalam pembelajaran mesin, khususnya pada domain medis dan deteksi anomali di mana kelas minoritas membawa dampak risiko terbesar. Evaluasi model pada dataset imbalanced wajib mengandalkan metrik \textit{Recall}, \textit{Precision}, dan $F_1$-Score, bukan sekadar akurasi semu.
+    \item Metode \textit{Random Under Sampling} efektif menyeimbangkan rasio kelas tetapi rentan membuang sejumlah besar informasi data mayoritas. Sebaliknya, \textit{Random Over Sampling} rentan menimbulkan \textit{overfitting} akibat replikasi data identik.
+    \item Algoritma SMOTE dan ADASYN terbukti lebih unggul dalam memperkaya data minoritas secara sintetis. SMOTE menggunakan interpolasi linier $k$-NN, sedangkan ADASYN secara adaptif memusatkan pembentukan sampel sintetis pada titik-titik minoritas yang berada di batas keputusan yang sulit.
+    \item Penerapan ADASYN pada data latih terbukti berhasil mendongkrak sensitivitas (\textit{Recall}) model Logistic Regression dari 62,50\% menjadi 70,83\% dengan nilai $F_1$-Score mencapai 72,34\% pada data uji klinis independen.
+\end{enumerate}
+\clearpage
+
+%======================================================================
+% DAFTAR PUSTAKA
+%======================================================================
+\addcontentsline{toc}{chapter}{Daftar Pustaka}
+\begin{thebibliography}{99}
+
+\bibitem{ref_istiana}
+A.~Istiana and M.~Mustafiril, ``Perbandingan Metode Klasifikasi pada Data dengan Imbalance Class dan Missing Value,'' \textit{JURNAL INFORMATIKA}, pp. 101--108, 2023.
+
+\bibitem{ref_normawati}
+Normawati and T.~Prayogi, ``Implementasi Naive Bayes Classifier Dan Confusion Matrix Pada Analisis Sentimen Berbasis Teks Pada Twitter,'' \textit{J-SAKTI (Jurnal Sains Komputer \& Informatika)}, pp. 697--711, 2021.
+
+\bibitem{ref_pratama}
+R.~Pratama and K.~Kusnawi, ``Komparasi Algoritma Supervised Learning dan Feature Selection pada Klasifikasi Penyakit Gagal Jantung,'' \textit{Indonesian Journal of Computer Science}, pp. 3722--3733, 2023.
+
+\bibitem{ref_septiana}
+R.~Septiana, A.~Susanto, and Tukiyat, ``Analisis Sentimen Vaksinasi Covid-19 Pada Twitter Menggunakan Naive Bayes Classifier Dengan Feature Selection Chi-Squared Statistic Dan Particle Swarm Optimization,'' \textit{Jurnal Sistem Komputer dan Kecerdasan Buatan}, pp. 49--56, 2021.
+
+\bibitem{ref_guyon}
+I.~Guyon and A.~Elisseeff, ``An introduction to variable and feature selection,'' \textit{Journal of Machine Learning Research}, vol.~3, pp. 1157--1182, 2003.
+
+\bibitem{ref_kohavi}
+R.~Kohavi and G.~H. John, ``Wrappers for feature subset selection,'' \textit{Artificial Intelligence}, vol.~97, no. 1--2, pp. 273--324, 1997.
+
+\bibitem{ref_tibshirani}
+R.~Tibshirani, ``Regression shrinkage and selection via the Lasso,'' \textit{Journal of the Royal Statistical Society: Series B (Methodological)}, vol.~58, no.~1, pp. 267--288, 1996.
+
+\bibitem{ref_wijayanti}
+N.~L.~P. Wijayanti, I.~W. Kencana, and I.~M. Sumarjaya, ``SMOTE: Potensi dan Kekurangannya pada Survei,'' \textit{E-Jurnal Matematika}, pp. 235--240, 2021.
+
+\bibitem{ref_ramadhanti}
+A.~P. Ramadhanti, H.~B. Santoso, and T.~Widiharih, ``Perbandingan SMOTE dan ADASYN pada Data Imbalance untuk Klasifikasi Rumah Tangga Miskin Kabupaten Temanggung dengan Algoritma K-Nearest Neighbor,'' \textit{JURNAL GAUSSIAN}, pp. 499--505, 2022.
+
+\end{thebibliography}
+
+\end{document}

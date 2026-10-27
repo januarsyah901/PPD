@@ -15,11 +15,15 @@
   - Format file LaTeX: `PPD_P{n}_Januarsyah Akbar_535846.tex`.
   - Aset logo: `lambang ugm.png` di folder laporan.
   - Folder gambar: `Pn/laporan/gambar/`.
+  - **Format Sitasi & Daftar Pustaka (Wajib IEEE seperti Pertemuan 5)**:
+    - Format sitasi dalam teks naskah LaTeX **WAJIB** menggunakan gaya numerik IEEE dengan perintah `\cite{ref_key}` yang menghasilkan nomor referensi dalam kurung siku seperti `[1]`, `[2]`.
+    - **DILARANG** menggunakan format sitasi teks langsung seperti format APA `(Nama, Tahun)` dalam narasi teks.
+    - Lingkungan Daftar Pustaka menggunakan `\begin{thebibliography}{99}` dengan entri `\bibitem{ref_key}` yang disusun rapi sesuai standar IEEE (inisial nama depan, nama belakang, judul artikel dalam tanda petik ganda, nama jurnal/buku miring, volume/isu/halaman, dan tahun).
   - File build sementara LaTeX (`.aux`, `.log`, `.toc`, dsb.) diabaikan via `.gitignore`.
 
 - **Trigger & Standar Otomasi Laporan End-to-End**:
   - Ketika bang jan meminta: *"Gas buatin laprak pertemuan [N] full end-to-end sampai PDF jadi"* (atau perintah serupa seperti *"Buat laprak P[N] lengkap sama gambar dan compile LaTeX-nya"*), langsung jalankan pipeline otomatis berikut tanpa perlu diminta langkah per langkah:
     1. **Analisis Modul & Proyek**: Baca `Pn/MODUL_PDD_Pn.md` dan cek notebook di `Pn/project/`.
     2. **Generate Gambar/Grafik**: Buat skrip python untuk mengekstrak dan merender seluruh grafik percobaan dan tugas ke folder `Pn/laporan/gambar/`.
-    3. **Tulis Dokumen LaTeX (`.tex`)**: Tulis dokumen lengkap dengan format standar UGM (struktur 4 Bab, metadata nama/NIM/kelas, code listing, tabel deskripsi, output box, dan analisis/jawaban tugas mendalam). Pastikan semua karakter khusus seperti underscore di luar code environment sudah di-escape (`\_`).
+    3. **Tulis Dokumen LaTeX (`.tex`)**: Tulis dokumen lengkap dengan format standar UGM (struktur 4 Bab, metadata nama/NIM/kelas, code listing, tabel deskripsi, output box, analisis/jawaban tugas mendalam, dan **sitasi numerik IEEE `\cite{...}`**). Pastikan semua karakter khusus seperti underscore di luar code environment sudah di-escape (`\_`).
     4. **Build PDF Otomatis**: Kompilasi langsung dengan `pdflatex` / `latexmk` sebanyak 2x di folder `Pn/laporan/` hingga menghasilkan file PDF siap kumpul `PPD_P{n}_Januarsyah Akbar_535846.pdf`.

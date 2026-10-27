@@ -125,7 +125,13 @@ BAB IV  Kesimpulan
 Daftar Pustaka
 ```
 
-### D. Pengelolaan File Build dan Gambar di Git
+### D. Format Sitasi dan Daftar Pustaka (Standar IEEE - Wajib)
+
+Format sitasi dan daftar pustaka pada seluruh laporan praktikum LaTeX **WAJIB menggunakan standar IEEE numerik seperti pada Pertemuan 5 (P5)**:
+- **Sitasi dalam Teks**: Gunakan perintah `\cite{ref_key}` yang memunculkan nomor dalam kurung siku di teks, misalnya `\cite{ref_han}` $\rightarrow$ `[1]` atau `\cite{ref_retno, ref_santoso}` $\rightarrow$ `[1, 2]`. **DILARANG** menggunakan format sitasi teks langsung seperti APA `(Nama, Tahun)`.
+- **Daftar Pustaka**: Disusun menggunakan lingkungan `\begin{thebibliography}{99}` dengan entri `\bibitem{ref_key}` berurutan dan terstruktur rapi sesuai kaidah IEEE (inisial nama depan, nama belakang, judul artikel dalam tanda petik ganda, nama berkala/jurnal miring, volume, nomor, rentang halaman, dan tahun penerbitan).
+
+### E. Pengelolaan File Build dan Gambar di Git
 Sesuai konfigurasi `.gitignore`, berkas tangkapan layar (`*.png`) serta file build sementara (`.aux`, `.log`, `.toc`, `.out`, `.synctex.gz`, dan `.pdf`) otomatis diabaikan agar tidak terdorong ke repositori remote. Hal ini menjaga ukuran repositori tetap ringan dan bersih, dengan fokus pelacakan pada berkas sumber naskah `.tex` dan modul kode praktikum.
 
 ---
