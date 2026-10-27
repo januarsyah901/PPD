@@ -311,7 +311,7 @@ import pandas as pd
 import numpy as np
 \end{lstlisting}
 
-\screenshotimage{gambar/colab-p7-imports.png}{Impor Pustaka Preprocessing dan Balancing (Gambar 7.4.1 Modul)}{colab-imports}
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-imports.png}{Impor Pustaka Preprocessing dan Balancing (Gambar 7.4.1 Modul)}{colab-imports}
 
 \subsection{Import dan Load Dataset Information}
 Dataset yang digunakan dalam langkah percobaan adalah \textit{Stroke Prediction Dataset} (\texttt{healthcare-dataset-stroke-data.csv}). Dataset ini memuat 5.110 baris data pasien dengan 12 kolom yang merekam kondisi biometrik, demografi, serta status riwayat penyakit kardiovaskular.
@@ -324,9 +324,9 @@ df = pd.read_csv('healthcare-dataset-stroke-data.csv')
 df.head()
 \end{lstlisting}
 
-\screenshotimage{gambar/colab-p7-read-dataset.png}{Pembacaan Dataset dan Tampilan Lima Baris Pertama (Gambar 7.4.2 Modul)}{colab-head}
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-read-dataset.png}{Pembacaan Dataset dan Tampilan Lima Baris Pertama (Gambar 7.4.2 Modul)}{colab-head}
 
-\screenshotimage{gambar/colab-p7-info.png}{Struktur Kolom dan Tipe Data Dataset Melalui df.info()}{colab-info}
+\screenshotimage[0.90\textwidth]{gambar/colab-p7-info.png}{Struktur Kolom dan Tipe Data Dataset Melalui df.info()}{colab-info}
 
 Pemeriksaan nilai yang hilang (\textit{missing value}) dilakukan dengan perintah \texttt{df.isnull().sum()}. Dari pemeriksaan tersebut, ditemukan sebanyak 201 nilai kosong khusus pada atribut \texttt{bmi}, sementara sebelas atribut lainnya terisi lengkap.
 
@@ -335,9 +335,7 @@ Pemeriksaan nilai yang hilang (\textit{missing value}) dilakukan dengan perintah
 df.isnull().sum()
 \end{lstlisting}
 
-\screenshotimage[0.72\textwidth]{gambar/colab-p7-null-before.png}{Pengecekan Missing Value Awal pada Seluruh Atribut (Gambar 7.4.3 Modul)}{colab-null-before}
-
-\screenshotimage{gambar/colab-p7-missing-df.png}{Tabel Ringkasan Missing Values dan Persentase per Fitur}{colab-missing-df}
+\screenshotimage[0.85\textwidth]{gambar/colab-p7-null-before.png}{Pengecekan Missing Value Awal pada Seluruh Atribut (Gambar 7.4.3 Modul)}{colab-null-before}
 
 \subsection{Exploratory Data Analysis (EDA)}
 Distribusi kelas pada variabel target \texttt{stroke} dianalisis menggunakan diagram lingkaran (\textit{pie chart}). Visualisasi ini memetakan rasio antara pasien yang tidak mengalami stroke (kelas 0) dan pasien yang terserang stroke (kelas 1).
@@ -361,7 +359,7 @@ Rasio ketimpangan ini mencapai hampir 20:1, yang menegaskan urgensi penerapan te
 \subsection{Data Cleaning}
 Karena atribut \texttt{bmi} memiliki skala numerik kontinu dengan sebaran mendekati normal, 201 nilai yang hilang diatasi menggunakan teknik imputasi nilai rata-rata (\textit{mean}) sebesar 28,89.
 
-\begin{lstlisting}[style=pythonstyle, caption={Imputasi Missing Values dengan Rata-rata}]
+\begin{lstlisting}[style=pythonstyle, caption={Imputasi Missing Values dengan Rata-rata dan Pengecekan Ulang}]
 # Imputasi missing value
 df['bmi'].fillna(df['bmi'].mean(), inplace=True)
 
@@ -369,9 +367,7 @@ df['bmi'].fillna(df['bmi'].mean(), inplace=True)
 df.isnull().sum()
 \end{lstlisting}
 
-\screenshotimage[0.7\textwidth]{gambar/colab-p7-data-cleaning.png}{Eksekusi Kode Imputasi Missing Value BMI (Gambar 7.4.5 Modul)}{colab-cleaning-code}
-
-\screenshotimage[0.72\textwidth]{gambar/colab-p7-null-after.png}{Pengecekan Ulang Jumlah Missing Values Pasca Imputasi (Gambar 7.4.6 Modul)}{colab-null-after}
+\screenshotimage[0.85\textwidth]{gambar/colab-p7-data-cleaning.png}{Eksekusi Imputasi Missing Value BMI dan Verifikasi Pasca Imputasi (Gambar 7.4.5 \& 7.4.6 Modul)}{colab-cleaning-code}
 
 Setelah imputasi, seluruh atribut terkonfirmasi bersih dari data kosong dengan nilai null bernilai 0.
 
@@ -390,7 +386,7 @@ print('setelah undersampling')
 print(pd.DataFrame(y_resampled).value_counts())
 \end{lstlisting}
 
-\screenshotimage[0.72\textwidth]{gambar/colab-p7-rus-output.png}{Output Distribusi Kelas Sebelum vs Sesudah RUS (Gambar 7.4.7 Modul)}{colab-rus-out}
+\screenshotimage[0.90\textwidth]{gambar/colab-p7-rus-output.png}{Output Distribusi Kelas Sebelum vs Sesudah RUS (Gambar 7.4.7 Modul)}{colab-rus-out}
 
 \begin{lstlisting}[style=pythonstyle, caption={Menampilkan Kolom Target Stroke}]
 # Menampilkan kolom stroke
@@ -398,7 +394,7 @@ df_y = df[['stroke']]
 df_y
 \end{lstlisting}
 
-\screenshotimage[0.65\textwidth]{gambar/colab-p7-melihat-data.png}{Inspeksi Data Kolom Target Stroke Sebanyak 5110 Baris (Gambar 7.4.8 Modul)}{colab-melihat-data}
+\screenshotimage[0.75\textwidth]{gambar/colab-p7-melihat-data.png}{Inspeksi Data Kolom Target Stroke Sebanyak 5110 Baris (Gambar 7.4.8 Modul)}{colab-melihat-data}
 
 Perubahan sebaran fitur akibat pemangkasan sampel diinspeksi melalui histogram BMI dan diagram sebar (kadar glukosa terhadap BMI):
 
@@ -421,7 +417,7 @@ print('setelah random oversampling')
 print(pd.DataFrame(y_resampled).value_counts())
 \end{lstlisting}
 
-\screenshotimage[0.72\textwidth]{gambar/colab-p7-ros-output.png}{Output Distribusi Kelas Sebelum vs Sesudah ROS (Gambar 7.4.11 Modul)}{colab-ros-out}
+\screenshotimage[0.90\textwidth]{gambar/colab-p7-ros-output.png}{Output Distribusi Kelas Sebelum vs Sesudah ROS (Gambar 7.4.11 Modul)}{colab-ros-out}
 
 \screenshotimage{gambar/colab-p7-ros-bmi-hist.png}{Perbandingan Distribusi BMI Sebelum vs Sesudah Random Over Sampling (Gambar 7.4.12 Modul)}{colab-ros-hist}
 
@@ -442,7 +438,7 @@ print('Setelah SMOTE')
 print(pd.DataFrame(y_resampled).value_counts())
 \end{lstlisting}
 
-\screenshotimage[0.72\textwidth]{gambar/colab-p7-smote-output.png}{Output Distribusi Kelas Sebelum vs Sesudah SMOTE (Gambar 7.4.14 Modul)}{colab-smote-out}
+\screenshotimage[0.90\textwidth]{gambar/colab-p7-smote-output.png}{Output Distribusi Kelas Sebelum vs Sesudah SMOTE (Gambar 7.4.14 Modul)}{colab-smote-out}
 
 \screenshotimage{gambar/colab-p7-smote-bmi-hist.png}{Perbandingan Distribusi BMI Sebelum vs Sesudah SMOTE (Gambar 7.4.15 Modul)}{colab-smote-hist}
 
@@ -463,7 +459,7 @@ print('Setelah ADASYN')
 print(pd.DataFrame(y_resampled).value_counts())
 \end{lstlisting}
 
-\screenshotimage[0.72\textwidth]{gambar/colab-p7-adasyn-output.png}{Output Distribusi Kelas Sebelum vs Sesudah ADASYN (Gambar 7.4.17 Modul)}{colab-adasyn-out}
+\screenshotimage[0.90\textwidth]{gambar/colab-p7-adasyn-output.png}{Output Distribusi Kelas Sebelum vs Sesudah ADASYN (Gambar 7.4.17 Modul)}{colab-adasyn-out}
 
 \screenshotimage{gambar/colab-p7-adasyn-bmi-hist.png}{Perbandingan Distribusi BMI Sebelum vs Sesudah ADASYN (Gambar 7.4.18 Modul)}{colab-adasyn-hist}
 
@@ -488,9 +484,9 @@ Dari perbandingan di atas, SMOTE dan ADASYN terbukti mempertahankan seluruh data
 \section{Tugas 1: Analisis Karakteristik Stroke Prediction Dataset}
 
 \subsection{Pemuatan Dataset ke DataFrame Pandas}
-Dataset Stroke Prediction dimuat langsung dari repository data menggunakan pustaka pandas. Cuplikan sepuluh entri pertama dataset diperlihatkan pada tabel di bawah ini.
+Dataset Stroke Prediction dimuat langsung dari repository data menggunakan pustaka pandas. Cuplikan sepuluh entri pertama dataset diperlihatkan pada tampilan Google Colab di bawah ini.
 
-\screenshotimage{gambar/colab-p7-read-dataset.png}{Pemuatan Stroke Prediction Dataset ke dalam DataFrame}{colab-t1-head}
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-t1-head.png}{Pemuatan Stroke Prediction Dataset ke dalam DataFrame (df\_stroke.head(10))}{colab-t1-head}
 
 \subsection{Tujuan Penggunaan Dataset}
 Tujuan utama penggunaan dataset \textit{Stroke Prediction} adalah untuk membangun dan mengevaluasi model pembelajaran mesin prediktif yang mampu mengidentifikasi risiko kemungkinan seorang individu terserang penyakit stroke berdasarkan parameter biometrik, riwayat kondisi medis, dan pola hidup. Secara praktis, tujuan dataset ini mencakup:
@@ -535,12 +531,18 @@ Dataset terdiri atas 12 atribut dengan rincian karakteristik klinis dan teknis s
 \subsection{Deskripsi Dataset Alternatif: Heart Failure Clinical Records}
 Pada tugas kedua, digunakan dataset alternatif yang juga berasal dari domain medis dengan sifat ketimpangan kelas, yaitu \textit{Heart Failure Clinical Records Dataset}. Dataset ini memiliki 299 baris data pasien dengan 12 fitur klinis dan 1 target prediksi kejadian kematian (\texttt{DEATH\_EVENT}).
 
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-t2-load.png}{Pemuatan Dataset Alternatif Heart Failure Clinical Records di Google Colab}{colab-t2-load}
+
 \screenshotimage[0.65\textwidth]{gambar/colab-p7-t2-heart-dist.png}{Distribusi Target Kematian Pasien (DEATH\_EVENT)}{colab-hf-dist}
 
 Sebagaimana terlihat pada Gambar \ref{fig:colab-hf-dist}, terdapat 203 pasien yang bertahan hidup (67,89\%) dan 96 pasien yang meninggal dunia (32,11\%). Meskipun ketimpangan tidak seekstrem dataset stroke, rasio 2,1:1 ini cukup membuat model pembelajaran konvensional bias terhadap pasien yang selamat, sehingga pasien berisiko tinggi luput terdeteksi.
 
 \subsection{Eksperimen Pemodelan dan Penyeimbangan}
-Dataset dibagi menjadi 75\% data train dan 25\% data test dengan metode pembagian berstrata (\textit{stratified split}) untuk menjamin proporsi kelas pada data uji murni tetap representatif. Fitur numerik distandarisasi menggunakan \texttt{StandardScaler}. Dua algoritma klasifikasi dengan paradigma berbeda diuji:
+Dataset dibagi menjadi 75\% data train dan 25\% data test dengan metode pembagian berstrata (\textit{stratified split}) untuk menjamin proporsi kelas pada data uji murni tetap representatif. Fitur numerik distandarisasi menggunakan \texttt{StandardScaler}.
+
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-t2-prep-balancing.png}{Pemisahan Data, Standarisasi, dan Penyeimbangan SMOTE serta ADASYN di Google Colab}{colab-t2-prep}
+
+Dua algoritma klasifikasi dengan paradigma berbeda diuji:
 \begin{enumerate}
     \item \textbf{Logistic Regression}: Model linier parametrik berbasis probabilitas sigmoid.
     \item \textbf{Random Forest Classifier}: Model ansambel non-parametrik berbasis pohon keputusan majemuk.
@@ -548,7 +550,7 @@ Dataset dibagi menjadi 75\% data train dan 25\% data test dengan metode pembagia
 
 Kedua model diuji dalam tiga skenario data latih: tanpa penyeimbangan (\textit{Baseline}), dengan SMOTE, dan dengan ADASYN. Evaluasi dilakukan secara ketat pada data uji murni (tanpa resampling).
 
-\screenshotimage{gambar/colab-p7-t2-metrics-table.png}{Tabel Komparasi Metrik Performa Model Sebelum vs Sesudah Balancing}{colab-t2-table}
+\screenshotimage[0.92\textwidth]{gambar/colab-p7-t2-metrics-table.png}{Tabel Komparasi Metrik Performa Model Sebelum vs Sesudah Balancing}{colab-t2-table}
 
 \screenshotimage[0.92\textwidth]{gambar/colab-p7-t2-metrics-bar.png}{Diagram Batang Komparasi Metrik Evaluasi Seluruh Model}{colab-t2-bar}
 
