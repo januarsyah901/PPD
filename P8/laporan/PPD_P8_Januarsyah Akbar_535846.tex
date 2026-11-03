@@ -325,6 +325,8 @@ Pengukuran akurasi dan kinerja model regresi dievaluasi menggunakan metrik berik
 \subsection{Persiapan Lingkungan Komputasi}
 Eksperimen dilaksanakan pada lingkungan Google Colab dan Jupyter Notebook lokal dengan runtime Python 3.11. Lingkungan ini memfasilitasi komputasi matriks berkecepatan tinggi serta menyediakan integrasi pustaka pengolahan data dan pembelajaran mesin tanpa beban konfigurasi perangkat keras fisik yang kompleks.
 
+\screenshotimage[0.92\textwidth]{gambar/colab-p8-setup.png}{Inisialisasi Lingkungan dan Pemilihan Direktori Dataset pada Google Colab}{colab-setup}
+
 \subsection{Instalasi dan Impor Library}
 Tahap awal percobaan diawali dengan mengimpor modul manipulasi data, pra-pemrosesan fitur, fungsi pembagian data latih dan uji, modul arsitektur neural network, serta ragam metrik evaluasi kinerja.
 
@@ -453,9 +455,7 @@ Koefisien bobot model diperiksa melalui atribut \texttt{model.coefs\_}. Lapisan 
 
 \screenshotimage[0.90\textwidth]{gambar/colab-p8-churn-coefs.png}{Struktur Koefisien Bobot Saraf Tiruan pada Model (Gambar 8.4.8 Modul)}{colab-churn-coefs}
 
-\screenshotimage[0.95\textwidth]{gambar/colab-p8-churn-dfx.png}{Tampilan Dataframe Fitur Setelah Encoding (Gambar 8.4.9 Modul)}{colab-churn-dfx}
-
-\screenshotimage[0.88\textwidth]{gambar/colab-p8-churn-xtrain0.png}{Representasi Vektor Numerik Sampel Pertama X\_train[0] (Gambar 8.4.10 Modul)}{colab-churn-xtrain0}
+\screenshotimage[0.95\textwidth]{gambar/colab-p8-churn-dfx.png}{Tampilan Dataframe Fitur Setelah Encoding dan Vektor Numerik X\_train[0] (Gambar 8.4.9 \& 8.4.10 Modul)}{colab-churn-dfx}
 
 \subsubsection{Evaluasi Kinerja Model Klasifikasi}
 Kinerja model diuji terhadap 3.039 data uji independen. Metrik evaluasi mencakup Akurasi, Presisi, Recall, dan visualisasi \textit{Confusion Matrix}.
@@ -472,8 +472,6 @@ disp.plot()
 plt.show()
 \end{lstlisting}
 
-\screenshotimage[0.75\textwidth]{gambar/colab-p8-churn-eval-metrics.png}{Ringkasan Output Numerik Metrik Evaluasi Klasifikasi}{colab-churn-eval}
-
 \screenshotimage[0.65\textwidth]{gambar/colab-p8-churn-cm.png}{Visualisasi Confusion Matrix MLPClassifier (Gambar 8.4.11 Modul)}{colab-churn-cm}
 
 Dari hasil evaluasi, model \texttt{MLPClassifier} mencatatkan akurasi sebesar \textbf{93,81\%}, presisi sebesar \textbf{96,05\%}, dan recall sebesar \textbf{96,58\%}. Dari matriks kontingensi, model berhasil mengklasifikasikan 2.456 nasabah aktif dengan tepat dan mendeteksi 395 nasabah yang berpotensi churn.
@@ -481,9 +479,7 @@ Dari hasil evaluasi, model \texttt{MLPClassifier} mencatatkan akurasi sebesar \t
 \subsubsection{Prediksi Data Inferensi Baru}
 Satu sampel nasabah baru dengan profil usia 58 tahun, perempuan, berpendidikan Graduate, status lajang, pendapatan di bawah \$40K, kartu tipe Blue, saldo revolving \$800, dan utilisasi kredit 16,7\% diumpankan ke dalam model.
 
-\screenshotimage[0.90\textwidth]{gambar/colab-p8-churn-inference-code.png}{Penyiapan Dataframe Inferensi Nasabah Baru (Gambar 8.4.12 Modul)}{colab-churn-inf-code}
-
-\screenshotimage[0.85\textwidth]{gambar/colab-p8-churn-inference-out.png}{Hasil Prediksi Inferensi Model Terhadap Nasabah Baru (Gambar 8.4.13 Modul)}{colab-churn-inf-out}
+\screenshotimage[0.92\textwidth]{gambar/colab-p8-churn-inference-code.png}{Penyiapan Sampel Inferensi Nasabah Baru dan Hasil Prediksi Model (Gambar 8.4.12 \& 8.4.13 Modul)}{colab-churn-inf-code}
 
 Model memprediksi keluaran kelas 1, yang diinterpretasikan sebagai \textbf{Existing Customer} dengan tingkat probabilitas keyakinan mencapai 96,52\%.
 
